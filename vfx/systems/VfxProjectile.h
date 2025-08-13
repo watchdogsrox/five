@@ -1,0 +1,126 @@
+///////////////////////////////////////////////////////////////////////////////
+//  
+//	FILE: 	VfxProjectile.h
+//	BY	: 	Mark Nicholson
+//	FOR	:	Rockstar North
+//	ON	:	12 Nov 2009
+//	WHAT:	
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#ifndef VFX_PROJECTILE_H
+#define	VFX_PROJECTILE_H
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  INCLUDES
+///////////////////////////////////////////////////////////////////////////////													
+
+// rage
+
+// game
+#include "physics/WorldProbe/worldprobe.h"
+
+///////////////////////////////////////////////////////////////////////////////
+//  FORWARD DECLARATIONS
+///////////////////////////////////////////////////////////////////////////////	
+
+namespace rage
+{
+	class phIntersection;
+}
+
+class CObject;
+class CProjectile;
+
+///////////////////////////////////////////////////////////////////////////////
+//  DEFINES
+///////////////////////////////////////////////////////////////////////////////													
+
+#define	VFXRANGE_WPN_MOLOTOV_FLAME		(25.0f)
+#define	VFXRANGE_WPN_MOLOTOV_FLAME_SQR	(VFXRANGE_WPN_MOLOTOV_FLAME*VFXRANGE_WPN_MOLOTOV_FLAME)
+
+#define	VFXRANGE_WPN_ROCKET_TRAIL		(300.0f)
+#define	VFXRANGE_WPN_ROCKET_TRAIL_SQR	(VFXRANGE_WPN_ROCKET_TRAIL*VFXRANGE_WPN_ROCKET_TRAIL)
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  ENUMS
+///////////////////////////////////////////////////////////////////////////////	
+
+// projectile ptfx offsets for registered systems that play on the same projectile
+enum PtFxProjectileOffsets_e
+{
+	PTFXOFFSET_PROJECTILE_FUSE				= 0,
+	PTFXOFFSET_PROJECTILE_FUSE_ALT_FP,
+	PTFXOFFSET_PROJECTILE_FUSE_ALT_NORM,
+	PTFXOFFSET_PROJECTILE_TRAIL,
+	PTFXOFFSET_PROJECTILE_TRAIL_UNDERWATER,
+	PTFXOFFSET_PROJECTILE_GROUND,
+	PTFXOFFSET_PROJECTILE_PROXIMITY
+};
+
+///////////////////////////////////////////////////////////////////////////////
+//  STRUCTURES
+///////////////////////////////////////////////////////////////////////////////	
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  CLASSES
+///////////////////////////////////////////////////////////////////////////////
+
+class CVfxProjectile
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		void				Init						(unsigned initMode);
+		void				Shutdown					(unsigned shutdownMode);
+
+#if __BANK
+		void				InitWidgets					();
+#endif
+
+		// particle systems
+		void				ProcessPtFxProjProximity	(CProjectile* pProjectile, bool isProximityAcvtive);
+		void				RemovePtFxProjProximity		(CProjectile* pProjectile);
+		void				ProcessPtFxProjFuse			(CProjectile* pProjectile, bool isPrimed);
+		void				RemovePtFxProjFuse			(CProjectile* pProjectile, bool removeNormalPtFx, bool removeAltPtFx);
+		void				UpdatePtFxProjTrail			(CProjectile* pProjectile,  float trailEvo, u8 weaponTintIndex);
+		void				UpdatePtFxProjGround		(CProjectile* pProjectile, WorldProbe::CShapeTestHitPoint& shapeTestResult);
+
+		// colour tints
+		Vec3V_Out			GetWeaponProjTintColour		(u8 weaponTintIndex);
+		Vec3V_Out			GetAltWeaponProjTintColour	(u8 weaponTintIndex);
+
+	private: //////////////////////////
+
+		// particle systems
+		void				UpdatePtFxProjFuse			(CProjectile* pProjectile, bool isPrimed, bool isFirstPersonPass);
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+
+}; // CVfxProjectile
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  EXTERNS
+///////////////////////////////////////////////////////////////////////////////
+
+extern	CVfxProjectile		g_vfxProjectile;
+
+
+#endif // VFX_PROJECTILE_H
+
+
+

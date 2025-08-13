@@ -1,0 +1,30 @@
+Project Objects 
+
+Files {
+	CoverTuning.cpp
+	CoverTuning.h
+	Door.cpp
+	Door.h
+	DoorTuning.cpp
+	DoorTuning.h
+	DummyObject.cpp
+	DummyObject.h
+	Object.cpp
+	Object.h
+	ObjectIntelligence.cpp
+	ObjectIntelligence.h
+	objectpopulation.cpp
+	objectpopulation.h
+	objectpopulationNY.cpp
+	objectpopulationNY.h
+	ProceduralInfo.cpp
+	ProceduralInfo.h
+	ProcObjects.cpp
+	ProcObjects.h
+	Parse {
+		CoverTuning
+		DoorTuning
+		ProceduralInfo
+	}
+}
+

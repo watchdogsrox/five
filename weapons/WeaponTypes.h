@@ -1,0 +1,99 @@
+#ifndef WEAPON_TYPES_H
+#define WEAPON_TYPES_H
+
+// Rage headers
+#include "atl/hashstring.h"
+
+// Constant definitions
+// Weapons 
+extern const atHashWithStringNotFinal WEAPONTYPE_DROWNING; // Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_DROWNINGINVEHICLE; // Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_EXPLOSION; // Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_FALL; // Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_FIRE; // Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_RAMMEDBYVEHICLE;// Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_RUNOVERBYVEHICLE;// Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_UNARMED;// Generic
+extern const atHashWithStringNotFinal WEAPONTYPE_BLEEDING;
+extern const atHashWithStringNotFinal WEAPONTYPE_BUZZARD;
+extern const atHashWithStringNotFinal WEAPONTYPE_TANK;
+extern const atHashWithStringNotFinal WEAPONTYPE_ROTORS;
+extern const atHashWithStringNotFinal WEAPONTYPE_WATER_CANNON;
+extern const atHashWithStringNotFinal WEAPONTYPE_HIT_BY_WATER_CANNON;
+extern const atHashWithStringNotFinal WEAPONTYPE_GOLFCLUB;
+extern const atHashWithStringNotFinal WEAPONTYPE_ELECTRICFENCE;
+extern const atHashWithStringNotFinal WEAPONTYPE_EXHAUSTION;
+extern const atHashWithStringNotFinal WEAPONTYPE_MINIGUN;
+extern const atHashWithStringNotFinal WEAPONTYPE_AIRSTRIKE_ROCKET;
+extern const atHashWithStringNotFinal WEAPONTYPE_RPG;
+extern const atHashWithStringNotFinal WEAPONTYPE_STICKYBOMB;
+extern const atHashWithStringNotFinal WEAPONTYPE_VEHICLE_PLAYER_BULLET;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_FIREWORK;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_PROXMINE;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_SNOWBALL;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_RAILGUN;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_COMBATPDW;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_PIPEBOMB;
+
+//to be removed...
+extern const atHashWithStringNotFinal WEAPONTYPE_ASSAULTRIFLE;
+extern const atHashWithStringNotFinal WEAPONTYPE_FIREEXTINGUISHER;
+extern const atHashWithStringNotFinal WEAPONTYPE_GRENADE;
+extern const atHashWithStringNotFinal WEAPONTYPE_GRENADELAUNCHER;
+extern const atHashWithStringNotFinal WEAPONTYPE_SMOKEGRENADE;
+extern const atHashWithStringNotFinal WEAPONTYPE_LOUDHAILER;
+extern const atHashWithStringNotFinal WEAPONTYPE_PISTOL;
+extern const atHashWithStringNotFinal WEAPONTYPE_STUNGUN;
+extern const atHashWithStringNotFinal WEAPONTYPE_SCRIPT_HEALTH_CHANGE;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_BOMB_GAS;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_TRANQUILIZER;
+extern const atHashWithStringNotFinal WEAPONTYPE_DLC_BZGAS_MK2;
+extern const atHashWithStringNotFinal WEAPONTYPE_VEHICLE_WEAPON_SUB_MISSILE_HOMING;
+extern const atHashWithStringNotFinal WEAPONTYPE_VEHICLE_WEAPON_OPPRESSOR2_MISSILE;
+
+// Gadgets
+extern const atHashWithStringNotFinal GADGETTYPE_SKIS;
+extern const atHashWithStringNotFinal GADGETTYPE_PARACHUTE;
+extern const atHashWithStringNotFinal GADGETTYPE_JETPACK;
+
+// Objects
+extern const atHashWithStringNotFinal OBJECTTYPE_OBJECT;
+
+// Ammos
+extern const atHashWithStringNotFinal AMMOTYPE_STICKYBOMB;
+extern const atHashWithStringNotFinal AMMOTYPE_GRENADELAUNCHER;
+extern const atHashWithStringNotFinal AMMOTYPE_EMPLAUNCHER;
+extern const atHashWithStringNotFinal AMMOTYPE_DLC_FLAREGUN;
+
+// Weapon groups
+extern const atHashWithStringNotFinal WEAPONGROUP_PISTOL;
+extern const atHashWithStringNotFinal WEAPONGROUP_SNIPER;
+extern const atHashWithStringNotFinal WEAPONGROUP_SHOTGUN;
+extern const atHashWithStringNotFinal WEAPONGROUP_UNARMED;
+extern const atHashWithStringNotFinal WEAPONGROUP_RIFLE;
+extern const atHashWithStringNotFinal WEAPONGROUP_SMG;
+extern const atHashWithStringNotFinal WEAPONGROUP_MG;
+extern const atHashWithStringNotFinal WEAPONGROUP_RUBBERGUN;
+extern const atHashWithStringNotFinal WEAPONGROUP_LOUDHAILER;
+extern const atHashWithStringNotFinal WEAPONGROUP_HEAVY;
+extern const atHashWithStringNotFinal WEAPONGROUP_MELEE;
+extern const atHashWithStringNotFinal WEAPONGROUP_PETROLCAN;
+extern const atHashWithStringNotFinal WEAPONGROUP_THROWN;
+
+// Firing patterns
+extern const atHashWithStringNotFinal FIRING_PATTERN_BURST_FIRE;
+extern const atHashWithStringNotFinal FIRING_PATTERN_BURST_FIRE_IN_COVER;
+extern const atHashWithStringNotFinal FIRING_PATTERN_FULL_AUTO;
+extern const atHashWithStringNotFinal FIRING_PATTERN_SINGLE_SHOT;
+extern const atHashWithStringNotFinal FIRING_PATTERN_DELAY_FIRE_BY_ONE_SEC;
+extern const atHashWithStringNotFinal FIRING_PATTERN_FROM_GROUND;
+
+enum
+{
+	GENERALWEAPON_TYPE_INVALID = 0,
+	GENERALWEAPON_TYPE_ANYMELEE,
+	GENERALWEAPON_TYPE_ANYWEAPON,
+	NUM_GENERALWEAPON_TYPES
+};
+
+#endif	// WEAPON_TYPES_H

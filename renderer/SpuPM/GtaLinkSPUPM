@@ -1,0 +1,1 @@
+-nostartfiles -Ttext=0xa00 -e cellSpursModuleEntryStatus

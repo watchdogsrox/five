@@ -1,0 +1,26 @@
+Project Core 
+
+Files {
+	app.cpp
+	app.h
+	core_channel.h
+	memorytest.cpp
+	memorytest.h
+	dongle.h
+	dongle_common.cpp
+	dongle_durango.cpp
+	dongle_orbis.cpp
+	dongle_psn.cpp
+	game.cpp
+	game.h
+	gamesessionstatemachine.cpp
+	gamesessionstatemachine.h
+	IUserEntitlementDataProvider.h
+	UserEntitlementDataProvider_dummy.cpp
+	UserEntitlementDataProvider_dummy.h
+	UserEntitlementDefs.h
+	UserEntitlementService.cpp
+	UserEntitlementService.h
+	watermark.h
+}
+

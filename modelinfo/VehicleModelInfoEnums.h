@@ -1,0 +1,230 @@
+//
+// VehicleModelInfoEnums.h
+//
+// Rockstar Games (c) 2011
+
+#ifndef INC_VEHICLE_MODELINFO_ENUMS_H_
+#define INC_VEHICLE_MODELINFO_ENUMS_H_ 
+
+#define NUM_VEH_BASE_COLOURS		(6)
+#define MAX_VEH_POSSIBLE_COLOURS	(25)
+
+#define MAX_NUM_LIVERIES			(30)
+#define MAX_NUM_LIVERY_COLORS		(8)
+
+enum eVehicleModCameraPos
+{
+	VMCP_DEFAULT = 0,
+	VMCP_FRONT,
+	VMCP_FRONT_LEFT,
+	VMCP_FRONT_RIGHT,
+	VMCP_REAR,
+	VMCP_REAR_LEFT,
+	VMCP_REAR_RIGHT,
+	VMCP_LEFT,
+	VMCP_RIGHT,
+	VMCP_TOP,
+	VMCP_BOTTOM,
+};
+
+enum eVehicleModType
+{
+	VMT_INVALID = -1,
+
+	VMT_SPOILER = 0,
+	VMT_BUMPER_F,
+	VMT_BUMPER_R,
+	VMT_SKIRT,
+	VMT_EXHAUST,
+	VMT_CHASSIS,
+	VMT_GRILL,
+	VMT_BONNET,
+	VMT_WING_L,
+	VMT_WING_R,
+	VMT_ROOF,
+	
+	// Start new visual mods
+	VMT_PLTHOLDER,
+	VMT_PLTVANITY,
+
+	VMT_INTERIOR1,
+	VMT_INTERIOR2,
+	VMT_INTERIOR3,
+	VMT_INTERIOR4,
+	VMT_INTERIOR5,
+	VMT_SEATS,
+	VMT_STEERING,
+	VMT_KNOB,
+	VMT_PLAQUE,
+	VMT_ICE,
+
+	VMT_TRUNK,
+	VMT_HYDRO,
+
+	VMT_ENGINEBAY1,
+	VMT_ENGINEBAY2,
+	VMT_ENGINEBAY3,
+
+	VMT_CHASSIS2,
+	VMT_CHASSIS3,
+	VMT_CHASSIS4,
+	VMT_CHASSIS5,
+
+	VMT_DOOR_L,
+	VMT_DOOR_R,
+
+	VMT_LIVERY_MOD,
+	VMT_LIGHTBAR,
+	// End new visual mods
+
+	/* Add any new renderable vehicle mods here! */
+
+	VMT_RENDERABLE,
+
+	// non visual mods (stats only)
+	VMT_STAT_MODS = VMT_RENDERABLE,
+	VMT_ENGINE = VMT_STAT_MODS,
+	VMT_BRAKES,
+	VMT_GEARBOX,
+	VMT_HORN,
+    VMT_SUSPENSION,
+	VMT_ARMOUR,
+
+	VMT_TOGGLE_MODS,
+	VMT_NITROUS = VMT_TOGGLE_MODS,
+	VMT_TURBO,
+	VMT_SUBWOOFER,
+	VMT_TYRE_SMOKE,
+	VMT_HYDRAULICS,
+	VMT_XENON_LIGHTS,
+
+	// other mods that require special care
+	VMT_MISC_MODS,
+	VMT_WHEELS = VMT_MISC_MODS,
+	VMT_WHEELS_REAR_OR_HYDRAULICS,
+
+	VMT_MAX,
+
+	VMT_RENDERABLE_NUM = VMT_RENDERABLE,
+	VMT_NEW_RENDERABLE_NUM = VMT_RENDERABLE - VMT_ROOF,
+	 
+	VMT_STAT_NUM = VMT_TOGGLE_MODS - VMT_STAT_MODS,
+	VMT_TOGGLE_NUM = VMT_MISC_MODS - VMT_TOGGLE_MODS,
+	VMT_MISC_NUM = VMT_MAX - VMT_MISC_MODS
+};
+
+// This enum mirrors the code one, in a different, script-compatible order
+enum eVehicleModType_Script
+{
+	SVMT_SPOILER = 0, 
+	SVMT_BUMPER_F, 
+	SVMT_BUMPER_R, 
+	SVMT_SKIRT, 
+	SVMT_EXHAUST, 
+	SVMT_CHASSIS, 
+	SVMT_GRILL, 
+	SVMT_BONNET, 
+	SVMT_WING_L, 
+	SVMT_WING_R, 
+	SVMT_ROOF, 
+	/* New visual mods appear here in code */
+	SVMT_ENGINE, 
+	SVMT_BRAKES, 
+	SVMT_GEARBOX, 
+	SVMT_HORN, 
+	SVMT_SUSPENSION, 
+	SVMT_ARMOUR, 
+	SVMT_NITROUS, 
+	SVMT_TURBO, 
+	SVMT_SUBWOOFER, 
+	SVMT_TYRE_SMOKE, 
+	SVMT_HYDRAULICS, 
+	SVMT_XENON_LIGHTS, 
+	SVMT_WHEELS,
+	SVMT_WHEELS_REAR_OR_HYDRAULICS,
+
+	// Start new visual mods 
+	SVMT_PLTHOLDER, 
+	SVMT_PLTVANITY, 
+
+	SVMT_INTERIOR1, 
+	SVMT_INTERIOR2, 
+	SVMT_INTERIOR3, 
+	SVMT_INTERIOR4, 
+	SVMT_INTERIOR5, 
+	SVMT_SEATS, 
+	SVMT_STEERING, 
+	SVMT_KNOB, 
+	SVMT_PLAQUE, 
+	SVMT_ICE, 
+
+	SVMT_TRUNK, 
+	SVMT_HYDRO, 
+
+	SVMT_ENGINEBAY1, 
+	SVMT_ENGINEBAY2, 
+	SVMT_ENGINEBAY3, 
+
+	SVMT_CHASSIS2, 
+	SVMT_CHASSIS3, 
+	SVMT_CHASSIS4, 
+	SVMT_CHASSIS5, 
+
+	SVMT_DOOR_L, 
+	SVMT_DOOR_R, 
+
+	SVMT_LIVERY,  
+	SVMT_LIGHTBAR,
+	// End new visual mods
+
+	SVMT_MAX 
+};
+
+enum eVehicleWheelType
+{
+	VWT_INVALID = -1,
+	VWT_SPORT = 0,
+	VWT_MUSCLE,
+	VWT_LOWRIDER,
+	VWT_SUV,
+	VWT_OFFROAD,
+	VWT_TUNER,
+	VWT_BIKE,
+	VWT_HIEND,
+	VWT_SUPERMOD1,
+	VWT_SUPERMOD2,
+	VWT_SUPERMOD3,
+	VWT_SUPERMOD4,
+	VWT_SUPERMOD5,
+
+    VWT_MAX
+};
+
+enum eVehicleColorType
+{
+    VCT_METALLIC = 0,
+    VCT_CLASSIC,
+    VCT_PEARLESCENT,
+    VCT_MATTE,
+    VCT_METALS,
+    VCT_CHROME,
+	VCT_CHAMELEON,
+
+    VCT_NONE,    
+    VCT_MAX
+};
+
+// Slightly hacky function that converts the eVehicleModType from the format
+// which script expects (i.e. new stuff under old stuff, don't re-use IDs), to the format
+// which code expects (i.e. each one in a nice, self-contained group). A necessary evil.
+inline eVehicleModType ConvertVehicleModTypeFromScript(eVehicleModType_Script svmt) {
+	if (svmt <= SVMT_ROOF) {
+		return eVehicleModType(svmt);
+	} else if (svmt >= SVMT_ENGINE && svmt <= SVMT_WHEELS_REAR_OR_HYDRAULICS) {
+		return eVehicleModType(svmt + VMT_NEW_RENDERABLE_NUM - 1);
+	} else {
+		return eVehicleModType(svmt - (VMT_STAT_NUM + VMT_TOGGLE_NUM + VMT_MISC_NUM));
+	}
+}
+
+#endif // INC_VEHICLE_MODELINFO_ENUMS_H_

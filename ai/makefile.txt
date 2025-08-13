@@ -1,0 +1,85 @@
+Project ai 
+
+Files {
+	Directory ambient {
+		AmbientModelSet.cpp
+		AmbientModelSet.h
+		AmbientModelSetManager.cpp
+		AmbientModelSetManager.h
+		ConditionalAnims.cpp
+		ConditionalAnims.h
+		ConditionalAnimManager.cpp
+		ConditionalAnimManager.h
+		Parse {
+			AmbientModelSet
+			AmbientModelSetManager
+			ConditionalAnims
+			ConditionalAnimManager
+		}
+	}
+	Directory debug {
+		Directory system {
+			AIDebugInfo.cpp
+			AIDebugInfo.h
+			AIDebugLogManager.cpp
+			AIDebugLogManager.h
+		}
+		Directory types {
+			AnimationDebugInfo.cpp
+			AnimationDebugInfo.h
+			AttachmentsDebugInfo.cpp
+			AttachmentsDebugInfo.h
+			CombatDebugInfo.cpp
+			CombatDebugInfo.h
+			DamageDebugInfo.cpp
+			DamageDebugInfo.h
+			EventsDebugInfo.cpp
+			EventsDebugInfo.h
+			LodDebugInfo.cpp
+			LodDebugInfo.h
+			PedDebugInfo.cpp
+			PedDebugInfo.h
+			MovementDebugInfo.cpp
+			MovementDebugInfo.h
+			RagdollDebugInfo.cpp
+			RagdollDebugInfo.h
+			RelationshipDebugInfo.cpp
+			RelationshipDebugInfo.h
+			ScriptHistoryDebugInfo.cpp
+			ScriptHistoryDebugInfo.h
+			TaskDebugInfo.cpp
+			TaskDebugInfo.h
+			TargetingDebugInfo.cpp
+			TargetingDebugInfo.h
+			VehicleControlDebugInfo.cpp
+			VehicleControlDebugInfo.h
+			VehicleDebugInfo.cpp
+			VehicleDebugInfo.h
+			VehicleFlagDebugInfo.cpp
+			VehicleFlagDebugInfo.h
+			VehicleNodeListDebugInfo.cpp
+			VehicleNodeListDebugInfo.h
+			VehicleStuckDebugInfo.cpp
+			VehicleStuckDebugInfo.h
+			VehicleTaskDebugInfo.cpp
+			VehicleTaskDebugInfo.h		
+			WantedDebugInfo.cpp
+			WantedDebugInfo.h
+		}
+	}
+	AITarget.cpp
+	AITarget.h
+  AnimBlackboard.cpp
+  AnimBlackboard.h
+	BlockingBounds.cpp
+	BlockingBounds.h
+	EntityScanner.cpp
+	EntityScanner.h
+	ExpensiveProcess.cpp
+	ExpensiveProcess.h
+	spatialarray.h
+	spatialarray.cpp
+	spatialarraynode.h
+	stats.cpp
+	stats.h
+}

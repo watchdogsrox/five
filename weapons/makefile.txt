@@ -1,0 +1,186 @@
+Project weapons
+
+Files {
+	Directory components {
+		Folder data {
+			WeaponComponentData.cpp
+			WeaponComponentData.h
+			WeaponComponentReloadData.cpp
+			WeaponComponentReloadData.h
+		}
+		WeaponComponent.cpp
+		WeaponComponent.h
+		WeaponComponentClip.cpp
+		WeaponComponentClip.h
+		WeaponComponentFactory.cpp
+		WeaponComponentFactory.h
+		WeaponComponentFlashLight.cpp
+		WeaponComponentFlashLight.h
+		WeaponComponentGroup.cpp
+		WeaponComponentGroup.h
+		WeaponComponentLaserSight.cpp
+		WeaponComponentLaserSight.h
+		WeaponComponentManager.cpp
+		WeaponComponentManager.h
+		WeaponComponentParser.cpp
+		WeaponComponentProgrammableTargeting.cpp
+		WeaponComponentProgrammableTargeting.h
+		WeaponComponentPool.cpp
+		WeaponComponentScope.cpp
+		WeaponComponentScope.h
+		WeaponComponentSuppressor.cpp
+		WeaponComponentSuppressor.h
+		WeaponComponentVariantModel.cpp
+		WeaponComponentVariantModel.h
+		Parse {
+			weaponcomponentparser
+		}
+	}
+	Directory gadgets {
+		Gadget.cpp
+		Gadget.h
+		GadgetParachute.cpp
+		GadgetParachute.h
+		GadgetJetpack.cpp
+		GadgetJetpack.h
+		GadgetSkis.cpp
+		GadgetSkis.h
+	}
+	Directory helpers {
+		WeaponHelpers.cpp
+		WeaponHelpers.h
+		Parse {
+			weaponhelpers
+		}
+	}
+	Directory info {
+		AmmoInfo.cpp
+		AmmoInfo.h
+		ItemInfo.cpp
+		ItemInfo.h
+		VehicleWeaponInfo.cpp
+		VehicleWeaponInfo.h
+		WeaponAnimationsManager.cpp
+		WeaponAnimationsManager.h
+		WeaponInfo.cpp
+		WeaponInfo.h
+		WeaponInfoFlags.cpp
+		WeaponInfoFlags.h
+		WeaponInfoManager.cpp
+		WeaponInfoManager.h
+		WeaponInfoManagerDebug.cpp
+		WeaponSwapData.cpp
+		WeaponSwapData.h
+		Parse {
+			ammoinfo
+			iteminfo
+			vehicleweaponinfo
+			WeaponAnimationsManager
+			weaponinfo
+			weaponinfoflags
+			weaponinfomanager
+		}
+	}
+	Directory inventory {
+		Folder item {
+			AmmoItem.cpp
+			AmmoItem.h
+			AmmoItemRepository.cpp
+			AmmoItemRepository.h
+			InventoryItem.cpp
+			InventoryItem.h
+			InventoryItemPool.cpp
+			InventoryItemRepository.cpp
+			InventoryItemRepository.h
+			WeaponItem.cpp
+			WeaponItem.h
+			WeaponItemRepository.cpp
+			WeaponItemRepository.h
+		}
+		InventoryListener.cpp
+		InventoryListener.h
+		PedEquippedWeapon.cpp
+		PedEquippedWeapon.h
+		PedInventory.cpp
+		PedInventory.h
+		PedInventoryDebug.cpp
+		PedInventoryLoadOut.cpp
+		PedInventoryLoadOut.h
+		PedInventorySelectOption.h
+		PedWeaponManager.cpp
+		PedWeaponManager.h
+		PedWeaponSelector.cpp
+		PedWeaponSelector.h
+		Parse {
+			PedInventoryLoadOut
+		}
+	}
+	Directory modifiers {
+		WeaponAccuracyModifier.cpp
+		WeaponAccuracyModifier.h
+		WeaponDamageModifier.cpp
+		WeaponDamageModifier.h
+		WeaponFallOffModifier.cpp
+		WeaponFallOffModifier.h
+		Parse {
+			weaponaccuracymodifier
+			weapondamagemodifier
+			weaponfalloffmodifier
+		}
+	}
+	Directory projectiles {
+		Projectile.cpp
+		Projectile.h
+		ProjectileFactory.cpp
+		ProjectileFactory.h
+		ProjectileManager.cpp
+		ProjectileManager.h
+		ProjectileRocket.cpp
+		ProjectileRocket.h
+		ProjectileThrown.cpp
+		ProjectileThrown.h
+	}
+	AirDefence.cpp
+	AirDefence.h
+	Bullet.cpp
+	Bullet.h
+	Explosion.cpp
+	Explosion.h
+	ExplosionInst.cpp
+	ExplosionInst.h
+	FiringPattern.cpp
+	FiringPattern.h
+	TargetSequence.cpp
+	TargetSequence.h
+	ThrownWeaponInfo.cpp
+	ThrownWeaponInfo.h
+	Weapon.cpp
+	Weapon.h
+	WeaponAccuracy.cpp
+	WeaponAccuracy.h
+	WeaponChannel.cpp
+	WeaponChannel.h
+	WeaponDamage.cpp
+	WeaponDamage.h
+	WeaponDebug.cpp
+	WeaponDebug.h
+	WeaponEnums.cpp
+	WeaponEnums.h
+	WeaponFactory.cpp
+	WeaponFactory.h
+	WeaponManager.cpp
+	WeaponManager.h
+	WeaponNetworkModifiers.cpp
+	WeaponNetworkModifiers.h
+	WeaponObserver.h
+	WeaponScriptResource.cpp
+	WeaponScriptResource.h
+	WeaponTypes.h
+	WeaponTypes.cpp
+	Parse {
+		Explosion
+		FiringPattern
+		TargetSequence
+		WeaponEnums
+	}
+}

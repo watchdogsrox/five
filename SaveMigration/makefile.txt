@@ -1,0 +1,13 @@
+Project SaveMigration
+
+Files {
+	SaveMigration.cpp
+	SaveMigration.h
+	SaveMigration_common.cpp
+	SaveMigration_common.h
+	SaveMigration_multiplayer.cpp
+	SaveMigration_multiplayer.h
+	SaveMigration_singleplayer.cpp
+	SaveMigration_singleplayer.h
+}
+

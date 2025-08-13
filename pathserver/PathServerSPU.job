@@ -1,0 +1,4 @@
+#define ENTRYPOINT PathServer_FindPathSPU
+#include "system/task_spu.h"
+
+#include "PathServerSPU.cpp" 

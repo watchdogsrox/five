@@ -1,0 +1,40 @@
+Project shaders 
+
+Files {
+	CustomDrawableShaderVar.cpp
+	CustomDrawableShaderVar.h
+	CustomShaderEffectAnimUV.cpp
+	CustomShaderEffectAnimUV.h
+	CustomShaderEffectBase.cpp
+	CustomShaderEffectBase.h
+	CustomShaderEffectCable.cpp
+	CustomShaderEffectCable.h
+	CustomShaderEffectGrass.cpp
+	CustomShaderEffectGrass.h
+	CustomShaderEffectInterior.cpp
+	CustomShaderEffectInterior.h
+	CustomShaderEffectMirror.cpp
+	CustomShaderEffectMirror.h
+	CustomShaderEffectPed.cpp
+	CustomShaderEffectPed.h
+	CustomShaderEffectProp.cpp
+	CustomShaderEffectProp.h
+	CustomShaderEffectTint.cpp
+	CustomShaderEffectTint.h
+	CustomShaderEffectTree.cpp
+	CustomShaderEffectTree.h
+	CustomShaderEffectVehicle.cpp
+	CustomShaderEffectVehicle.h
+	CustomShaderEffectWeapon.cpp
+	CustomShaderEffectWeapon.h
+	ShaderEdit.h
+	ShaderEdit.cpp
+	ShaderHairSort.cpp
+	ShaderHairSort.h
+	ShaderLib.cpp
+	ShaderLib.h
+	Parse {
+		CustomShaderEffectTree
+	}
+}
+

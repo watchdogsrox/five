@@ -1,0 +1,16 @@
+#include "security/ragesecengine.h"
+#ifndef SECURITY_PLAYERNAMEMONITORPLUGIN_H
+#define SECURITY_PLAYERNAMEMONITORPLUGIN_H
+
+#if USE_RAGESEC
+
+#if RAGE_SEC_TASK_PLAYERNAME_MONITOR_CHECK
+
+bool PlayerNameMonitorPlugin_Init();
+bool PlayerNameMonitorPlugin_Work();
+
+#endif // RAGE_SEC_TASK_PLAYERNAME_MONITOR_CHECK
+
+#endif  // USE_RAGESEC
+
+#endif  // SECURITY_PLAYERNAMEMONITORPLUGIN_H

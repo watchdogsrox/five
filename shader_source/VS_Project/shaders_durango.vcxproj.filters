@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Custom">
+      <UniqueIdentifier>{8dd77a30-9d5d-47d6-a31b-358fd368f98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom\Glass">
+      <UniqueIdentifier>{248bc6ad-76e8-449b-971a-b9786a74df63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom\Rope">
+      <UniqueIdentifier>{977d0013-ea3d-4a3d-87a7-09d00cd783f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom\Wire">
+      <UniqueIdentifier>{57ad05f2-7b91-4bd9-b4c2-556759465ad1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom\Cable">
+      <UniqueIdentifier>{fb941252-5647-4d90-b80a-3a1fbad9bc28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Custom\Mirror">
+      <UniqueIdentifier>{2ccfed83-623a-4199-976b-a8dc21331800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{678fc85a-8b17-48fb-9a1c-3f1b15ba0187}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting">
+      <UniqueIdentifier>{2abea803-f9e5-409a-a520-4867120625cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting\Shadows">
+      <UniqueIdentifier>{d3b85778-0f95-424d-8a01-69e64b317ba3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting\Lights">
+      <UniqueIdentifier>{3a3b139f-16bc-46ff-954a-512c0469caa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Megashader">
+      <UniqueIdentifier>{1271d448-eaf7-434b-a868-d8c0479c4b19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Peds">
+      <UniqueIdentifier>{34deb885-e2f2-4796-a252-617f84c8cee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PostFX">
+      <UniqueIdentifier>{33e63189-eba1-481c-9bdc-513e271a2849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky">
+      <UniqueIdentifier>{dfe2d787-902c-4788-a6ca-77383d50f3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sky\Clouds">
+      <UniqueIdentifier>{683a2e58-9db8-4016-9086-233174832251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{a613fbdf-8f0d-4ca9-aecd-95dae84661e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{02a26a28-af54-454d-a232-73b1f1956829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vegetation">
+      <UniqueIdentifier>{a79941d7-7704-445c-aa3f-0548e65bc226}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vegetation\Grass">
+      <UniqueIdentifier>{9de77174-f1be-44c8-b15f-0fe2e4a4b369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vegetation\Trees">
+      <UniqueIdentifier>{efcfa130-b64e-4fb7-96ca-4d40a2ddf895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Vehicles">
+      <UniqueIdentifier>{b0b69f08-cd04-47f6-99ae-626aae02ee8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VFX">
+      <UniqueIdentifier>{0c3835e7-5b11-4a93-b0bb-c7d40c416f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Water">
+      <UniqueIdentifier>{9649f090-cc41-4a84-9248-5ed6828df2cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting - PC">
+      <UniqueIdentifier>{4f07f1aa-716a-4e56-98a9-ac0c21f4de75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting - PC\AO">
+      <UniqueIdentifier>{d58134ae-5e50-4ddc-ae07-d2441adeb7b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Lighting - PC\Lights">
+      <UniqueIdentifier>{5404e947-cd47-40b3-a79f-a52732286b2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- ADD SHADER FILES HERE -->
+    <None Include="..\Custom\blend_2lyr.fx">
+      <Filter>Custom</Filter>
+    </None>
+    <None Include="..\Custom\damage_blits.fx">
+      <Filter>Custom</Filter>
+    </None>
+    <None Include="..\Custom\distance_map.fx">
+      <Filter>Custom</Filter>
+    </None>
+    <None Include="..\Custom\radar.fx">
+      <Filter>Custom</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_breakable.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_breakable_crack.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_displacement.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_emissive.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_emissivenight.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_env.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_normal_spec_reflect.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_reflect.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Glass\glass_spec.fx">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Custom\Rope\rope_default.fx">
+      <Filter>Custom\Rope</Filter>
+    </None>
+    <None Include="..\Custom\Wire\wire2.fx">
+      <Filter>Custom\Wire</Filter>
+    </None>
+    <None Include="..\Custom\Cable\cable.fx">
+      <Filter>Custom\Cable</Filter>
+    </None>
+    <None Include="..\Custom\Mirror\mirror_crack.fx">
+      <Filter>Custom\Mirror</Filter>
+    </None>
+    <None Include="..\Custom\Mirror\mirror_default.fx">
+      <Filter>Custom\Mirror</Filter>
+    </None>
+    <None Include="..\Debug\debug_cable.fx">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Debug\debug_DTQ.fx">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Debug\debug_mirror.fx">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Debug\debug_rendering.fx">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Debug\debug_shadows.fx">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Lighting\deferred_lighting.fx">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\Lighting\deferred_volume.fx">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\Lighting\SSAO.fx">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\Lighting\tiled_lighting.fx">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\lighting\Shadows\cascadeshadows.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\cascadeshadows_processing.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\cascadeshadows_rendering.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\shadowSmartBlit.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\shadowZ.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\shadowZDir.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Megashader\cloth_default.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\cloth_normal_spec.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\cloth_spec_alpha.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\cpv_only.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\cubemap_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\cutout_fence.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_amb_only.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_dirt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_glue.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_normal_only.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_spec_only.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\decal_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\default.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\default_spec.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\default_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\default_um.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\emissive.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\emissive_speclum.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\emissive_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\emissivenight.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\emissivestrong.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\minimap.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_cubemap_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_decal_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_decal_pxm.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_pxm.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_tnt_pxm.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_reflect_alpha.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_reflect_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_cubemap_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_decal_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_detail.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_reflect_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_reflect_emissive.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_reflect_emissivenight.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_um.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_spec_wrinkle.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\normal_um.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\parallax.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\parallax_specmap.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\parallax_steep.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\reflect_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\retro.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\spec.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\spec_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\spec_reflect.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\spec_reflect_decal.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\spec_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\weapon_normal_spec_tnt.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\wire.fx">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Peds\ped.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_alpha.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_cloth.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_decal.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_decal_exp.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_decal_nodiff.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_default.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_default_cloth.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_default_enveff.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_default_palette.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_enveff.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_fur.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_hair_cutout_alpha.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_hair_cutout_alpha_enveff.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_hair_spiked.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_hair_spiked_enveff.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_palette.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_stubble.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_wrinkle.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_wrinkle_cloth.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\Peds\ped_wrinkle_cs.fx">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\PostFX\postfx.fx">
+      <Filter>PostFX</Filter>
+    </None>
+    <None Include="..\Sky\sky_system.fx">
+      <Filter>Sky</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\clouds_anim.fx">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\clouds_animsoft.fx">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\clouds_fast.fx">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\clouds_fog.fx">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\clouds_soft.fx">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex_blend.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex_blend_lod.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_cm.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_cm_tnt.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_4lyr_lod.fx">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Util\im.fx">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Util\scaleform_shaders.fx">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_fur.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_fur_lod.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_fur_mask.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_fur_tnt.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_camera_aligned.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Grass\grass_camera_facing.fx">
+      <Filter>Vegetation\Grass</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\billboard_nobump.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_lod.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_lod_tnt.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_lod2.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_normal.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_normal_spec.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_tnt.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_normal_diffspec.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_normal_diffspec_tnt.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_badges.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_basic.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_blurredrotor.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_decal.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_detail.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_detail2.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_generic.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_interior.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_interior2.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_licenseplate.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_lightsemissive.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_mesh.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_mesh_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint1.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint1_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint2.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint2_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint3.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint3_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint4.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint4_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint5.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint5_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint6.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_paint6_enveff.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_rims1.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_rims2.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_shuts.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_tire.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_track.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_um.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_vehglass.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_vehglass_inner.fx">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\VFX\golf_trail.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_model.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_sprite.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_sprite_shadow.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_trail.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_trail_shadow.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptxgpu_render.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptxgpu_update.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal_steep.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal_glass.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal_glass_steep.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal_rotate_towards_camera.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decaldyn.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decaldyn_steep.fx">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\Water\water.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_foam.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_fountain.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_river.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_riverocean.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_rivershallow.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_shallow.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_terrainfoam.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\waterTex.fx">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\point.fx">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\directional.fx">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\spot.fx">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_lod2d.fx">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\capsule.fx">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\Deferred\light_techs_and_funcs.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <!-- ADD HEADER FILES HERE -->
+    <None Include="..\Custom\Glass\glass_breakable.fxh">
+      <Filter>Custom\Glass</Filter>
+    </None>
+    <None Include="..\Debug\debug_overlay.fxh">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Debug\EntitySelect.fxh">
+      <Filter>Debug</Filter>
+    </None>
+    <None Include="..\Lighting\forward_lighting.fxh">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\Lighting\lighting.fxh">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\Lighting\lighting_common.fxh">
+      <Filter>Lighting</Filter>
+    </None>
+    <None Include="..\lighting\Shadows\cascadeshadows.fxh">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\cascadeshadows_common.fxh">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\cascadeshadows_receiving.fxh">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Shadows\cascadeshadows_sampling.fxh">
+      <Filter>Lighting\Shadows</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\dir.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\light_common.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\light_structs.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\point.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Lighting\Lights\spot.fxh">
+      <Filter>Lighting\Lights</Filter>
+    </None>
+    <None Include="..\Megashader\detail_map.fxh">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\megashader.fxh">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\megashader_deferredRS.fxh">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Megashader\Puddle.fxh">
+      <Filter>Megashader</Filter>
+    </None>
+    <None Include="..\Peds\ped_common.fxh">
+      <Filter>Peds</Filter>
+    </None>
+    <None Include="..\PostFX\FXAA.fxh">
+      <Filter>PostFX</Filter>
+    </None>
+    <None Include="..\PostFX\SeeThroughFX.fxh">
+      <Filter>PostFX</Filter>
+    </None>
+    <None Include="..\Sky\Clouds\Clouds.fxh">
+      <Filter>Sky\Clouds</Filter>
+    </None>
+    <None Include="..\Terrain\terrain_cb_common.fxh">
+      <Filter>Terrain</Filter>
+    </None>
+    <None Include="..\Util\alternativecolorspaces.fxh">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Util\macros.fxh">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Util\shader_utils.fxh">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Util\skin.fxh">
+      <Filter>Util</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\billboard_shared.fxh">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vegetation\Trees\trees_common.fxh">
+      <Filter>Vegetation\Trees</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_common.fxh">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\Vehicles\vehicle_damage.fxh">
+      <Filter>Vehicles</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_common.fxh">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptxgpu_common.fxh">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decal.fxh">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\vfx_decaldyn.fxh">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\Water\water_common.fxh">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_river_common.fxh">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\Water\water_river_wave.fxh">
+      <Filter>Water</Filter>
+    </None>
+    <None Include="..\common.fxh" />
+    <None Include="..\VFX\ptfx_sprite.fxh">
+      <Filter>VFX</Filter>
+    </None>
+    <None Include="..\VFX\ptfx_trail.fxh">
+      <Filter>VFX</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Lighting\Shadows\cascadeshadows_processingMS.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\Shadows\cascadeshadows_renderingMS.fx">
+      <Filter>Lighting\Shadows</Filter>
+    </FxCompile>
+    <FxCompile Include="..\PostFX\exposureGPU.fx">
+      <Filter>PostFX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\PostFX\postfxMS.fx">
+      <Filter>PostFX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Util\BlurCS_50.fx">
+      <Filter>Util</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\AO\HDAO_MS.fx">
+      <Filter>Lighting - PC\AO</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\Lights\capsuleMS.fx">
+      <Filter>Lighting - PC\Lights</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\Lights\directionalMS.fx">
+      <Filter>Lighting - PC\Lights</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\Lights\pointMS.fx">
+      <Filter>Lighting - PC\Lights</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\Lights\spotMS.fx">
+      <Filter>Lighting - PC\Lights</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\deferred_lightingMS.fx">
+      <Filter>Lighting - PC</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Lighting\tiled_lightingMS.fx">
+      <Filter>Lighting - PC</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PostFX\FXAA3.h">
+      <Filter>PostFX</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

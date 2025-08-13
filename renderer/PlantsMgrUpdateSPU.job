@@ -1,0 +1,4 @@
+#define ENTRYPOINT PlantsMgrUpdateSPU
+#include "system/task_spu2.h"
+
+#include "PlantsMgrUpdateSPU.cpp"

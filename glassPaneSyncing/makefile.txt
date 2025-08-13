@@ -1,0 +1,10 @@
+Project glasspanesyncing 
+
+Files {
+	GlassPane.cpp
+	GlassPane.h
+	GlassPaneManager.cpp
+	GlassPaneManager.h
+	GlassPaneInfo.h
+}
+

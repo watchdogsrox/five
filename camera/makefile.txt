@@ -1,0 +1,347 @@
+Project camera 
+
+Files {
+	Directory cinematic {
+		CinematicDirector.cpp
+		CinematicDirector.h
+		
+		Directory camera {
+			Directory animated {
+				CinematicAnimatedCamera.cpp
+				CinematicAnimatedCamera.h
+			}
+
+			Directory orbit {
+				CinematicVehicleOrbitCamera.cpp
+				CinematicVehicleOrbitCamera.h
+			}
+	
+			Directory mounted {
+				CinematicMountedCamera.cpp
+				CinematicMountedCamera.h
+				CinematicMountedPartCamera.cpp
+				CinematicMountedPartCamera.h
+			}
+		
+			Directory tracking {
+				BaseCinematicTrackingCamera.cpp
+				BaseCinematicTrackingCamera.h
+				CinematicCamManCamera.cpp
+				CinematicCamManCamera.h
+				CinematicFirstPersonIdleCamera.cpp
+				CinematicFirstPersonIdleCamera.h
+				CinematicGroupCamera.cpp
+				CinematicGroupCamera.h
+				CinematicIdleCamera.cpp
+				CinematicIdleCamera.h
+				CinematicHeliChaseCamera.cpp
+				CinematicHeliChaseCamera.h
+				CinematicPedCloseUpCamera.cpp
+				CinematicPedCloseUpCamera.h
+				CinematicPositionCamera.cpp
+				CinematicPositionCamera.h
+				CinematicStuntCamera.cpp
+				CinematicStuntCamera.h
+				CinematicTrainTrackCamera.cpp
+				CinematicTrainTrackCamera.h
+				CinematicTwoShotCamera.cpp
+				CinematicTwoShotCamera.h
+				CinematicVehicleTrackingCamera.cpp
+				CinematicVehicleTrackingCamera.h
+				CinematicWaterCrashCamera.cpp
+				CinematicWaterCrashCamera.h
+			}
+		}
+		Directory context {
+			BaseCinematicContext.cpp
+			BaseCinematicContext.h
+			CinematicBustedContext.cpp
+			CinematicBustedContext.h
+			CinematicOnFootIdleContext.cpp
+			CinematicOnFootIdleContext.h
+			CinematicInVehicleContext.cpp
+			CinematicInVehicleContext.h
+			CinematicInVehicleFirstPersonContext.cpp
+			CinematicInVehicleFirstPersonContext.h
+			CinematicInVehicleOverriddenFirstPersonContext.cpp
+			CinematicInVehicleOverriddenFirstPersonContext.h
+			CinematicInVehicleWantedContext.cpp
+			CinematicInVehicleWantedContext.h
+			CinematicFallFromHeliContext.cpp
+			CinematicFallFromHeliContext.h
+			CinematicMissileKillContext.cpp
+			CinematicMissileKillContext.h
+			CinematicWaterCrashContext.cpp
+			CinematicWaterCrashContext.h
+			CinematicOnFootAssistedAimingContext.cpp
+			CinematicOnFootAssistedAimingContext.h
+			CinematicOnFootMeleeContext.cpp
+			CinematicOnFootMeleeContext.h
+			CinematicOnFootSpectatingContext.cpp
+			CinematicOnFootSpectatingContext.h
+			CinematicOnFootWantedContext.cpp
+			CinematicOnFootWantedContext.h
+			CinematicParachuteContext.cpp
+			CinematicParachuteContext.h
+			CinematicScriptContext.cpp
+			CinematicScriptContext.h
+			CinematicSpectatorNewsChannelContext.cpp
+			CinematicSpectatorNewsChannelContext.h
+			CinematicStuntJumpContext.cpp
+			CinematicStuntJumpContext.h
+		}
+		
+		Directory shot {
+			BaseCinematicShot.cpp
+			BaseCinematicShot.h
+			CinematicBustedShot.cpp
+			CinematicBustedShot.h
+			CinematicOnFootAssistedAimingShot.cpp
+			CinematicOnFootAssistedAimingShot.h
+			CinematicOnFootFirstPersonIdleShot.cpp
+			CinematicOnFootFirstPersonIdleShot.h
+			CinematicOnFootIdleShot.cpp
+			CinematicOnFootIdleShot.h
+			CinematicOnFootMeleeShot.cpp
+			CinematicOnFootMeleeShot.h
+			CinematicOnFootSpectatingShot.cpp
+			CinematicOnFootSpectatingShot.h
+			CinematicInVehicleShot.cpp
+			CinematicInVehicleShot.h
+			CinematicInVehicleGroupShot.cpp
+			CinematicInVehicleGroupShot.h
+			CinematicInVehicleWantedShot.cpp
+			CinematicInVehicleWantedShot.h
+			CinematicFallFromHeliShot.cpp
+			CinematicFallFromHeliShot.h
+			CinematicMissileKillShot.cpp
+			CinematicMissileKillShot.h
+			CinematicWaterCrashShot.cpp
+			CinematicWaterCrashShot.h
+			CinematicParachuteShot.cpp
+			CinematicParachuteShot.h
+			CinematicScriptShot.cpp
+			CinematicScriptShot.h
+			CinematicStuntJumpShot.cpp
+			CinematicStuntJumpShot.h
+			CinematicTrainShot.cpp
+			CinematicTrainShot.h
+		}
+	}
+	Directory animscene {
+		AnimSceneDirector.cpp
+		AnimSceneDirector.h
+	}
+	Directory base {
+		BaseCamera.cpp
+		BaseCamera.h
+		BaseDirector.cpp
+		BaseDirector.h
+		BaseObject.cpp
+		BaseObject.h
+	}
+	Directory cutscene {
+		AnimatedCamera.cpp
+		AnimatedCamera.h
+		CutsceneDirector.cpp
+		CutsceneDirector.h
+	}
+	Directory debug {
+		DebugDirector.cpp
+		DebugDirector.h
+		FreeCamera.cpp
+		FreeCamera.h
+		ShakeDebugger.cpp
+		ShakeDebugger.h
+	}
+	Directory gameplay {
+		Directory aim {
+			AimCamera.cpp
+			AimCamera.h
+			FirstPersonAimCamera.cpp
+			FirstPersonAimCamera.h
+			FirstPersonHeadTrackingAimCamera.cpp
+			FirstPersonHeadTrackingAimCamera.h
+			FirstPersonPedAimCamera.cpp
+			FirstPersonPedAimCamera.h
+			FirstPersonShooterCamera.cpp
+			FirstPersonShooterCamera.h
+			ThirdPersonAimCamera.cpp
+			ThirdPersonAimCamera.h
+			ThirdPersonPedAimCamera.cpp
+			ThirdPersonPedAimCamera.h
+			ThirdPersonPedAimInCoverCamera.cpp
+			ThirdPersonPedAimInCoverCamera.h
+			ThirdPersonPedAssistedAimCamera.cpp
+			ThirdPersonPedAssistedAimCamera.h
+			ThirdPersonPedMeleeAimCamera.cpp
+			ThirdPersonPedMeleeAimCamera.h
+			ThirdPersonVehicleAimCamera.cpp
+			ThirdPersonVehicleAimCamera.h
+		}
+		Directory follow {
+			FollowCamera.cpp
+			FollowCamera.h
+			FollowObjectCamera.cpp
+			FollowObjectCamera.h
+			FollowParachuteCamera.cpp
+			FollowParachuteCamera.h
+			FollowPedCamera.cpp
+			FollowPedCamera.h
+			FollowVehicleCamera.cpp
+			FollowVehicleCamera.h
+			TableGamesCamera.cpp
+			TableGamesCamera.h
+		}
+		GameplayDirector.cpp
+		GameplayDirector.h
+		ThirdPersonCamera.cpp
+		ThirdPersonCamera.h
+	}
+	Directory helpers {
+		Directory switch {
+			BaseSwitchHelper.cpp
+			BaseSwitchHelper.h
+			LongSwoopSwitchHelper.cpp
+			LongSwoopSwitchHelper.h
+			ShortRotationSwitchHelper.cpp
+			ShortRotationSwitchHelper.h
+			ShortTranslationSwitchHelper.cpp
+			ShortTranslationSwitchHelper.h
+			ShortZoomInOutSwitchHelper.cpp
+			ShortZoomInOutSwitchHelper.h
+			ShortZoomToHeadSwitchHelper.cpp
+			ShortZoomToHeadSwitchHelper.h
+		}
+		AnimatedFrameShaker.cpp
+		AnimatedFrameShaker.h
+		BaseFrameShaker.cpp
+		BaseFrameShaker.h
+		CatchUpHelper.cpp
+		CatchUpHelper.h
+		Collision.cpp
+		Collision.h
+		ControlHelper.cpp
+		ControlHelper.h
+		DampedSpring.cpp
+		DampedSpring.h
+		Envelope.cpp
+		Envelope.h
+		Frame.cpp
+		Frame.h
+		FrameInterpolator.cpp
+		FrameInterpolator.h
+		FramePropagator.cpp
+		FramePropagator.h
+		FrameShaker.cpp
+		FrameShaker.h
+		HandShaker.cpp
+		HandShaker.h
+		HintHelper.cpp
+		HintHelper.h
+		InconsistentBehaviourZoomHelper.cpp
+		InconsistentBehaviourZoomHelper.h
+		Interpolator.cpp
+		Interpolator.h
+		LookAheadHelper.cpp
+		LookAheadHelper.h
+		LookAtDampingHelper.cpp
+		LookAtDampingHelper.h
+		NearClipScanner.cpp
+		NearClipScanner.h
+		Oscillator.cpp
+		Oscillator.h
+		SplineNode.cpp
+		SplineNode.h
+		SpringMount.cpp
+		SpringMount.h
+		StickyAimHelper.cpp
+		StickyAimHelper.h
+		ThirdPersonFrameInterpolator.cpp
+		ThirdPersonFrameInterpolator.h
+	}
+	Directory marketing {
+		MarketingAToBCamera.cpp
+		MarketingAToBCamera.h
+		MarketingDirector.cpp
+		MarketingDirector.h
+		MarketingFreeCamera.cpp
+		MarketingFreeCamera.h
+		MarketingMountedCamera.cpp
+		MarketingMountedCamera.h
+		MarketingOrbitCamera.cpp
+		MarketingOrbitCamera.h
+		MarketingStickyCamera.cpp
+		MarketingStickyCamera.h
+	}
+	Directory replay {
+		ReplayBaseCamera.cpp
+		ReplayBaseCamera.h
+		ReplayDirector.cpp
+		ReplayDirector.h
+		ReplayRecordedCamera.cpp
+		ReplayRecordedCamera.h
+		ReplayFreeCamera.cpp
+		ReplayFreeCamera.h
+		ReplayPresetCamera.cpp
+		ReplayPresetCamera.h
+	}
+	Directory scripted {
+		BaseSplineCamera.cpp
+		BaseSplineCamera.h
+		CustomTimedSplineCamera.cpp
+		CustomTimedSplineCamera.h
+		RoundedSplineCamera.cpp
+		RoundedSplineCamera.h
+		ScriptDirector.cpp
+		ScriptDirector.h
+		ScriptedCamera.cpp
+		ScriptedCamera.h
+		ScriptedFlyCamera.cpp
+		ScriptedFlyCamera.h
+		SmoothedSplineCamera.cpp
+		SmoothedSplineCamera.h
+		TimedSplineCamera.cpp
+		TimedSplineCamera.h
+	}
+	
+	Directory syncedscene {
+		SyncedSceneDirector.cpp
+		SyncedSceneDirector.h
+	}
+			
+	Directory switch {
+		SwitchCamera.cpp
+		SwitchCamera.h
+		SwitchDirector.cpp
+		SwitchDirector.h
+	}
+	Directory system {
+		Directory debug {
+			CameraDebugInfo.cpp
+			CameraDebugInfo.h
+		}
+		CameraMetadata.cpp
+		CameraMetadata.h
+		CameraFactory.cpp
+		CameraFactory.h
+		CameraManager.cpp
+		CameraManager.h
+		Parse {
+			CameraMetadata
+		}
+
+	}
+	Directory viewports {
+		Viewport.cpp
+		Viewport.h
+		ViewportFader.cpp
+		ViewportFader.h
+		ViewportManager.cpp
+		ViewportManager.h
+	}
+	camera_channel.h
+	CamInterface.cpp
+	CamInterface.h
+}
+

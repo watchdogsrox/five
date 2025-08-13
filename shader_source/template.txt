@@ -1,0 +1,174 @@
+<File
+			RelativePath="..\..\..\core\shader_source\%name%"
+			>
+			<FileConfiguration
+				Name="Debug|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Debug|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Release|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Beta|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Beta|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="PreRelease|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="PreRelease|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Final|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="Final|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Debug|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Debug|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Beta|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Beta|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 PreRelease|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 PreRelease|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Release|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Release|Xbox 360"
+				>
+				<Tool
+					Name="FX"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Final|Win32"
+				>
+				<Tool
+					Name="FX"
+					generatetemplate="false"
+					Dependencies="%dep%"
+				/>
+			</FileConfiguration>
+			<FileConfiguration
+				Name="SN PS3 Final|Xbox 360"
+				>
+	<Tool
+		Name="FX"
+		Dependencies="%dep%"
+	/>
+	</FileConfiguration>
+</File>

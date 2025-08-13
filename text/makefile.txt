@@ -1,0 +1,21 @@
+Project text 
+
+Files {
+	chunk.h
+	GxtString.h
+	messages.cpp
+	messages.h
+	PagedText.cpp
+	PagedText.h
+	text.cpp
+	text.h
+	TextConversion.cpp
+	TextConversion.h
+	TextFile.cpp
+	TextFile.h
+	TextFormat.cpp
+	TextFormat.h
+	Parse {
+		dialogueCharacters
+	}
+}

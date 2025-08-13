@@ -1,0 +1,157 @@
+// File header
+#include "Weapons/WeaponEnums.h"
+
+// Rage headers
+#include "atl/hashstring.h"
+#include "string/stringhash.h"
+
+// Parser headers
+#include "WeaponEnums_parser.h"
+
+////////////////////////////////////////////////////////////////////////////////
+
+CompileTimeAssert(parser_eExplosionTag_Count==NUM_EEXPLOSIONTAG+1); // +1 is because the first enum value is -1 (EXP_TAG_DONTCARE)
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+eExplosionTag eExplosionTag_Parse(const char *str, const eExplosionTag defaultVal)
+{
+	const u32 strHash = atStringHash(str);
+	return eExplosionTag_Parse(strHash, defaultVal);
+}
+
+eExplosionTag eExplosionTag_Parse(atHashValue hashName, const eExplosionTag defaultVal)
+{
+	switch(hashName)
+	{
+	case 3812832039U: return EXP_TAG_DONTCARE;
+	case 2323771015U: return EXP_TAG_GRENADE;
+	case 1886816994U: return EXP_TAG_GRENADELAUNCHER;
+	case 7827170U:    return EXP_TAG_STICKYBOMB;
+	case 4033868522U: return EXP_TAG_MOLOTOV;
+	case 1848043031U: return EXP_TAG_ROCKET;
+	case 4160300742U: return EXP_TAG_TANKSHELL;
+	case 111157249U:  return EXP_TAG_HI_OCTANE;
+	case 2269051536U: return EXP_TAG_CAR;
+	case 519761071U:  return EXP_TAG_PLANE;
+	case 4190685720U: return EXP_TAG_PETROL_PUMP;
+	case 2962763715U: return EXP_TAG_BIKE;
+	case 2715601830U: return EXP_TAG_DIR_STEAM;
+	case 1756061235U: return EXP_TAG_DIR_FLAME;
+	case 534024042U:  return EXP_TAG_DIR_WATER_HYDRANT;
+	case 3530196472U: return EXP_TAG_DIR_GAS_CANISTER;
+	case 2026476578U: return EXP_TAG_BOAT;
+	case 2735531125U: return EXP_TAG_SHIP_DESTROY;
+	case 952441136U:  return EXP_TAG_TRUCK;
+	case 3238732005U: return EXP_TAG_BULLET;
+	case 2389658605U: return EXP_TAG_SMOKEGRENADELAUNCHER;	
+	case 4178601326U: return EXP_TAG_SMOKEGRENADE;
+	case 1773912634U: return EXP_TAG_BZGAS;
+	case 1579615220:  return EXP_TAG_FLARE;
+	case 3376861374U: return EXP_TAG_GAS_CANISTER;
+	case 2636366753U: return EXP_TAG_EXTINGUISHER;
+	case 1081849694U: return EXP_TAG_PROGRAMMABLEAR;
+	case 1841648908U: return EXP_TAG_TRAIN;
+	case 1092718256U: return EXP_TAG_BARREL;
+	case 1844544532U: return EXP_TAG_PROPANE;
+	case 2682527126U: return EXP_TAG_BLIMP;
+	case 4293226484U: return EXP_TAG_DIR_FLAME_EXPLODE;
+	case 799054450U:  return EXP_TAG_TANKER;
+	case 2469346959U: return EXP_TAG_PLANE_ROCKET;
+	case 1692079049U: return EXP_TAG_VEHICLE_BULLET;
+	case 3340218381U: return EXP_TAG_GAS_TANK;
+	case 2522456900U: return EXP_TAG_BIRD_CRAP;
+	case 2291950670U: return EXP_TAG_RAILGUN;
+	case 428486510U:  return EXP_TAG_BLIMP2;
+	case 1095209106U: return EXP_TAG_FIREWORK;
+	case 79956383U:   return EXP_TAG_SNOWBALL;
+	case 1526080082U: return EXP_TAG_PROXMINE;
+	case 3078660825U: return EXP_TAG_VALKYRIE_CANNON;
+	case 3513070405U: return EXP_TAG_AIR_DEFENCE;
+	case 2166604032U: return EXP_TAG_PIPEBOMB;
+	case 773270600U:  return EXP_TAG_VEHICLEMINE;
+	case 2509170632U: return EXP_TAG_EXPLOSIVEAMMO;
+	case 1648438185U: return EXP_TAG_APCSHELL;
+	case 2996540666U: return EXP_TAG_BOMB_CLUSTER;
+	case 3553220665U: return EXP_TAG_BOMB_GAS;
+	case 1703553843U: return EXP_TAG_BOMB_INCENDIARY;
+	case 15403557U:	  return EXP_TAG_BOMB_STANDARD;
+	case 2609962983U: return EXP_TAG_TORPEDO;
+	case 1311434948U: return EXP_TAG_TORPEDO_UNDERWATER;
+	case 3084158436U: return EXP_TAG_BOMBUSHKA_CANNON;
+	case 2411646660U: return EXP_TAG_BOMB_CLUSTER_SECONDARY;
+	case 2646835273U: return EXP_TAG_HUNTER_BARRAGE;
+	case 1082442432U: return EXP_TAG_HUNTER_CANNON;
+	case 2236184030U: return EXP_TAG_ROGUE_CANNON;
+	case 1718822469U: return EXP_TAG_MINE_UNDERWATER;
+	case 1398806336U: return EXP_TAG_ORBITAL_CANNON;
+	case 443492528U:  return EXP_TAG_BOMB_STANDARD_WIDE;
+	case 3292851040U: return EXP_TAG_EXPLOSIVEAMMO_SHOTGUN;
+	case 2382381768U: return EXP_TAG_OPPRESSOR2_CANNON;
+	case 2611474006U: return EXP_TAG_MORTAR_KINETIC;
+	case 3221559614U: return EXP_TAG_VEHICLEMINE_KINETIC;
+	case 2260733551U: return EXP_TAG_VEHICLEMINE_EMP;
+	case 3867661680U: return EXP_TAG_VEHICLEMINE_SPIKE;
+	case 1484422149U: return EXP_TAG_VEHICLEMINE_SLICK;
+	case 2019434853U: return EXP_TAG_VEHICLEMINE_TAR;
+	case 3525741410U: return EXP_TAG_SCRIPT_DRONE;
+	case 648564360U:  return EXP_TAG_RAYGUN;
+	case 2810574641U: return EXP_TAG_BURIEDMINE;
+	case 2850692033U: return EXP_TAG_SCRIPT_MISSILE;
+	case 1794110630U: return EXP_TAG_RCTANK_ROCKET;
+	case 1813113829U: return EXP_TAG_BOMB_WATER;
+	case 2397901253U: return EXP_TAG_BOMB_WATER_SECONDARY;
+	case 1154015781U: return EXP_TAG_MINE_CNCSPIKE;
+	case 1467459919U: return EXP_TAG_BZGAS_MK2;
+	case 97185819U:   return EXP_TAG_FLASHGRENADE;
+	case 1069734491U: return EXP_TAG_STUNGRENADE;
+	case 730741267U:  return EXP_TAG_CNC_KINETICRAM;
+	case 4230735204U: return EXP_TAG_SCRIPT_MISSILE_LARGE;
+	case 214341113U:  return EXP_TAG_SUBMARINE_BIG;
+	case 108414151U:  return EXP_TAG_EMPLAUNCHER_EMP;
+	default: return defaultVal;
+	}
+}
+
+const char ** eExplosionTag_GetStaticTagNames()
+{
+	return parser_eExplosionTag_Strings;
+}
+
+int eExplosionTag_GetTagNameCount()
+{
+	return parser_eExplosionTag_Count;
+}
+
+#if __BANK
+const char* GetWeaponEffectGroupName(eWeaponEffectGroup weaponEffectGroup)
+{
+	switch (weaponEffectGroup)
+	{
+	case WEAPON_EFFECT_GROUP_PUNCH_KICK: return "WEG_PUNCH_KICK";
+	case WEAPON_EFFECT_GROUP_MELEE_WOOD: return "WEG_MELEE_WOOD";
+	case WEAPON_EFFECT_GROUP_MELEE_METAL: return "WEG_MELEE_METAL";
+	case WEAPON_EFFECT_GROUP_MELEE_SHARP: return "WEG_MELEE_SHARP";
+	case WEAPON_EFFECT_GROUP_MELEE_GENERIC: return "WEG_MELEE_GENERIC";
+	case WEAPON_EFFECT_GROUP_PISTOL_SMALL: return "WEG_PISTOL_SMALL";
+	case WEAPON_EFFECT_GROUP_PISTOL_LARGE: return "WEG_PISTOL_LARGE";
+	case WEAPON_EFFECT_GROUP_PISTOL_SILENCED: return "WEG_PISTOL_SILENCED";
+	case WEAPON_EFFECT_GROUP_RUBBER: return "WEG_RUBBER";
+	case WEAPON_EFFECT_GROUP_SMG: return "WEG_SMG";
+	case WEAPON_EFFECT_GROUP_SHOTGUN: return "WEG_SHOTGUN";
+	case WEAPON_EFFECT_GROUP_RIFLE_ASSAULT: return "WEG_RIFLE_ASSAULT";
+	case WEAPON_EFFECT_GROUP_RIFLE_SNIPER: return "WEG_RIFLE_SNIPER";
+	case WEAPON_EFFECT_GROUP_ROCKET: return "WEG_ROCKET";
+	case WEAPON_EFFECT_GROUP_GRENADE: return "WEG_GRENADE";
+	case WEAPON_EFFECT_GROUP_MOLOTOV: return "WEG_MOLOTOV";
+	case WEAPON_EFFECT_GROUP_FIRE: return "WEG_FIRE";
+	case WEAPON_EFFECT_GROUP_EXPLOSION: return "WEG_EXPLOSION";
+	case WEAPON_EFFECT_GROUP_LASER: return "WEG_LASER";
+	case WEAPON_EFFECT_GROUP_STUNGUN: return "WEG_STUNGUN";
+	case WEAPON_EFFECT_GROUP_HEAVY_MG: return "WEG_HEAVY_MG";
+	case WEAPON_EFFECT_GROUP_VEHICLE_MG: return "WEG_VEHICLE_MG";
+	default: return "WEG_INVALID";
+	}
+}
+#endif

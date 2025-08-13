@@ -1,0 +1,13 @@
+//
+// vfx/decals/DecalProcessDrawablesNonSkinned.job
+//
+// Copyright (C) 2013-2013 Rockstar Games.  All Rights Reserved.
+//
+
+#define DECAL_MANAGER_ENABLE_PROCESSBOUND               0
+#define DECAL_MANAGER_ENABLE_PROCESSBREAKABLEGLASS      0
+#define DECAL_MANAGER_ENABLE_PROCESSDRAWABLESNONSKINNED 1
+#define DECAL_MANAGER_ENABLE_PROCESSDRAWABLESSKINNED    0
+#define DECAL_MANAGER_ENABLE_PROCESSSMASHGROUP          0
+
+#include "DecalProcessInstTask.h"

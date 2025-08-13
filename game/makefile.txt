@@ -1,0 +1,89 @@
+Project game 
+
+Files {
+	Directory dispatch {
+		DispatchData.cpp
+		DispatchData.h
+		DispatchEnums.h
+		DispatchHelpers.h
+		DispatchHelpers.cpp
+		DispatchManager.h
+		DispatchManager.cpp
+		DispatchServices.h
+		DispatchServices.cpp
+		Incidents.h
+		Incidents.cpp
+		IncidentManager.h
+		IncidentManager.cpp
+		OrderManager.h
+		OrderManager.cpp
+		Orders.h
+		Orders.cpp
+		RoadBlock.h
+		RoadBlock.cpp
+        Parse {
+            dispatchdata
+			DispatchHelpers
+			DispatchServices
+        }
+	}
+
+	Directory BackgroundScripts {
+		BackgroundScripts.cpp
+		BackgroundScripts.h
+		BackgroundScriptsDebug.cpp
+		BackgroundScriptsDebug.h
+	}
+	cheat.cpp
+	cheat.h
+	Clock.cpp
+	Clock.h
+	config.cpp
+	config.h
+	Crime.cpp
+	Crime.h
+	CrimeInformation.cpp
+	CrimeInformation.h
+	ScriptRouterContextEnums.cpp
+	ScriptRouterContextEnums.h
+	GameSituation.cpp
+	GameSituation.h
+	localisation.cpp
+	localisation.h
+	ModelIndices.cpp
+	ModelIndices.h
+	Performance.cpp
+	Performance.h
+	PopMultiplierAreas.cpp
+	PopMultiplierAreas.h
+	Riots.cpp
+	Riots.h
+	user.cpp
+	user.h
+	Wanted.cpp
+	Wanted.h
+	weather.cpp
+	weather.h
+	wind.cpp
+	wind.h
+	witness.cpp
+	witness.h
+	WitnessInformation.cpp
+	WitnessInformation.h
+	zones.cpp
+	zones.h
+	MapZones.cpp
+	MapZones.h
+	Parse {
+		config
+		CrimeInformation
+		ScriptRouterContextEnums
+		Riots
+		Wanted
+		witness
+		WitnessInformation
+    	weather
+    	MapZones
+	}
+}
+

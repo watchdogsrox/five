@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Durango">
+      <Configuration>Debug</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15CB33B3-2D7D-4B31-87A2-D06979B06AC5}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>batch\rsm_build_durango.bat</NMakeBuildCommandLine>
+    <NMakeOutput>shaders_durango.exe</NMakeOutput>
+    <NMakeCleanCommandLine>batch\rsm_clean_durango.bat</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>batch\rsm_rebuild_durango.bat</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>RSG_DURANGO; __SHADERMODEL=50;WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Durango'">
+    <NMakeBuildCommandLine>batch\rsm_build_durango.bat dev</NMakeBuildCommandLine>
+    <NMakeOutput>shaders_durango.exe</NMakeOutput>
+    <NMakeCleanCommandLine>batch\rsm_clean_durango.bat dev</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>batch\rsm_rebuild_durango.bat dev</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>RSG_DURANGO; __SHADERMODEL=50;WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- ADD SHADER FILES HERE -->
+    <None Include="..\Custom\blend_2lyr.fx" />
+    <None Include="..\Custom\damage_blits.fx" />
+    <None Include="..\Custom\distance_map.fx" />
+    <None Include="..\Custom\radar.fx" />
+    <None Include="..\Custom\Glass\glass.fx" />
+    <None Include="..\Custom\Glass\glass_breakable.fx" />
+    <None Include="..\Custom\Glass\glass_breakable_crack.fx" />
+    <None Include="..\Custom\Glass\glass_displacement.fx" />
+    <None Include="..\Custom\Glass\glass_emissive.fx" />
+    <None Include="..\Custom\Glass\glass_emissivenight.fx" />
+    <None Include="..\Custom\Glass\glass_env.fx" />
+    <None Include="..\Custom\Glass\glass_normal_spec_reflect.fx" />
+    <None Include="..\Custom\Glass\glass_reflect.fx" />
+    <None Include="..\Custom\Glass\glass_spec.fx" />
+    <None Include="..\Custom\Rope\rope_default.fx" />
+    <None Include="..\Custom\Wire\wire2.fx" />
+    <None Include="..\Custom\Cable\cable.fx" />
+    <None Include="..\Custom\Mirror\mirror_crack.fx" />
+    <None Include="..\Custom\Mirror\mirror_default.fx" />
+    <None Include="..\Debug\debug_cable.fx" />
+    <None Include="..\Debug\debug_DTQ.fx" />
+    <None Include="..\Debug\debug_mirror.fx" />
+    <None Include="..\Debug\debug_rendering.fx" />
+    <None Include="..\Debug\debug_shadows.fx" />
+    <None Include="..\Lighting\deferred_lighting.fx" />
+    <None Include="..\Lighting\Lights\spot.fx" />
+    <None Include="..\Lighting\Lights\point.fx" />
+    <None Include="..\Lighting\Lights\capsule.fx" />
+    <None Include="..\Lighting\Lights\directional.fx" />
+    <None Include="..\Lighting\deferred_volume.fx" />
+    <None Include="..\Lighting\tiled_lighting.fx" />
+    <None Include="..\lighting\Shadows\cascadeshadows.fx" />
+    <None Include="..\Lighting\Shadows\cascadeshadows_processing.fx" />
+    <None Include="..\Lighting\Shadows\cascadeshadows_rendering.fx" />
+    <None Include="..\Lighting\Shadows\shadowSmartBlit.fx" />
+    <None Include="..\Lighting\Shadows\shadowZ.fx" />
+    <None Include="..\Lighting\Shadows\shadowZDir.fx" />
+    <None Include="..\Megashader\cloth_default.fx" />
+    <None Include="..\Megashader\cloth_normal_spec.fx" />
+    <None Include="..\Megashader\cloth_spec_alpha.fx" />
+    <None Include="..\Megashader\cpv_only.fx" />
+    <None Include="..\Megashader\cubemap_reflect.fx" />
+    <None Include="..\Megashader\cutout_fence.fx" />
+    <None Include="..\Megashader\decal.fx" />
+    <None Include="..\Megashader\decal_amb_only.fx" />
+    <None Include="..\Megashader\decal_dirt.fx" />
+    <None Include="..\Megashader\decal_glue.fx" />
+    <None Include="..\Megashader\decal_normal_only.fx" />
+    <None Include="..\Megashader\decal_spec_only.fx" />
+    <None Include="..\Megashader\decal_tnt.fx" />
+    <None Include="..\Megashader\default.fx" />
+    <None Include="..\Megashader\default_spec.fx" />
+    <None Include="..\Megashader\default_tnt.fx" />
+    <None Include="..\Megashader\default_um.fx" />
+    <None Include="..\Megashader\emissive.fx" />
+    <None Include="..\Megashader\emissive_speclum.fx" />
+    <None Include="..\Megashader\emissive_tnt.fx" />
+    <None Include="..\Megashader\emissivenight.fx" />
+    <None Include="..\Megashader\emissivestrong.fx" />
+    <None Include="..\Megashader\minimap.fx" />
+    <None Include="..\Megashader\normal.fx" />
+    <None Include="..\Megashader\normal_cubemap_reflect.fx" />
+    <None Include="..\Megashader\normal_decal.fx" />
+    <None Include="..\Megashader\normal_decal_tnt.fx" />
+    <None Include="..\Megashader\normal_decal_pxm.fx" />
+    <None Include="..\Megashader\normal_pxm.fx" />
+    <None Include="..\Megashader\normal_tnt_pxm.fx" />
+    <None Include="..\Megashader\normal_reflect.fx" />
+    <None Include="..\Megashader\normal_reflect_alpha.fx" />
+    <None Include="..\Megashader\normal_reflect_decal.fx" />
+    <None Include="..\Megashader\normal_spec.fx" />
+    <None Include="..\Megashader\normal_spec_cubemap_reflect.fx" />
+    <None Include="..\Megashader\normal_spec_decal.fx" />
+    <None Include="..\Megashader\normal_spec_decal_tnt.fx" />
+    <None Include="..\Megashader\normal_spec_detail.fx" />
+    <None Include="..\Megashader\normal_spec_reflect.fx" />
+    <None Include="..\Megashader\normal_spec_reflect_decal.fx" />
+    <None Include="..\Megashader\normal_spec_reflect_emissive.fx" />
+    <None Include="..\Megashader\normal_spec_reflect_emissivenight.fx" />
+    <None Include="..\Megashader\normal_spec_tnt.fx" />
+    <None Include="..\Megashader\normal_spec_um.fx" />
+    <None Include="..\Megashader\normal_spec_wrinkle.fx" />
+    <None Include="..\Megashader\normal_tnt.fx" />
+    <None Include="..\Megashader\normal_um.fx" />
+    <None Include="..\Megashader\parallax.fx" />
+    <None Include="..\Megashader\parallax_specmap.fx" />
+    <None Include="..\Megashader\parallax_steep.fx" />
+    <None Include="..\Megashader\reflect.fx" />
+    <None Include="..\Megashader\reflect_decal.fx" />
+    <None Include="..\Megashader\retro.fx" />
+    <None Include="..\Megashader\spec.fx" />
+    <None Include="..\Megashader\spec_decal.fx" />
+    <None Include="..\Megashader\spec_reflect.fx" />
+    <None Include="..\Megashader\spec_reflect_decal.fx" />
+    <None Include="..\Megashader\spec_tnt.fx" />
+    <None Include="..\Megashader\weapon_normal_spec_tnt.fx" />
+    <None Include="..\Megashader\wire.fx" />
+    <None Include="..\Peds\ped.fx" />
+    <None Include="..\Peds\ped_alpha.fx" />
+    <None Include="..\Peds\ped_cloth.fx" />
+    <None Include="..\Peds\ped_decal.fx" />
+    <None Include="..\Peds\ped_decal_exp.fx" />
+    <None Include="..\Peds\ped_decal_nodiff.fx" />
+    <None Include="..\Peds\ped_default.fx" />
+    <None Include="..\Peds\ped_default_cloth.fx" />
+    <None Include="..\Peds\ped_default_enveff.fx" />
+    <None Include="..\Peds\ped_default_palette.fx" />
+    <None Include="..\Peds\ped_enveff.fx" />
+    <None Include="..\Peds\ped_fur.fx" />
+    <None Include="..\Peds\ped_hair_cutout_alpha.fx" />
+    <None Include="..\Peds\ped_hair_cutout_alpha_enveff.fx" />
+    <None Include="..\Peds\ped_hair_spiked.fx" />
+    <None Include="..\Peds\ped_hair_spiked_enveff.fx" />
+    <None Include="..\Peds\ped_palette.fx" />
+    <None Include="..\Peds\ped_stubble.fx" />
+    <None Include="..\Peds\ped_wrinkle.fx" />
+    <None Include="..\Peds\ped_wrinkle_cloth.fx" />
+    <None Include="..\Peds\ped_wrinkle_cs.fx" />
+    <None Include="..\PostFX\postfx.fx" />
+    <None Include="..\Sky\sky_system.fx" />
+    <None Include="..\Sky\Clouds\clouds_anim.fx" />
+    <None Include="..\Sky\Clouds\clouds_animsoft.fx" />
+    <None Include="..\Sky\Clouds\clouds_fast.fx" />
+    <None Include="..\Sky\Clouds\clouds_fog.fx" />
+    <None Include="..\Sky\Clouds\clouds_soft.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex_blend.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_2tex_blend_lod.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_cm.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_cm_tnt.fx" />
+    <None Include="..\Terrain\terrain_cb_4lyr_lod.fx" />
+    <None Include="..\Util\im.fx" />
+    <None Include="..\Util\scaleform_shaders.fx" />
+    <None Include="..\Vegetation\Grass\grass.fx" />
+    <None Include="..\Vegetation\Grass\grass_fur.fx" />
+    <None Include="..\Vegetation\Grass\grass_fur_lod.fx" />
+    <None Include="..\Vegetation\Grass\grass_fur_mask.fx" />
+    <None Include="..\Vegetation\Grass\grass_fur_tnt.fx" />
+    <None Include="..\Vegetation\Grass\grass_camera_aligned.fx" />
+    <None Include="..\Vegetation\Grass\grass_camera_facing.fx" />
+    <None Include="..\Vegetation\Trees\billboard_nobump.fx" />
+    <None Include="..\Vegetation\Trees\trees.fx" />
+    <None Include="..\Vegetation\Trees\trees_lod.fx" />
+    <None Include="..\Vegetation\Trees\trees_lod_tnt.fx" />
+    <None Include="..\Vegetation\Trees\trees_lod2.fx" />
+    <None Include="..\Vegetation\Trees\trees_lod2d.fx" />
+    <None Include="..\Vegetation\Trees\trees_normal.fx" />
+    <None Include="..\Vegetation\Trees\trees_normal_spec.fx" />
+    <None Include="..\Vegetation\Trees\trees_tnt.fx" />
+    <None Include="..\Vegetation\Trees\trees_normal_diffspec.fx" />
+    <None Include="..\Vegetation\Trees\trees_normal_diffspec_tnt.fx" />
+    <None Include="..\Vehicles\vehicle_badges.fx" />
+    <None Include="..\Vehicles\vehicle_basic.fx" />
+    <None Include="..\Vehicles\vehicle_blurredrotor.fx" />
+    <None Include="..\Vehicles\vehicle_decal.fx" />
+    <None Include="..\Vehicles\vehicle_detail.fx" />
+    <None Include="..\Vehicles\vehicle_detail2.fx" />
+    <None Include="..\Vehicles\vehicle_generic.fx" />
+    <None Include="..\Vehicles\vehicle_interior.fx" />
+    <None Include="..\Vehicles\vehicle_interior2.fx" />
+    <None Include="..\Vehicles\vehicle_licenseplate.fx" />
+    <None Include="..\Vehicles\vehicle_lightsemissive.fx" />
+    <None Include="..\Vehicles\vehicle_mesh.fx" />
+    <None Include="..\Vehicles\vehicle_mesh_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint1.fx" />
+    <None Include="..\Vehicles\vehicle_paint1_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint2.fx" />
+    <None Include="..\Vehicles\vehicle_paint2_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint3.fx" />
+    <None Include="..\Vehicles\vehicle_paint3_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint4.fx" />
+    <None Include="..\Vehicles\vehicle_paint4_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint5.fx" />
+    <None Include="..\Vehicles\vehicle_paint5_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_paint6.fx" />
+    <None Include="..\Vehicles\vehicle_paint6_enveff.fx" />
+    <None Include="..\Vehicles\vehicle_rims1.fx" />
+    <None Include="..\Vehicles\vehicle_rims2.fx" />
+    <None Include="..\Vehicles\vehicle_shuts.fx" />
+    <None Include="..\Vehicles\vehicle_tire.fx" />
+    <None Include="..\Vehicles\vehicle_track.fx" />
+    <None Include="..\Vehicles\vehicle_um.fx" />
+    <None Include="..\Vehicles\vehicle_vehglass.fx" />
+    <None Include="..\Vehicles\vehicle_vehglass_inner.fx" />
+    <None Include="..\VFX\golf_trail.fx" />
+    <None Include="..\VFX\ptfx_model.fx" />
+    <None Include="..\VFX\ptfx_sprite.fx" />
+    <None Include="..\VFX\ptfx_sprite_shadow.fx" />
+    <None Include="..\VFX\ptfx_trail.fx" />
+    <None Include="..\VFX\ptfx_trail_shadow.fx" />
+    <None Include="..\VFX\ptxgpu_render.fx" />
+    <None Include="..\VFX\ptxgpu_update.fx" />
+    <None Include="..\VFX\vfx_decal.fx" />
+    <None Include="..\VFX\vfx_decal_steep.fx" />
+    <None Include="..\VFX\vfx_decal_glass.fx" />
+    <None Include="..\VFX\vfx_decal_glass_steep.fx" />
+    <None Include="..\VFX\vfx_decal_rotate_towards_camera.fx" />
+    <None Include="..\VFX\vfx_decaldyn.fx" />
+    <None Include="..\VFX\vfx_decaldyn_steep.fx" />
+    <None Include="..\Water\water.fx" />
+    <None Include="..\Water\water_foam.fx" />
+    <None Include="..\Water\water_fountain.fx" />
+    <None Include="..\Water\water_river.fx" />
+    <None Include="..\Water\water_riverocean.fx" />
+    <None Include="..\Water\water_rivershallow.fx" />
+    <None Include="..\Water\water_shallow.fx" />
+    <None Include="..\Water\water_terrainfoam.fx" />
+    <None Include="..\Water\waterTex.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- ADD HEADER FILES HERE -->
+    <None Include="..\Custom\Glass\glass_breakable.fxh" />
+    <None Include="..\Debug\debug_overlay.fxh" />
+    <None Include="..\Debug\EntitySelect.fxh" />
+    <None Include="..\Lighting\forward_lighting.fxh" />
+    <None Include="..\Lighting\lighting.fxh" />
+    <None Include="..\Lighting\lighting_common.fxh" />
+    <None Include="..\lighting\Shadows\cascadeshadows.fxh" />
+    <None Include="..\Lighting\Shadows\cascadeshadows_common.fxh" />
+    <None Include="..\Lighting\Shadows\cascadeshadows_receiving.fxh" />
+    <None Include="..\Lighting\Shadows\cascadeshadows_sampling.fxh" />
+    <None Include="..\Lighting\Lights\dir.fxh" />
+    <None Include="..\Lighting\Lights\light_common.fxh" />
+    <None Include="..\Lighting\Lights\light_structs.fxh" />
+    <None Include="..\Lighting\Lights\point.fxh" />
+    <None Include="..\Lighting\Lights\spot.fxh" />
+    <None Include="..\Lighting\Lights\Deferred\light_techs_and_funcs.fxh" />
+    <None Include="..\Megashader\detail_map.fxh" />
+    <None Include="..\Megashader\megashader.fxh" />
+    <None Include="..\Megashader\megashader_deferredRS.fxh" />
+    <None Include="..\Megashader\Puddle.fxh" />
+    <None Include="..\Peds\ped_common.fxh" />
+    <None Include="..\PostFX\FXAA.fxh" />
+    <None Include="..\PostFX\SeeThroughFX.fxh" />
+    <None Include="..\PostFX\dofDiffusion.fxh" />
+    <None Include="..\Sky\Clouds\Clouds.fxh" />
+    <None Include="..\Terrain\terrain_cb_common.fxh" />
+    <None Include="..\Util\alternativecolorspaces.fxh" />
+    <None Include="..\Util\macros.fxh" />
+    <None Include="..\Util\shader_utils.fxh" />
+    <None Include="..\Util\skin.fxh" />
+    <None Include="..\Vegetation\Trees\billboard_shared.fxh" />
+    <None Include="..\Vegetation\Trees\trees_common.fxh" />
+    <None Include="..\Vehicles\vehicle_common.fxh" />
+    <None Include="..\Vehicles\vehicle_damage.fxh" />
+    <None Include="..\VFX\ptfx_common.fxh" />
+    <None Include="..\VFX\ptfx_sprite.fxh" />
+    <None Include="..\VFX\ptfx_trail.fxh" />
+    <None Include="..\VFX\ptxgpu_common.fxh" />
+    <None Include="..\VFX\vfx_decal.fxh" />
+    <None Include="..\VFX\vfx_decaldyn.fxh" />
+    <None Include="..\Water\water_common.fxh" />
+    <None Include="..\Water\water_river_common.fxh" />
+    <None Include="..\Water\water_river_wave.fxh" />
+    <None Include="..\common.fxh" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Lighting\AO\HDAO.fx" />
+    <FxCompile Include="..\Lighting\AO\HDAO2.fx" />
+    <FxCompile Include="..\Lighting\AO\HDAO2_MS.fx" />
+    <FxCompile Include="..\Lighting\AO\HDAO_MS.fx" />
+    <FxCompile Include="..\Lighting\AO\SSAO.fx" />
+    <FxCompile Include="..\Lighting\AO\SSAO_MS.fx" />
+    <FxCompile Include="..\Lighting\deferred_lightingMS.fx" />
+    <FxCompile Include="..\Lighting\Lights\capsuleMS.fx" />
+    <FxCompile Include="..\Lighting\Lights\directionalMS.fx" />
+    <FxCompile Include="..\Lighting\Lights\pointMS.fx" />
+    <FxCompile Include="..\Lighting\Lights\spotMS.fx" />
+    <FxCompile Include="..\Lighting\Shadows\cascadeshadows_processingMS.fx" />
+    <FxCompile Include="..\Lighting\Shadows\cascadeshadows_renderingMS.fx" />
+    <FxCompile Include="..\Lighting\tiled_lightingMS.fx" />
+    <FxCompile Include="..\PostFX\exposureGPU.fx" />
+    <FxCompile Include="..\PostFX\adaptiveDof.fx" />
+    <FxCompile Include="..\PostFX\dofCompute.fx" />
+    <FxCompile Include="..\PostFX\dofDiffusion.fx" />
+    <FxCompile Include="..\PostFX\postfxMS.fx" />
+    <FxCompile Include="..\Util\BlurCS_50.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\PostFX\FXAA3.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

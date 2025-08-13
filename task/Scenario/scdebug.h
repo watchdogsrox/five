@@ -1,0 +1,11 @@
+#ifndef SCENARIO_DEBUG_HEADER_H
+#define SCENARIO_DEBUG_HEADER_H
+
+#define SCENARIO_DEBUG (__BANK && !__XENON)
+#if SCENARIO_DEBUG
+#define SCENARIO_DEBUG_ONLY(...) __VA_ARGS__
+#else
+#define SCENARIO_DEBUG_ONLY(...)
+#endif
+
+#endif // SCENARIO_DEBUG_HEADER_H

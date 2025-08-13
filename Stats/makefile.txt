@@ -1,0 +1,23 @@
+Project Stats 
+
+Files {
+	StatsMgr.cpp
+	StatsMgr.h
+	StatsDataMgr.cpp
+	StatsDataMgr.h
+	StatsTypes.h
+	StatsTypes.cpp
+	StatsInterface.cpp
+	StatsInterface.h
+	StatsUtils.cpp
+	StatsUtils.h
+	StatsSavesMgr.cpp
+	StatsSavesMgr.h
+	stats_channel.h
+	MoneyInterface.cpp
+	MoneyInterface.h
+	Parse {
+		StatsMgr
+	}
+}
+

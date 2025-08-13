@@ -1,0 +1,18 @@
+
+/////////////////////////////////////////////////////////////////////////////////
+//
+// FILE :    recklessdriving.cpp
+// PURPOSE : Some code to detect the player driving recklessly.
+// AUTHOR :  Obbe.
+// CREATED : 2/8/06
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#ifndef _RECKLESSDRIVING_H_
+	#define _RECKLESSDRIVING_H_
+
+#include "peds/PlayerInfo.h"
+
+
+
+#endif

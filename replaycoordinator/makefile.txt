@@ -1,0 +1,44 @@
+Project replaycoordinator 
+
+Files 
+{
+	Directory Rendering
+	{
+		AncillaryReplayRenderer.cpp
+		AncillaryReplayRenderer.h
+		ReplayPostFxData.cpp
+		ReplayPostFxData.h
+		ReplayPostFxRegistry.cpp
+		ReplayPostFxRegistry.h
+        Parse {
+            ReplayPostFxRegistry
+        }
+	}
+	
+	Directory Storage
+	{
+		Clip.cpp
+		Clip.h
+		Montage.cpp
+		Montage.h
+		MontageMusicClip.cpp
+		MontageMusicClip.h
+		MontageText.cpp
+		MontageText.h
+	}
+	
+	replay_coordinator_channel.h
+	ReplayAudioTrackProvider.cpp
+	ReplayAudioTrackProvider.h
+	ReplayCoordinator.cpp
+	ReplayCoordinator.h
+	ReplayEditorParameters.cpp
+	ReplayEditorParameters.h
+	ReplayMetadata.cpp
+	ReplayMetadata.h
+	ReplayMontageGenerator.cpp
+	ReplayMontageGenerator.h
+	ReplayPlaybackController.cpp
+	ReplayPlaybackController.h
+}
+

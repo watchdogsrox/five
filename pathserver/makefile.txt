@@ -1,0 +1,37 @@
+Project pathserver 
+
+Files {
+	ExportCollision.cpp
+	ExportCollision.h
+	NavEdit.cpp
+	NavEdit.h	
+	NavGenParam.h
+	NavMeshGta.cpp
+	NavMeshGta.h
+	PathServer.cpp
+	PathServer.h
+	PathServer_Cover.cpp
+	PathServer_DataTypes.cpp
+	PathServer_DataTypes.h
+	PathServer_Debug.cpp
+	PathServer_Grid.cpp
+	PathServer_Hierarchical.cpp
+	PathServer_Immediate.cpp
+	PathServer_Objects.cpp
+	PathServer_PathMisc.cpp
+	PathServer_PathRequest.cpp
+	PathServer_PathSearch.cpp
+	PathServer_PathStringPull.cpp
+	PathServer_Ped.cpp
+	PathServer_Ped.h
+	PathServer_Store.cpp
+	PathServer_Store.h				
+	PathServerSPU.cpp
+	PathServerSPU.h
+	PathServerThread.cpp
+	PathServerThread.h
+	Custom {
+		PathServerSPU.job
+	}
+}
+

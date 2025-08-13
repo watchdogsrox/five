@@ -1,0 +1,8 @@
+#include "PedMoveBlendInVehicle.h"
+#include "Peds/Ped.h"
+#include "Peds/PedIntelligence.h"
+#include "Task/default/TaskPlayer.h"
+#include "Task/Vehicle/TaskCar.h"
+#include "Task/Vehicle/TaskInVehicle.h"
+#include "Vehicles/Metadata/VehicleSeatInfo.h"
+#include "debug/DebugScene.h"

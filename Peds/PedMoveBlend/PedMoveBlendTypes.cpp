@@ -1,0 +1,13 @@
+#include "Peds\PedMoveBlend\PedMoveBlendTypes.h"
+
+#include "Debug\Debug.h"
+#include "Peds\Ped.h"
+#include "Peds\PedMoveBlend\PedMoveBlendDoNothing.h"
+#include "Peds\PedMoveBlend\PedMoveBlendInVehicle.h"
+#include "Peds\PedMoveBlend\PedMoveBlendInWater.h"
+#include "Peds\PedMoveBlend\PedMoveBlendLowGravity.h"
+#include "Peds\PedMoveBlend\PedMoveBlendOnFoot.h"
+#include "Peds\PedMoveBlend\PedMoveBlendOnFootSimple.h"
+#include "Peds\PedMoveBlend\PedMoveBlendOnFootTest.h"
+#include "Peds\PedMoveBlend\PedMoveBlendOnSkis.h"
+#include "Peds\PedMoveBlend\PedMoveBlendRunAndGun.h"

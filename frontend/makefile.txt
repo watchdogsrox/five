@@ -1,0 +1,733 @@
+Project frontend 
+
+Files {
+    
+    Directory boot_flow {
+        BootupScreen.cpp
+        BootupScreen.h
+    }
+    
+	Directory career_builder {
+		
+		Directory items {
+			CareerBuilderCategory.cpp
+			CareerBuilderCategory.h
+			CareerBuilderDefs.h
+			CareerBuilderShoppingCartItem.cpp
+			CareerBuilderShoppingCartItem.h
+			CareerPillarItem.cpp
+			CareerPillarItem.h
+			CashBalance.cpp
+			CashBalance.h
+			ParallaxImage.cpp
+			ParallaxImage.h
+			uiCareerBuilderSupport.cpp
+			uiCareerBuilderSupport.h
+			SummaryButton.cpp
+			SummaryButton.h
+			SummaryCashTotals.cpp
+			SummaryCashTotals.h
+		}
+
+		Directory layout {
+			CarouselTabLayout.cpp
+			CarouselTabLayout.h
+			SummaryLayoutItem.cpp
+			SummaryLayoutItem.h
+			SummaryPageLayout.cpp
+			SummaryPageLayout.h
+		}  
+		
+		Directory messages {
+			uiCareerBuilderMessages.cpp
+			uiCareerBuilderMessages.h
+		}
+		
+		Directory pages {
+			CareerBuilderPage.cpp
+			CareerBuilderPage.h
+			CareerSelectionPage.cpp
+			CareerSelectionPage.h
+			
+			Parse {
+				CareerBuilderPage
+				CareerSelectionPage
+			}
+		}
+
+		Directory views {          
+			CareerSelectionPageView.cpp
+			CareerSelectionPageView.h
+			WindfallShopPageView.cpp
+            WindfallShopPageView.h		
+            
+            Parse {              
+				CareerSelectionPageView
+				WindfallShopPageView
+            }
+        }	
+	}
+	
+    Directory Input {
+		uiInputCommon.cpp
+		uiInputCommon.h
+        uiInputEnums.h
+    }
+    
+    Directory landing_page {
+        
+        Directory items {
+            LandingPageCloudDataCategory.cpp
+            LandingPageCloudDataCategory.h
+			NetworkErrorItem.cpp
+			NetworkErrorItem.h
+			NewsItem.cpp
+			NewsItem.h
+			StoryItem.cpp
+			StoryItem.h
+            
+            Parse {
+                LandingPageCloudDataCategory
+				NetworkErrorItem
+				NewsItem
+				StoryItem
+            }
+        }
+        
+        Directory layout {
+            
+            LandingOnlineLayout.cpp
+            LandingOnlineLayout.h
+            
+            Parse {
+                LandingOnlineLayout
+            }
+        }
+        
+        Directory Messages {
+            uiLandingPageMessages.cpp
+            uiLandingPageMessages.h
+            
+            Parse {
+                uiLandingPageMessages
+            }
+        }
+        
+        Directory pages {
+            FTUECompleteDecisionPage.cpp
+            FTUECompleteDecisionPage.h
+            GameSettingsPage.cpp
+            GameSettingsPage.h
+            HasCharacterToTransferDecisionPage.cpp
+            HasCharacterToTransferDecisionPage.h
+            SignedInDecisionPage.cpp
+            SignedInDecisionPage.h
+			SocialClubPage.cpp
+			SocialClubPage.h
+			StorePage.cpp
+			StorePage.h
+            StoryModeAvailableDecisionPage.cpp
+            StoryModeAvailableDecisionPage.h
+            WindfallRecievedDecisionPage.cpp
+            WindfallRecievedDecisionPage.h
+            
+            Parse {
+                FTUECompleteDecisionPage
+                GameSettingsPage
+                HasCharacterToTransferDecisionPage
+                SignedInDecisionPage
+				SocialClubPage
+				StorePage
+                StoryModeAvailableDecisionPage
+                WindfallRecievedDecisionPage
+            }
+        }
+        
+        Directory views {
+            LandingPageView.cpp
+            LandingPageView.h
+            PausePageView.cpp
+            PausePageView.h
+            SocialClubPageView.cpp
+            SocialClubPageView.h
+			StorePageView.cpp
+            StorePageView.h
+            
+            Parse {
+                LandingPageView
+                PausePageView
+				SocialClubPageView
+				StorePageView
+            }
+        }
+        
+        LandingPage.cpp
+        LandingPage.h
+        LandingPageArbiter.cpp
+        LandingPageArbiter.h
+        LandingPageConfig.h
+        LandingPageController.cpp
+        LandingPageController.h
+        LandingPageViewHost.cpp
+        LandingPageViewHost.h
+        LegacyLandingScreen.cpp
+        LegacyLandingScreen.h
+    }
+    
+    Directory page_deck {
+    
+        Directory items {
+            CardItem.cpp
+            CardItem.h
+            CardItemBase.cpp
+            CardItemBase.h
+            CloudCardItem.cpp
+            CloudCardItem.h
+            CloudCardNewsItem.cpp
+            CloudCardNewsItem.h
+            CloudDataCategory.cpp
+            CloudDataCategory.h
+            IItemStatsInterface.h
+            IItemStickerInterface.h
+            IItemTextureInterface.h
+			MultiCardItem.cpp
+			MultiCardItem.h
+			ParallaxCardItem.cpp
+			ParallaxCardItem.h
+            StaticDataCategory.cpp
+            StaticDataCategory.h
+            uiCloudSupport.cpp
+            uiCloudSupport.h
+            
+            Parse {
+                CardItem
+				CardItemBase
+                CloudDataCategory
+				MultiCardItem
+				ParallaxCardItem
+                StaticDataCategory
+            }
+        }
+        
+        Directory Layout {			
+            DynamicLayoutContext.cpp
+            DynamicLayoutContext.h
+            PageGrid.cpp
+            PageGrid.h
+            PageGridComplex.cpp
+            PageGridComplex.h
+            PageGridSimple.cpp
+            PageGridSimple.h
+            PageLayoutBase.cpp
+            PageLayoutBase.h
+            PageLayoutDecoratorItem.cpp
+            PageLayoutDecoratorItem.h
+            PageLayoutItem.cpp
+            PageLayoutItem.h
+            PageLayoutItemParams.cpp
+            PageLayoutItemParams.h		  
+
+            Parse {
+                PageGrid
+                PageGridComplex
+                PageGridSimple
+                PageLayoutBase
+            }
+        }
+        
+        Directory Messages {
+            uiPageDeckMessages.cpp
+            uiPageDeckMessages.h
+            
+            Parse {
+                uiPageDeckMessages
+            }
+        }
+        
+        Directory pages {
+			AccountPickerPage.cpp
+			AccountPickerPage.h
+			BigFeedDecisionPage.cpp
+			BigFeedDecisionPage.h
+			BigFeedPage.cpp
+			BigFeedPage.h
+			BinkPage.cpp
+			BinkPage.h
+            DecisionPageBase.cpp
+            DecisionPageBase.h
+            StaticDataPage.cpp
+            StaticDataPage.h
+            WarningScreenPage.cpp
+            WarningScreenPage.h
+            
+            Parse {
+				AccountPickerPage
+				BigFeedDecisionPage
+				BigFeedPage
+				BinkPage
+                DecisionPageBase
+                StaticDataPage
+                WarningScreenPage
+            }
+        }
+        
+        Directory views {
+			BigFeedView.cpp
+			BigFeedView.h
+			BinkPageView.cpp
+			BinkPageView.h
+            Carousel.cpp
+            Carousel.h
+            CarouselPageView.cpp
+            CarouselPageView.h
+            FeaturedImage.cpp
+            FeaturedImage.h
+            FeaturedItem.cpp
+            FeaturedItem.h
+            PageTitle.cpp
+            PageTitle.h
+            PillarPageView.cpp
+            PillarPageView.h
+			PipCounter.cpp
+			PipCounter.h
+            PopulatablePageView.cpp
+            PopulatablePageView.h
+            SimplePageView.cpp
+            SimplePageView.h
+            SingleLayoutView.cpp
+            SingleLayoutView.h		
+            TabbedPageView.cpp
+            TabbedPageView.h
+            TabController.cpp
+            TabController.h
+            Tooltip.cpp
+            Tooltip.h
+            
+            Parse {
+				BigFeedView
+				BinkPageView
+                CarouselPageView
+                PillarPageView
+                PopulatablePageView
+                SimplePageView
+                SingleLayoutView
+                TabbedPageView			
+            }
+        }
+        
+        IPageController.h
+        IPageItemCollection.h
+        IPageItemProvider.h
+        IPageMessageHandler.h
+        IPageViewHost.h
+        IPageView.h
+        PageBase.cpp
+        PageBase.h
+        PageItemBase.cpp
+        PageItemBase.h
+        PageItemCategoryBase.cpp
+        PageItemCategoryBase.h
+        PageProvider.cpp
+        PageProvider.h
+        PageViewBase.cpp
+        PageViewBase.h
+        PageViewHost.cpp
+        PageViewHost.h
+        uiEntrypointId.h
+        uiPageConfig.cpp
+        uiPageConfig.h
+        uiPageEnums.cpp
+        uiPageEnums.h
+        uiPageHotkey.cpp
+        uiPageHotkey.h
+        uiPageId.h
+        uiPageInfo.cpp
+        uiPageInfo.h
+        uiPageLink.cpp
+        uiPageLink.h
+        uiPageTransitioner.cpp
+        uiPageTransitioner.h
+        
+        Parse {
+            PageBase
+            PageItemBase
+            PageItemCategoryBase
+            PageProvider
+            PageViewBase
+            uiPageEnums
+            uiPageHotkey
+			uiPageInfo
+            uiPageLink
+        }
+    }
+    
+	Folder Menus {
+		ButtonEnum.h
+		CCrewMenu.cpp
+		CCrewMenu.h
+		CFriendsMenu.cpp
+		CFriendsMenu.h
+		CMapMenu.cpp
+		CMapMenu.h
+		CMenuBase.cpp
+		CMenuBase.h
+		ContextMenu.cpp
+		ContextMenu.h
+		CScriptMenu.cpp
+		CScriptMenu.h
+		ControllerLabelMgr.cpp
+		ControllerLabelMgr.h
+		CSettingsMenu.cpp
+		CSettingsMenu.h
+		DisplayCalibration.cpp
+		DisplayCalibration.h
+		PCGamepadCalibration.cpp
+		PCGamepadCalibration.h
+		FrontendStatsMgr.cpp
+		FrontendStatsMgr.h
+		GalleryMenu.h
+		GalleryMenu.cpp
+		InfoMenu.h
+		InfoMenu.cpp
+		KeyMappingMenu.cpp
+		KeyMappingMenu.h
+        LiveCountryMappings.h
+		PauseMenu.cpp
+		PauseMenu.h
+		PauseMenuData.h
+		PauseMenuData.cpp
+		PolicyMenu.cpp
+		PolicyMenu.h
+		ProfileSettings.cpp
+		ProfileSettings.h
+		ReportMenu.cpp
+		ReportMenu.h
+		ReportMenuData.cpp
+		ReportMenuData.h
+		ScaleformMenuHelper.cpp
+		ScaleformMenuHelper.h
+		SocialClubMenu.cpp
+		SocialClubMenu.h
+		StatsMenu.cpp
+		StatsMenu.h
+		UIContexts.cpp
+		UIContexts.h
+		UIMenuPed.cpp
+		UIMenuPed.h
+		UIPaginator.cpp
+		UIPaginator.h
+		VideoEditorPauseMenu.cpp
+		VideoEditorPauseMenu.h
+		
+		Parse {
+			PauseMenuData
+			PauseMenu
+			CMenuBase
+			ReportMenuData
+			MapZoomData
+		}
+
+	}
+	
+	Folder Hud {
+		BusySpinner.cpp
+		BusySpinner.h
+		Credits.cpp
+		Credits.h
+		GameStream.cpp
+		GameStream.h
+		GameStreamMgr.cpp
+		GameStreamMgr.h
+		GolfTrail.cpp
+		GolfTrail.h
+		NewHud.cpp
+		NewHud.h
+		HudTools.cpp
+		HudTools.h
+		hud_colour.cpp
+		hud_colour.h
+		MobilePhone.cpp
+		MobilePhone.h
+		MovieClipText.cpp
+		MovieClipText.h
+		MousePointer.cpp
+		MousePointer.h
+		MultiplayerChat.cpp
+		MultiplayerChat.h
+		MultiplayerGamerTagHud.cpp
+		MultiplayerGamerTagHud.h
+		MultiplayerGamerTagList.h
+		TextInputBox.cpp
+		TextInputBox.h
+		TimeWarper.cpp
+		TimeWarper.h
+		SimpleTimer.cpp
+		SimpleTimer.h
+		WarningScreen.cpp
+		WarningScreen.h
+        WarningScreenEnums.cpp
+		WarningScreenEnums.h
+		CSelectionWheel.cpp
+		CSelectionWheel.h
+		CRadioWheel.cpp
+		CRadioWheel.h
+		CWeaponWheel.cpp
+		CWeaponWheel.h
+		
+		UIReticule.cpp
+		UIReticule.h
+		UIWorldIcon.cpp
+		UIWorldIcon.h
+
+		Parse {
+			Credits
+            WarningScreenEnums
+		}
+
+	}
+	
+	Folder MiniMap {
+		MiniMap.cpp
+		MiniMap.h
+		MiniMapCommon.cpp
+		MiniMapCommon.h
+		MiniMapRenderThread.cpp
+		MiniMapRenderThread.h
+		MiniMapMenuComponent.cpp
+		MiniMapMenuComponent.h
+		MiniMapTunables.cpp
+		MiniMapTunables.h
+		Parse {
+			Metadata
+			MiniMapTunables
+		}
+	}
+
+	Directory Map {
+		BlipEnums.cpp
+		BlipEnums.h
+		Parse {
+			BlipEnums
+		}
+	}
+	
+	Folder HudMarkers {
+		HudMarkerManager.cpp
+		HudMarkerManager.h
+		HudMarkerRenderer.cpp
+		HudMarkerRenderer.h
+		HudMarkerTypes.h
+	}
+
+	Directory save_migration {
+
+		Directory items {
+			MigrateProfileItem.cpp
+			MigrateProfileItem.h
+			ReviewCharacterItem.cpp
+			ReviewCharacterItem.h
+			StoryModeSaveMigrationSaveGameItem.cpp
+			StoryModeSaveMigrationSaveGameItem.h
+		}
+
+		Directory pages {
+			HasAnyLocalSingleplayerSavesDecisionPage.cpp
+			HasAnyLocalSingleplayerSavesDecisionPage.h
+			HasAnyMigratableAccountsDecisionPage.cpp
+			HasAnyMigratableAccountsDecisionPage.h
+			HasAnyMigratableSingleplayerSavesDecisionPage.cpp
+			HasAnyMigratableSingleplayerSavesDecisionPage.h
+			HasPlayerReceivedWindfallDecisionPage.cpp
+			HasPlayerReceivedWindfallDecisionPage.h
+			SaveMigrationWaitingForProcessPages.cpp
+			SaveMigrationWaitingForProcessPages.h
+			SignedIntoSocialClubDecisionPage.cpp
+			SignedIntoSocialClubDecisionPage.h
+			VerifyDownloadedSaveDecisionPage.cpp
+			VerifyDownloadedSaveDecisionPage.h
+			WaitingForProcessPage.cpp
+			WaitingForProcessPage.h
+
+			Parse {
+				HasAnyLocalSingleplayerSavesDecisionPage
+				HasAnyMigratableAccountsDecisionPage
+				HasAnyMigratableSingleplayerSavesDecisionPage
+				HasPlayerReceivedWindfallDecisionPage
+				SaveMigrationWaitingForProcessPages
+				SignedIntoSocialClubDecisionPage
+				VerifyDownloadedSaveDecisionPage
+				WaitingForProcessPage
+			}
+		}
+
+		 Directory Messages {
+            uiMPMigrationMessages.cpp
+            uiMPMigrationMessages.h
+            
+            Parse {
+                uiMPMigrationMessages
+            }
+        }		
+
+		Directory views {
+			MigrateProfilePageView.cpp
+            MigrateProfilePageView.h		
+			ReviewCharacterPageView.cpp
+			ReviewCharacterPageView.h
+			StoryModeSaveMigrationView.cpp
+			StoryModeSaveMigrationView.h
+			WaitingForProcessView.cpp
+			WaitingForProcessView.h
+
+            Parse {
+				MigrateProfilePageView
+				ReviewCharacterPageView
+				StoryModeSaveMigrationView
+				WaitingForProcessView
+            }
+        }
+
+		SaveMigrationDefs.h
+	}
+	
+	Directory Store {
+		StoreAdvertScreen.cpp
+		StoreAdvertScreen.h
+		StoreMainScreen.cpp
+		StoreMainScreen.h
+		StoreScreenMgr.cpp
+		StoreScreenMgr.h
+		StoreTextureManager.cpp
+		StoreTextureManager.h
+		StoreUIChannel.h
+		PauseStoreMenu.cpp
+		PauseStoreMenu.h
+	}
+	Directory VideoEditor 
+	{
+		Directory Core
+		{
+			ImposedImageEntry.cpp
+			ImposedImageEntry.h
+			ImposedImageHandler.cpp
+			ImposedImageHandler.h
+			VideoEditorHelpers.cpp
+			VideoEditorHelpers.h
+			VideoEditorProject.cpp
+			VideoEditorProject.h
+			VideoEditorUtil.cpp
+			VideoEditorUtil.h
+			VideoProjectAudioTrackProvider.h
+			VideoProjectPlaybackController.cpp
+			VideoProjectPlaybackController.h
+		}
+		
+		Directory DataProviders
+		{
+			FileDataProvider.cpp
+			FileDataProvider.h
+			RawClipFileDataProvider.cpp
+			RawClipFileDataProvider.h
+			ThumbnailFileDataProvider.cpp
+			ThumbnailFileDataProvider.h
+			VideoFileDataEnumerator.cpp
+			VideoFileDataEnumerator.h
+			VideoFileDataProvider.cpp
+			VideoFileDataProvider.h
+			VideoProjectFileDataProvider.cpp
+			VideoProjectFileDataProvider.h
+		}
+		
+		Directory Debug
+		{
+			DebugVideoEditorScreen.cpp
+			DebugVideoEditorScreen.h
+			UiGadgetFileSelector.cpp
+			UiGadgetFileSelector.h
+			UiGadgetFileList.cpp
+			UiGadgetFileList.h
+			UiGadgetFullscreenOverlay.cpp
+			UiGadgetFullscreenOverlay.h
+			UiGadgetPlaybackControls.cpp
+			UiGadgetPlaybackControls.h
+			UiGadgetVideoEditorPane.cpp
+			UiGadgetVideoEditorPane.h
+		}
+		
+		Directory Views
+		{
+			FileViewFilter.cpp
+			FileViewFilter.h
+			RawClipFileView.cpp
+			RawClipFileView.h
+			ThumbnailFileView.cpp
+			ThumbnailFileView.h
+			VideoProjectFileView.cpp
+			VideoProjectFileView.h
+			VideoFileView.cpp
+			VideoFileView.h
+		}
+		
+		Directory ui
+		{	
+			Editor.cpp
+			Editor.h
+			Menu.cpp
+			Menu.h
+			Timeline.cpp
+			Timeline.h
+			Playback.cpp
+			Playback.h
+			InstructionalButtons.cpp
+			InstructionalButtons.h
+			TextTemplate.cpp
+			TextTemplate.h
+			ThumbnailManager.cpp
+			ThumbnailManager.h
+			WatermarkRenderer.cpp
+			WatermarkRenderer.h
+			
+			Parse
+			{
+				Menu
+				TextTemplate
+			}
+		}
+		
+		VideoEditorInterface.cpp
+		VideoEditorInterface.h
+	}
+	
+	Folder Replay 
+	{
+		
+		UIReplayScaleformController.cpp
+		UIReplayScaleformController.h
+	}
+	BinkDefs.h
+	
+	LanguageSelect.cpp
+	LanguageSelect.h
+	loadingscreens.cpp
+	loadingscreens.h
+	
+
+	ui_channel.h
+
+	
+	Directory Scaleform {
+		colour.cpp
+		colour.h
+		pauseMenuLUT.cpp
+		pauseMenuLUT.h
+		ScaleformMgr.cpp
+		ScaleformMgr.h
+		ScaleformStore.cpp
+		ScaleformStore.h
+		ScaleformDef.cpp
+		ScaleformDef.h
+		ScaleformComplexObjectMgr.cpp
+		ScaleformComplexObjectMgr.h
+	}
+
+}

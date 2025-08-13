@@ -1,0 +1,6 @@
+// Pathfind Node Search SPU
+// mkoulouris: 31/08/2012
+
+#define ENTRYPOINT PathfindNodeSearchSPU
+
+#include "PathfindNodeSearchJob.cpp"

@@ -1,0 +1,171 @@
+///////////////////////////////////////////////////////////////////////////////
+//  
+//	FILE: 	VfxInteriorInfo.h
+//	BY	: 	Mark Nicholson
+//	FOR	:	Rockstar North
+//	ON	:	01 June 2006
+//	WHAT:	
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#ifndef VFX_INTERIORINFO_H
+#define	VFX_INTERIORINFO_H
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  INCLUDES
+///////////////////////////////////////////////////////////////////////////////													
+
+// rage
+#include "atl/array.h"
+#include "atl/binmap.h"
+#include "atl/hashstring.h"
+#include "parser/macros.h"
+
+// game
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  CLASSES
+///////////////////////////////////////////////////////////////////////////////
+
+class CVfxRoomSetup
+{
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		atHashWithStringNotFinal GetInteriorInfoName() const {return m_interiorInfoName;}
+
+
+	private: //////////////////////////
+
+		// parser
+		PAR_SIMPLE_PARSABLE;
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+		atHashWithStringNotFinal m_interiorInfoName;
+
+};
+
+class CVfxInteriorSetup
+{
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		CVfxRoomSetup* GetRoomSetup(u32 roomHashName);
+
+		atHashWithStringNotFinal GetInteriorInfoName() const {return m_interiorInfoName;}
+
+
+	private: //////////////////////////
+
+		// parser
+		PAR_SIMPLE_PARSABLE;
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+		atHashWithStringNotFinal m_interiorInfoName;
+
+		atBinaryMap<CVfxRoomSetup*, atHashWithStringNotFinal> m_vfxRoomSetups;
+
+};
+
+class CVfxInteriorInfo
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		// smoke vfx
+		bool GetSmokePtFxEnabled() const {return m_smokePtFxEnabled;}
+		atHashWithStringNotFinal GetSmokePtFxName() const {return m_smokePtFxName;}
+		float GetSmokePtFxLevelOverride() const {return m_smokePtFxLevelOverride;}
+
+		// dust vfx
+		bool GetDustPtFxEnabled() const {return m_dustPtFxEnabled;}
+		atHashWithStringNotFinal GetDustPtFxName() const {return m_dustPtFxName;}
+		float GetDustPtFxEvo() const {return m_dustPtFxEvo;}
+
+
+	private: //////////////////////////
+
+		// parser
+		PAR_SIMPLE_PARSABLE;
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+		// smoke vfx
+		bool m_smokePtFxEnabled;
+		atHashWithStringNotFinal m_smokePtFxName;
+		float m_smokePtFxLevelOverride;
+
+		// dust
+		bool m_dustPtFxEnabled;
+		atHashWithStringNotFinal m_dustPtFxName;
+		float m_dustPtFxEvo;
+
+};
+
+class CVfxInteriorInfoMgr
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		void LoadData();
+		CVfxInteriorInfo* GetInfo(u32 interiorHashName, u32 roomHashName);
+	
+
+	private: //////////////////////////
+
+
+		// parser
+		PAR_SIMPLE_PARSABLE;
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+		atBinaryMap<CVfxInteriorSetup*, atHashWithStringNotFinal> m_vfxInteriorSetups;
+		atBinaryMap<CVfxInteriorInfo*, atHashWithStringNotFinal> m_vfxInteriorInfos;
+
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  EXTERNS
+///////////////////////////////////////////////////////////////////////////////
+
+extern	CVfxInteriorInfoMgr g_vfxInteriorInfoMgr;
+
+
+#endif // VFX_INTERIORINFO_H

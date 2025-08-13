@@ -1,0 +1,16 @@
+#include "math\amath.h"
+#include "math\angmath.h"
+
+#include "Peds\PedMoveBlend\PedMoveBlendInWater.h"
+#include "peds\ped.h"
+#include "peds\PedDebugVisualiser.h"
+#include "Peds\PedIntelligence.h"
+#include "peds\PedMoveBlend\PedMoveBlend.h"
+#include "peds/Ped.h"
+#include "physics/WorldProbe/worldprobe.h"
+#include "renderer\Water.h"
+#include "task\Weapons\Gun\TaskGun.h"
+#include "Task\Default\TaskPlayer.h"
+#include "vehicles/vehicle.h"
+#include "debug/DebugScene.h"
+

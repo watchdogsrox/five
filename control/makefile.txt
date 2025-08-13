@@ -1,0 +1,346 @@
+Project control 
+
+Files {
+	Directory replay {
+		
+		Directory Audio {			
+			AmbientAudioPacket.cpp
+			AmbientAudioPacket.h
+			BulletByAudioPacket.cpp
+			BulletByAudioPacket.h
+			CollisionAudioPacket.cpp
+			CollisionAudioPacket.h
+			CutSceneAudioPacket.cpp
+			CutSceneAudioPacket.h
+			DynamicMixerPacket.cpp
+			DynamicMixerPacket.h
+			ExplosionAudioPacket.cpp
+			ExplosionAudioPacket.h
+			FootStepPacket.cpp
+			FootStepPacket.h
+			MeleeAudioPacket.cpp
+			MeleeAudioPacket.h
+			ProjectileAudioPacket.cpp
+			ProjectileAudioPacket.h
+			ReplaySoundRecorder.cpp
+			ReplaySoundRecorder.h
+			SoundPacket.cpp
+			SoundPacket.h
+			ScriptAudioPacket.cpp
+			ScriptAudioPacket.h
+			SpeechAudioPacket.cpp
+			SpeechAudioPacket.h
+			WeaponAudioPacket.cpp
+			WeaponAudioPacket.h			
+		}
+
+		Directory Camera {
+			ReplayInterfaceCam.cpp
+			ReplayInterfaceCam.h
+		}
+
+		Directory Compression {
+			Quantization.h
+			Quantization.cpp
+		}
+
+		Directory Effects {
+			LightningFxPacket.cpp
+			LightningFxPacket.h
+			ParticleBloodFxPacket.cpp
+			ParticleBloodFxPacket.h
+			ParticleEntityFxPacket.cpp
+			ParticleEntityFxPacket.h
+			ParticleFireFxPacket.cpp
+			ParticleFireFxPacket.h
+			ParticleMarkFxPacket.cpp
+			ParticleMarkFxPacket.h
+			ParticleMaterialFxPacket.cpp
+			ParticleMaterialFxPacket.h
+			ParticleMiscFxPacket.cpp
+			ParticleMiscFxPacket.h
+			ParticlePacket.cpp
+			ParticlePacket.h
+			ParticlePedFxPacket.cpp
+			ParticlePedFxPacket.h
+			ParticleRippleFxPacket.cpp
+			ParticleRippleFxPacket.h
+			ParticleScriptedFxPacket.cpp
+			ParticleScriptedFxPacket.h
+			ParticleVehicleFxPacket.cpp
+			ParticleVehicleFxPacket.h
+			ParticleWaterFxPacket.cpp
+			ParticleWaterFxPacket.h
+			ParticleWeaponFxPacket.cpp
+			ParticleWeaponFxPacket.h
+			ProjectedTexturePacket.cpp
+			ProjectedTexturePacket.h
+		}
+
+		Directory Entity {
+			FragmentPacket.cpp
+			FragmentPacket.h
+			ObjectPacket.cpp
+			ObjectPacket.h
+			PickupPacket.cpp
+			PickupPacket.h
+			SmashablePacket.cpp
+			SmashablePacket.h
+			DestroyedMapObjectsPacket.cpp
+			DestroyedMapObjectsPacket.h
+		}
+
+		Directory Game {
+			ReplayInterfaceGame.cpp
+			ReplayInterfaceGame.h
+		}
+
+		Directory HttpUpload {
+			HttpUpload.cpp
+			HttpUpload.h
+		}
+
+		Directory Misc {
+			CameraPacket.cpp
+			CameraPacket.h
+			GlassPackets.cpp
+			GlassPackets.h
+			InterpPacket.cpp
+			InterpPacket.h
+			ReplayPacket.cpp
+			ReplayPacket.h
+			RopePacket.cpp
+			RopePacket.h
+			HidePacket.cpp
+			HidePacket.h
+			MoviePacket.cpp
+			MoviePacket.h
+			MovieTargetPacket.cpp
+			MovieTargetPacket.h
+			InteriorPacket.cpp
+			InteriorPacket.h
+			IPLPacket.cpp
+			IPLPacket.h
+			MeshSetPacket.cpp
+			MeshSetPacket.h
+			ReplayRayFirePacket.cpp
+			ReplayRayFirePacket.h
+			WaterPacket.cpp
+			WaterPacket.h
+			LightPacket.cpp
+			LightPacket.h
+			LinkedPacket.h
+			DeferredQuaternionBuffer.cpp
+			DeferredQuaternionBuffer.h
+			ClothPacket.cpp
+			ClothPacket.h
+		}
+
+		Directory Overlay {
+			ReplayOverlay.cpp
+			ReplayOverlay.h
+		}
+
+		Directory Ped {
+			BonedataMap.cpp
+			BonedataMap.h
+			PedPacket.cpp
+			PedPacket.h
+			PlayerPacket.cpp
+			PlayerPacket.h
+		}
+
+		Directory Preload {
+			ReplayAdvanceReader.cpp
+			ReplayAdvanceReader.h
+			ReplayPreloader.cpp
+			ReplayPreloader.h
+			ReplayPreplayer.cpp
+			ReplayPreplayer.h
+		}
+
+		Directory Vehicle {
+			VehicleAutomobilePacket.cpp
+			VehicleAutomobilePacket.h
+      VehicleAmphAutoPacket.cpp
+      VehicleAmphAutoPacket.h
+      VehicleAmphQuadPacket.cpp
+      VehicleAmphQuadPacket.h
+			VehicleBikePacket.cpp
+			VehicleBikePacket.h
+			VehicleBoatPacket.cpp
+			VehicleBoatPacket.h
+			VehicleHeliPacket.cpp
+			VehicleHeliPacket.h
+			VehiclePacket.cpp
+			VehiclePacket.h
+			VehiclePlanePacket.cpp
+			VehiclePlanePacket.h
+			VehicleTrailerPacket.cpp
+			VehicleTrailerPacket.h
+			VehicleTrainPacket.cpp
+			VehicleTrainPacket.h
+			VehicleSubPacket.cpp
+			VehicleSubPacket.h
+			WheelPacket.cpp
+			WheelPacket.h
+			ReplayWheelValues.cpp
+			ReplayWheelValues.h
+		}	
+
+		Directory Streaming {
+			ReplayStreaming.h
+			ReplayStreaming.cpp
+		}
+
+		Directory File {		
+			device_replay.h
+			device_replay.cpp
+			FileData.h
+			ReplayFileManager.h
+			ReplayFileManager.cpp
+			FileStorePC.h
+			FileStoreOrbis.h
+			FileStoreOrbis.cpp
+			FileStoreDurango.h
+			FileStoreDurango.winrt.cpp
+		}
+
+		IReplayMarkerStorage.h
+		IReplayPlaybackController.h
+		PacketBasics.cpp
+		PacketBasics.h
+		replay.cpp
+		replay.h
+		replay_channel.h
+		ReplayAttachmentManager.cpp
+		ReplayAttachmentManager.h
+		ReplayBufferMarker.h
+		ReplayBufferMarker.cpp
+		ReplayControl.cpp
+		ReplayControl.h
+		ReplayController.cpp
+		ReplayController.h
+		ReplayEnums.h
+		ReplayEventManager.cpp
+		ReplayEventManager.h
+		ReplayExtensions.cpp
+		ReplayExtensions.h
+		ReplayInterface.cpp
+		ReplayInterface.h
+		ReplayInterfaceImpl.h
+		ReplayInterfaceManager.cpp
+		ReplayInterfaceManager.h
+		ReplayInterfaceObj.cpp
+		ReplayInterfaceObj.h
+		ReplayInterfacePed.cpp
+		ReplayInterfacePed.h
+		ReplayInterfacePickup.cpp
+		ReplayInterfacePickup.h
+		ReplayInterfaceVeh.cpp
+		ReplayInterfaceVeh.h
+		ReplayInternal.cpp
+		ReplayInternal.h
+		ReplayInteriorManager.cpp
+		ReplayInteriorManager.h
+		ReplayMarkerContext.cpp
+		ReplayMarkerContext.h
+		ReplayMarkerInfo.h
+		ReplayMgrProxy.cpp
+		ReplayMgrProxy.h
+		ReplayModelManager.cpp
+		ReplayModelManager.h
+		ReplayPacketIDs.h
+    ReplayTrailController.cpp
+    ReplayTrailController.h
+		ReplayRecorder.h
+		ReplayRecording.cpp
+		ReplayRecording.h
+    ReplayRenderTargetHelper.cpp
+    ReplayRenderTargetHelper.h
+		ReplaySettings.h
+		ReplaySupportClasses.cpp
+		ReplaySupportClasses.h
+		ReplayTrackingController.h
+		ReplayTrackingControllerImpl.h
+		ReplayTrackingInfo.h
+		ReplayMovieController.cpp
+		ReplayMovieController.h
+    ReplayMovieControllerNew.cpp
+		ReplayMovieControllerNew.h
+		ReplayIPLManager.cpp
+		ReplayIPLManager.h
+		ReplayMeshSetManager.cpp
+		ReplayMeshSetManager.h
+		ReplayRayFireManager.cpp
+		ReplayRayFireManager.h
+		ReplayHideManager.cpp
+		ReplayHideManager.h
+		ReplayLightingManager.cpp
+		ReplayLightingManager.h
+	}
+
+	Directory videorecording {
+		VideoRecordingFrameBuffer.cpp
+		VideoRecordingFrameBuffer.h
+		videorecording.cpp
+		videorecording.h
+	}
+	Gen9ExclusiveAssets.cpp
+	Gen9ExclusiveAssets.h
+	Gen9ExclusiveAssetsDataPeds.cpp
+	Gen9ExclusiveAssetsDataPeds.h
+	Gen9ExclusiveAssetsDataVehicles.cpp
+	Gen9ExclusiveAssetsDataVehicles.h
+	gamelogic.cpp
+	gamelogic.h
+	garages.cpp
+	garages.h
+	GarageEditor.cpp
+	GarageEditor.h
+	gps.cpp
+	gps.h
+	leveldata.cpp
+	leveldata.h
+	onsctime.cpp
+	onsctime.h
+	WaypointRecording.cpp
+	WaypointRecording.h						
+	WaypointRecordingRoute.cpp
+	WaypointRecordingRoute.h
+	population.cpp
+	population.h
+	recklessdriving.cpp
+	recklessdriving.h
+	record.cpp
+	record.h
+	remote.cpp
+	remote.h
+	restart.cpp
+	restart.h
+	Route.cpp
+	Route.h
+	ScriptRouterContext.cpp
+	ScriptRouterContext.h
+	ScriptRouterLink.cpp
+	ScriptRouterLink.h
+	slownesszones.cpp
+	slownesszones.h
+	stuntjump.cpp
+	stuntjump.h
+	trafficlights.cpp
+	trafficlights.h
+	
+	Parse
+	{
+		Gen9ExclusiveAssetsDataPeds
+		Gen9ExclusiveAssetsDataVehicles
+		slownesszones
+		garages
+		leveldata
+	}	
+}
+
+
+
+

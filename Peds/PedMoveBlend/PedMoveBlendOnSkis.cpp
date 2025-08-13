@@ -1,0 +1,33 @@
+
+#include "phbound/boundcomposite.h"
+
+#include "ai/aichannel.h"
+#include "control/gamelogic.h"
+#include "Debug/debugscene.h"
+#include "Event/EventDamage.h"
+#include "fwanimation/clipsets.h"
+#include "grcore/debugdraw.h"
+#include "Game/ModelIndices.h"
+#include "modelinfo/PedModelInfo.h"
+#include "PedMoveBlendOnSkis.h"
+#include "Peds/Ped.h"
+#include "Peds/PedIntelligence.h"
+#include "Physics/GtaInst.h"
+#include "Physics/physics.h"
+#include "physics/WorldProbe/worldprobe.h"
+#include "scene/world/GameWorld.h"
+#include "Task/Default/TaskPlayer.h"
+#include "Task/Physics/TaskNM.h"
+#include "Task/Physics/TaskNMHighFall.h"
+#include "Task/System/TaskHelpers.h"
+#include "vehicles/vehicle.h"
+#include "Vfx/Systems/VfxGadget.h"
+#include "debug/DebugScene.h"
+
+#if __BANK
+#include "bank\bkmgr.h"
+#include "bank\bank.h"
+#include "bank\combo.h"
+#include "bank\slider.h"
+#include "peds/Ped.h"
+#endif

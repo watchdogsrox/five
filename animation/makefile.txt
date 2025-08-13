@@ -1,0 +1,122 @@
+Project animation 
+
+Files {
+	Directory debug {
+		AnimChecks.cpp
+		AnimChecks.h		
+		AnimDebug.cpp
+		AnimDebug.h
+		AnimPlacementTool.cpp
+		AnimPlacementTool.h
+		AnimViewer.cpp
+		AnimViewer.h
+		ClipEditor.cpp
+		ClipEditor.h
+		ClipTagMetadata.cpp
+		ClipTagMetadata.h
+		GestureEditor.cpp
+		GestureEditor.h
+		Parse {
+			ClipTagMetadata
+			}
+	}
+	Directory AnimScene {
+		AnimScene.cpp
+		AnimScene.h
+		AnimSceneDictionary.cpp
+		AnimSceneDictionary.h		
+		AnimSceneEntity.cpp
+		AnimSceneEntity.h
+		AnimSceneEntityIterator.h
+		AnimSceneEntityTypes.cpp
+		AnimSceneEntityTypes.h
+		AnimSceneEvent.cpp
+		AnimSceneEvent.h
+		AnimSceneEventIterator.h
+		AnimSceneFlags.cpp
+		AnimSceneFlags.h
+		AnimSceneHelpers.cpp
+		AnimSceneHelpers.h
+		AnimSceneManager.cpp
+		AnimSceneManager.h
+		AnimSceneStore.cpp
+		AnimSceneStore.h
+		AnimSceneEditor.cpp
+		AnimSceneEditor.h
+		AnimSceneScrollbar.cpp
+		AnimSceneScrollbar.h
+		Directory Events {
+			AnimSceneEventInitialisers.cpp
+			AnimSceneEventInitialisers.h
+			AnimSceneEvents.cpp
+			AnimSceneEvents.h
+			AnimScenePlayAnimEvent.cpp
+			AnimScenePlayAnimEvent.h
+			AnimScenePlayCameraAnimEvent.cpp
+			AnimScenePlayCameraAnimEvent.h
+			AnimScenePlayCameraAnimFlags.cpp
+			AnimScenePlayCameraAnimFlags.h
+			AnimSceneVfxEvents.cpp
+			AnimSceneVfxEvents.h
+			Parse {
+				AnimSceneEventInitialisers
+				AnimSceneEvents
+				AnimScenePlayAnimEvent
+				AnimScenePlayCameraAnimEvent
+				AnimScenePlayCameraAnimFlags
+				AnimSceneVfxEvents
+			}
+	}
+		Directory Entities {
+			AnimSceneEntities.cpp
+			AnimSceneEntities.h
+			AnimSceneEntityInitialisers.cpp
+			AnimSceneEntityInitialisers.h
+			Parse {
+				AnimSceneEntities
+				AnimSceneEntityInitialisers
+			}
+		}
+		Parse {
+			AnimScene
+			AnimSceneDictionary
+			AnimSceneEntity
+			AnimSceneEntityTypes
+			AnimSceneEvent
+			AnimSceneFlags
+			AnimSceneHelpers
+			}
+	}
+	anim_channel.h
+	AnimBones.cpp
+	AnimBones.h
+	AnimDefines.cpp
+	AnimDefines.h
+	AnimManager.cpp
+	AnimManager.h
+	ClipDictionaryStoreInterface.cpp
+	ClipDictionaryStoreInterface.h
+	CreatureMetadata.h
+	CreatureMetadata.cpp
+	FacialData.cpp
+	FacialData.h
+	GestureManager.cpp
+	GestureManager.h
+	Move.cpp
+	Move.h
+	MovePed.cpp
+	MovePed.h
+	MoveVehicle.cpp
+	MoveVehicle.h
+	MoveObject.cpp
+	MoveObject.h
+	Move_config.h
+	PMDictionaryStore.cpp
+	PMDictionaryStore.h
+	EventTags.cpp
+	EventTags.h
+	Parse {
+		CreatureMetadata			
+	}
+}
+

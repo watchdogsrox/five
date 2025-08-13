@@ -1,0 +1,37 @@
+//
+//	Custom PM version of BlitSPU processing job:
+//
+//	22/12/2008	-	Andrzej:	- initial;
+//	26/03/2009	-	Andrzej:	- Lightgrid added;
+//	30/03/2009	-	Andrzej:	- sharing code directly from BlitSPU.cpp;
+//
+//
+//
+#if __SPU
+
+static u8 buffer128[128] ALIGNED(128) = {0};	// handy general purpose scratch buffer
+
+#include "SSAOSPU.cpp"
+//
+//
+// main entry routine for custom pm SPU jobs:
+//
+void spuGtaProcess(void *infoPacketSource, unsigned int infoPacketSize)
+{	
+extern char _end[];
+
+	CSPUPostProcessDriverInfo *infoPacket = SSA0SPU_cr0(_end, infoPacketSource, infoPacketSize);
+
+#if 0
+	// Hard sync vram transfers so they get there before we patch jump-to-self.
+	dmaTransferRecord.hardSync();
+#endif
+
+	// Write and decrement gates, etc..
+	finalizeSpuGtaProcess(infoPacket, buffer128, 0x01);
+
+}// end of spuGtaProcess()...
+
+
+#endif //__SPU...
+

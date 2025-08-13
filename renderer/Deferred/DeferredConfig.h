@@ -1,0 +1,330 @@
+#ifndef DEFERRED_CONFIG_H_
+#define DEFERRED_CONFIG_H_
+
+#include "shader_source/Peds/ped_common_values.h"
+
+// =============================================================================================== //
+// DEFINES
+// =============================================================================================== //
+
+#define REFLECTION_CUBEMAP_SAMPLING			(0)
+#define MSAA_EDGE_PASS						(1 && RSG_PC && DEVICE_MSAA)
+#define MSAA_EDGE_PROCESS_FADING			(1 && MSAA_EDGE_PASS)
+
+#if MSAA_EDGE_PROCESS_FADING
+#define MSAA_EDGE_PROCESS_FADING_ONLY(...)	__VA_ARGS__
+#else
+#define MSAA_EDGE_PROCESS_FADING_ONLY(...)
+#endif
+
+// ----------------------------------------------------------------------------------------------- //
+
+// NOTE: Please keep this enumeration and comments in sync with DeferredGBuffer in lighting.fxh!
+enum GBufferRT
+{
+	GBUFFER_RT_0    = 0, // RGB = albedo, A = SSA
+	GBUFFER_RT_1    = 1, // RGB = normal, A = twiddle
+	GBUFFER_RT_2    = 2, // R = diffuse/specular mix, G = specular exponent,  B = fresnel, A = shadow
+	GBUFFER_RT_3    = 3, // R = natural ambient,      G = artificial ambient, B = emissive,  A = skin/reflection intensity
+	GBUFFER_DEPTH   = 4,
+#if __XENON || __D3D11 || RSG_ORBIS
+	GBUFFER_STENCIL = 5,
+#endif // __XENON
+#if DEVICE_EQAA
+	GBUFFER_FMASK_0	= 6,
+	GBUFFER_FMASK_1,
+	GBUFFER_FMASK_2,
+	GBUFFER_FMASK_3,
+#endif // DEVICE_EQAA
+	GBUFFER_RT_NUM
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+#define MAX_MULTIRENDER_RENDER_TARGETS	(4)
+#define NUM_TILES						(2)
+#define	DEG2RAD(x)						(1.74532925199e-2f*(x))
+
+// ----------------------------------------------------------------------------------------------- //
+
+#define SSA_USES_CONDITIONALRENDER		(__XENON||__PS3)
+
+// ----------------------------------------------------------------------------------------------- //
+
+#define DYNAMIC_GB (1 && DYNAMIC_ESRAM)
+
+// ----------------------------------------------------------------------------------------------- //
+
+#define SUPPORT_HQ_VOLUMETRIC_LIGHTS (RSG_PC) // Please keep this in sync with SUPPORT_HQ_VOLUMETRIC_LIGHTS in light_techs_and_funcs.fxh
+#if SUPPORT_HQ_VOLUMETRIC_LIGHTS
+	#define HQ_VOLUMETRIC_LIGHTS_ONLY(x)	x
+#else
+	#define HQ_VOLUMETRIC_LIGHTS_ONLY(x)
+#endif
+
+// ----------------------------------------------------------------------------------------------- //
+										
+enum eDeferredShaders
+{
+	DEFERRED_SHADER_LIGHTING = 0,
+	DEFERRED_SHADER_DIRECTIONAL,
+	DEFERRED_SHADER_SPOT,
+	DEFERRED_SHADER_POINT,
+	DEFERRED_SHADER_CAPSULE,
+	DEFERRED_SHADER_VOLUME,
+	DEFERRED_SHADER_TILED,
+	DEFERRED_SHADER_AMBIENT,
+	#if __BANK
+		DEFERRED_SHADER_DEBUG,
+	#endif
+	NUM_DEFERRD_SHADERS
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eDeferredShaderVars
+{
+	DEFERRED_SHADER_LIGHT_PARAMS = 0,
+	DEFERRED_SHADER_LIGHT_TEXTURE,
+	DEFERRED_SHADER_LIGHT_TEXTURE1,
+	DEFERRED_SHADER_LIGHT_TEXTURE2,
+	DEFERRED_SHADER_SCREENSIZE,
+	DEFERRED_SHADER_PROJECTION_PARAMS,									
+	DEFERRED_SHADER_PERSPECTIVESHEAR_PARAMS0,
+	DEFERRED_SHADER_PERSPECTIVESHEAR_PARAMS1,
+	DEFERRED_SHADER_PERSPECTIVESHEAR_PARAMS2,
+	DEFERRED_SHADER_LIGHT_VOLUME_PARAMS,
+	DEFERRED_SHADER_LOCAL_SHADOW_DATA,
+	NUM_DEFERRED_SHADER_VARS
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eDeferredShaderGlobalVars
+{
+	DEFERRED_SHADER_GBUFFER_0_GLOBAL = 0,
+	DEFERRED_SHADER_GBUFFER_1_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_2_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_3_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_DEPTH_GLOBAL,
+#if __XENON || __D3D11 || RSG_ORBIS
+	DEFERRED_SHADER_GBUFFER_STENCIL_GLOBAL,
+#endif
+#if DEVICE_EQAA
+	DEFERRED_SHADER_GBUFFER_0_FMASK_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_1_FMASK_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_2_FMASK_GLOBAL,
+	DEFERRED_SHADER_GBUFFER_3_FMASK_GLOBAL,
+#endif // DEVICE_EQAA
+	NUM_DEFERRED_SHADER_GLOBAL_VARS
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eDeferredTechnique
+{
+	DEFERRED_TECHNIQUE_SPOTCM = 0,
+	DEFERRED_TECHNIQUE_SPOTCM_VOLUME,
+	DEFERRED_TECHNIQUE_POINTCM,
+	DEFERRED_TECHNIQUE_POINTCM_VOLUME,
+	DEFERRED_TECHNIQUE_CAPSULE,
+	DEFERRED_TECHNIQUE_CAPSULE_VOLUME,
+	DEFERRED_TECHNIQUE_AMBIENT_VOLUME,
+	DEFERRED_TECHNIQUE_DIRECTIONAL,
+	DEFERRED_TECHNIQUE_TILED_DIRECTIONAL,
+	DEFERRED_TECHNIQUE_TILED_AMBIENT,
+	DEFERRED_TECHNIQUE_TILED_SHADOW,
+	DEFERRED_TECHNIQUE_SSS_SKIN,
+	DEFERRED_TECHNIQUE_PUDDLEPASS,
+	DEFERRED_TECHNIQUE_VOLUME_INTERLEAVE_RECONSTRUCTION, 
+	DEFERRED_TECHNIQUE_AMBIENT_LIGHT,
+	DEFERRED_TECHNIQUE_SNOW,
+	DEFERRED_TECHNIQUE_FOLIAGE_PREPROCESS,
+	DEFERRED_TECHNIQUE_NUM_TECHNIQUES
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eLightPass
+{
+	LIGHTPASS_STANDARD = 0,
+	LIGHTPASS_SHADOW, 
+	LIGHTPASS_SHADOW_INTERIOR,  
+	LIGHTPASS_SHADOW_EXTERIOR, 
+	LIGHTPASS_SHADOW_INTERIOR_FILLER,
+	LIGHTPASS_SHADOW_EXTERIOR_FILLER,
+	LIGHTPASS_SHADOW_FILLER, 
+	LIGHTPASS_FILLER, 
+	LIGHTPASS_INTERIOR, 
+	LIGHTPASS_EXTERIOR, 
+	LIGHTPASS_TEXTURE, 
+	LIGHTPASS_TEXTURE_INTERIOR, 
+	LIGHTPASS_TEXTURE_EXTERIOR, 
+	LIGHTPASS_SHADOW_TEXTURE, 
+	LIGHTPASS_SHADOW_TEXTURE_FILLER,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR, 
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_FILLER, 
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR, 
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_FILLER, 
+	LIGHTPASS_FILLER_INTERIOR, 
+	LIGHTPASS_FILLER_EXTERIOR, 
+	LIGHTPASS_FILLER_TEXTURE,
+	LIGHTPASS_FILLER_TEXTURE_INTERIOR,
+	LIGHTPASS_FILLER_TEXTURE_EXTERIOR,
+	LIGHTPASS_STENCIL_STANDARD,
+	LIGHTPASS_STENCIL_SHADOW,
+	LIGHTPASS_STENCIL_CULLPLANE,
+	LIGHTPASS_INSTANCED,
+	//soft shadows
+	LIGHTPASS_SHADOW_SOFT,
+	LIGHTPASS_SHADOW_INTERIOR_SOFT,
+	LIGHTPASS_SHADOW_EXTERIOR_SOFT,
+	LIGHTPASS_SHADOW_INTERIOR_FILLER_SOFT,
+	LIGHTPASS_SHADOW_EXTERIOR_FILLER_SOFT,
+	LIGHTPASS_SHADOW_FILLER_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_FILLER_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_FILLER_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_FILLER_SOFT,
+	//used only for spot lights
+	LIGHTPASS_STANDARD_CAUSTIC,
+	LIGHTPASS_SHADOW_CAUSTIC, 
+	LIGHTPASS_SHADOW_EXTERIOR_CAUSTIC, 
+	LIGHTPASS_SHADOW_EXTERIOR_FILLER_CAUSTIC,
+	LIGHTPASS_SHADOW_FILLER_CAUSTIC, 	
+	LIGHTPASS_FILLER_CAUSTIC, 
+	LIGHTPASS_EXTERIOR_CAUSTIC,
+	LIGHTPASS_TEXTURE_CAUSTIC, 
+	LIGHTPASS_TEXTURE_EXTERIOR_CAUSTIC, 
+	LIGHTPASS_SHADOW_TEXTURE_CAUSTIC, 
+	LIGHTPASS_SHADOW_TEXTURE_FILLER_CAUSTIC,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_CAUSTIC,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_FILLER_CAUSTIC,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_CAUSTIC,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_FILLER_CAUSTIC,
+	LIGHTPASS_FILLER_EXTERIOR_CAUSTIC, 
+	LIGHTPASS_FILLER_TEXTURE_CAUSTIC,
+	LIGHTPASS_FILLER_TEXTURE_EXTERIOR_CAUSTIC,	
+	LIGHTPASS_VEHICLE_TWIN_STANDARD,
+	LIGHTPASS_VEHICLE_TWIN_SHADOW,
+	LIGHTPASS_VEHICLE_TWIN_TEXTURE,
+	LIGHTPASS_VEHICLE_TWIN_SHADOW_TEXTURE,
+	//soft shadows - spots
+	LIGHTPASS_SHADOW_CAUSTIC_SOFT, 
+	LIGHTPASS_SHADOW_EXTERIOR_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_EXTERIOR_FILLER_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_FILLER_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_FILLER_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_EXTERIOR_FILLER_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_CAUSTIC_SOFT,
+	LIGHTPASS_SHADOW_TEXTURE_INTERIOR_FILLER_CAUSTIC_SOFT,
+	LIGHTPASS_VEHICLE_TWIN_SHADOW_SOFT,
+	LIGHTPASS_VEHICLE_TWIN_SHADOW_TEXTURE_SOFT,
+	LIGHTPASS_NUM_PASSES
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eLightVolumePass
+{
+	LIGHTVOLUMEPASS_STANDARD = 0,
+	LIGHTVOLUMEPASS_SHADOW,
+	LIGHTVOLUMEPASS_OUTSIDE,			// OUTSIDE means the camera is outside of the light volume
+	LIGHTVOLUMEPASS_OUTSIDE_SHADOW,		// and we are rendering front faces
+#if SUPPORT_HQ_VOLUMETRIC_LIGHTS
+	// HQ Volumetric enums must follow the LQ and be in the same order such that
+	// adding LIGHTVOLUMEPASS_STANDARD_HQ to any LQ enum gives you the HQ version.
+	LIGHTVOLUMEPASS_STANDARD_HQ,
+	LIGHTVOLUMEPASS_SHADOW_HQ,
+	LIGHTVOLUMEPASS_OUTSIDE_HQ,			
+	LIGHTVOLUMEPASS_OUTSIDE_SHADOW_HQ,
+#endif
+	LIGHTVOLUMEPASS_NUM_PASSES
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eLightVolumeInterleaveReconstructionPass
+{
+	LIGHTVOLUME_INTERLEAVE_RECONSTRUCTION_PASS_WEIGHTED = 0,
+	LIGHTVOLUME_INTERLEAVE_RECONSTRUCTION_PASS_UNWEIGHTED_ALPHA_CLIPPED,
+	LIGHTVOLUME_INTERLEAVE_RECONSTRUCTION_PASS_NUM_PASSES
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+enum eDirectionalPass
+{
+	DIRECTIONALPASS_STANDARD = 0,
+	DIRECTIONALPASS_AMBIENT,
+	DIRECTIONALPASS_UNDERWATER,
+	DIRECTIONALPASS_UNDERWATER_SURFACE,
+	DIRECTIONALPASS_UNDERWATER_STENCIL,
+	DIRECTIONALPASS_BACKLIT,
+	DIRECTIONALPASS_JUSTDIR,
+	DIRECTIONALPASS_SCATTER,
+#if __BANK
+	DIRECTIONALPASS_ORTHOGRAPHIC,
+#endif // __BANK
+	DIRECTIONALPASS_NUM_PASSES
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+#define DEFERRED_LIGHTING_DEFAULT_useGeomPassStencil (true)
+#define DEFERRED_LIGHTING_DEFAULT_useLightsHiStencil (false)
+#define DEFERRED_LIGHTING_DEFAULT_useSinglePassStencil (true)
+
+#define DEFERRED_LIGHTING_DEFAULT_skinPassParams Vector4(1.1f,0.8f,1.0f,2.4f)
+#define DEFERRED_LIGHTING_DEFAULT_dynamicBakeParams Vector4(0.3f, 1.0f, 0.0f, 0.0f)
+#define DEFERRED_LIGHTING_DEFAULT_edgeMarkParams Vector4(0.8f, 0.95f, 0.02f, 0.001f)
+
+#define DEFERRED_LIGHTING_DEFAULT_ReflectionBlurThreshold 64.0f
+
+// ----------------------------------------------------------------------------------------------- //
+
+#if __BANK
+#define DeferredLighting__m_useGeomPassStencil DebugDeferred::m_useGeomPassStencil
+#define DeferredLighting__m_useLightsHiStencil DebugDeferred::m_useLightsHiStencil
+#define DeferredLighting__m_useSinglePassStencil DebugDeferred::m_useSinglePassStencil
+#else
+#define DeferredLighting__m_useGeomPassStencil DEFERRED_LIGHTING_DEFAULT_useGeomPassStencil
+#define DeferredLighting__m_useLightsHiStencil DEFERRED_LIGHTING_DEFAULT_useLightsHiStencil
+#define DeferredLighting__m_useSinglePassStencil DEFERRED_LIGHTING_DEFAULT_useSinglePassStencil
+#endif
+
+// ----------------------------------------------------------------------------------------------- //
+// MSAA_EDGE_PASS stuff
+
+enum EdgeMode {
+	EM_IGNORE,
+	EM_EDGE0,
+	EM_EDGE1,
+	EM_FACE0,
+	EM_FACE1,
+	EM_TOTAL,
+};
+
+enum MultisampleMode {
+	MM_SINGLE,
+#if DEVICE_MSAA
+	MM_SUPER_SAMPLE,
+# if MSAA_EDGE_PASS
+	MM_TEXTURE_READS_ONLY,
+# endif
+#endif //DEVICE_MSAA
+	MM_TOTAL,
+#if DEVICE_MSAA
+	MM_DEFAULT = MM_SUPER_SAMPLE,
+#else
+	MM_DEFAULT = MM_SINGLE,
+#endif
+};
+
+// ----------------------------------------------------------------------------------------------- //
+
+#endif //DEFERRED_CONFIG_H_

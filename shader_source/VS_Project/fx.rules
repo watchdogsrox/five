@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="Rage FX compiler"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="FX"
+			DisplayName="FX"
+			CommandLine="$(RS_TOOLSROOT)\bin\RageShaderManager\RAGEShaderManager -config=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml -action=cleanbuild -noDependencies -shader=$(InputPath) -platform=[Platform] -platformConfig=[PlatformConfig] [AdditionalOptions]&#x0D;&#x0A;Rem IncrediBuild_OutputFileMask capture_mdata.*.*.xml&#x0D;&#x0A;Rem IncrediBuild_OutputFileMask *.cg.*.CAP&#x0D;&#x0A;Rem IncrediBuild_OutputFileMask *.*.CAP&#x0D;&#x0A;Rem IncrediBuild_OutputFileMask *.updb&#x0D;&#x0A;"
+			Outputs="$(OutDir)\[Platform][FolderSuffix]\$(InputName).[Ext]"
+			AdditionalDependencies="$(IntDir)dependency\$(InputName).d"
+			FileExtensions="*.fx"
+			ExecutionDescription="Compiling shader files"
+			>
+			<Properties>
+				<EnumProperty
+					Name="Ext"
+					DisplayName="Output File Extension"
+					Category="Platform"
+					>
+					<Values>
+						<EnumValue
+							Value="0"
+							Switch="fxc"
+							DisplayName="fxc"
+						/>
+						<EnumValue
+							Value="1"
+							Switch="cgx"
+							DisplayName="cgx"
+						/>
+						<EnumValue
+							Value="2"
+							Switch="fx"
+							DisplayName="fx"
+						/>
+					</Values>
+				</EnumProperty>
+				<EnumProperty
+					Name="Platform"
+					DisplayName="Platform"
+					Category="Platform"
+					>
+					<Values>
+						<EnumValue
+							Value="0"
+							Switch="win32_30"
+							DisplayName="Win32 3.0"
+						/>
+						<EnumValue
+							Value="1"
+							Switch="fxl_final"
+							DisplayName="Xbox 360"
+						/>
+						<EnumValue
+							Value="2"
+							Switch="psn"
+							DisplayName="PS3"
+						/>
+						<EnumValue
+							Value="4"
+							Switch="fx_max"
+							DisplayName="Tool"
+						/>
+						<EnumValue
+							Value="3"
+							Switch="win32_40"
+							DisplayName="Win32 4.0"
+						/>
+						<EnumValue
+							Value="5"
+							Switch="win32_50"
+							DisplayName="Win32 5.0"
+						/>
+						<EnumValue
+							Value="6"
+							Switch="psn_optimized"
+							DisplayName="PS3 Randomized"
+						/>
+						<EnumValue
+							Value="7"
+							Switch="fx_max_anonymized"
+							DisplayName="Max Thirdparty"
+						/>
+						<EnumValue
+							Value="8"
+							Switch="win32_nvstereo"
+							DisplayName="Win32 4.0 NvStereo"
+						/>
+						<EnumValue
+							Value="9"
+							Switch="orbis"
+							DisplayName="Orbis"
+						/>
+						<EnumValue
+							Value="10"
+							Switch="durango"
+							DisplayName="Durango"
+						/>
+						<EnumValue
+							Value="11"
+							Switch="win32_40_lq"
+							DisplayName="Win32 4.0 Law Quality"
+						/>
+					</Values>
+				</EnumProperty>
+				<EnumProperty
+					Name="PlatformConfig"
+					DisplayName="Platform Config"
+					Category="Platform"
+					>
+					<Values>
+						<EnumValue
+							Value="0"
+							Switch="dev"
+							DisplayName="Dev"
+						/>
+						<EnumValue
+							Value="1"
+							Switch="final"
+							DisplayName="Final"
+						/>
+					</Values>
+				</EnumProperty>
+				<StringProperty
+					Name="FolderSuffix"
+					DisplayName="Output Folder Suffix"
+					Category="Platform"
+					Switch="[value]"
+				/>
+				<BooleanProperty
+					Name="IncrediBuildAllowRemote"
+					DisplayName="IncrediBuildAllowRemote"
+					DefaultValue="true"
+				/>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

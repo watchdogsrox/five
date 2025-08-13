@@ -1,0 +1,44 @@
+Project Cutscene 
+
+Files {
+	cutscene_channel.h
+	AnimatedModelEntity.h
+	AnimatedModelEntity.cpp
+	CutSceneAnimation.cpp
+	CutSceneAnimation.h
+	CutSceneAnimManager.cpp
+	CutSceneAnimManager.h
+	CutSceneAssetManager.cpp
+	CutSceneAssetManager.h
+	CutSceneBoundsEntity.cpp
+	CutSceneBoundsEntity.h
+	CutSceneCameraEntity.cpp
+	CutSceneCameraEntity.h
+	CutSceneCustomEvents.h
+	CutSceneDebugManager.cpp
+	CutSceneDebugManager.h
+	CutSceneDefine.h
+	CutSceneFadeEntity.cpp
+	CutSceneFadeEntity.h
+	CutSceneLightObject.h
+	CutSceneLightObject.cpp
+	CutSceneLightEntity.cpp
+	CutSceneLightEntity.h
+	CutSceneManagerNew.cpp
+	CutSceneManagerNew.h
+	CutSceneOverlayEntity.h
+	CutSceneOverlayEntity.cpp
+	CutSceneParticleEffectObject.h
+	CutSceneParticleEffectObject.cpp
+	CutSceneParticleEffectEntity.cpp
+	CutSceneParticleEffectEntity.h
+	CutSceneSoundEntity.h
+	CutSceneSoundEntity.cpp
+	CutSceneStore.h
+	CutSceneStore.cpp
+	Parse {
+		CutsceneDebugMetadata
+		AuthorizedCutsceneMetadata
+	}	
+}
+

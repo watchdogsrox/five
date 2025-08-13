@@ -1,0 +1,9 @@
+Project PedGroup 
+
+Files {
+	formation.cpp
+	formation.h
+	PedGroup.cpp
+	PedGroup.h
+}
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AudioConfig>
+  <!-- If you add a new type that is an audioEntity, please add an entry here so that the Visualizer tool can display
+       the name of the entity -->
+  <EntityTypes>
+    <EntityType>audAmbientAudioEntity</EntityType>
+    <EntityType>audBoatAudioEntity</EntityType>
+    <EntityType>audCollisionAudioEntity</EntityType>
+    <EntityType>audCutsceneAudioEntity</EntityType>
+    <EntityType>audDoorAudioEntity</EntityType>
+    <EntityType>audEmitterAudioEntity</EntityType>
+    <EntityType>audExplosionAudioEntity</EntityType>
+    <EntityType>audFireAudioEntity</EntityType>
+    <EntityType>audFrontendAudioEntity</EntityType>
+    <EntityType>audGtaAudioEntity</EntityType>
+    <EntityType>rdrInteractiveMusicManager</EntityType>
+    <EntityType>audObjectAudioEntity</EntityType>
+    <EntityType>audPedAudioEntity</EntityType>
+    <EntityType>audPoliceScanner</EntityType>
+    <EntityType>audRadioAudioEntity</EntityType>
+    <EntityType>audScriptAudioEntity</EntityType>
+    <EntityType>audSmashableAudioEntity</EntityType>
+    <EntityType>audSpeechAudioEntity</EntityType>
+    <EntityType>audSpeechManager</EntityType>
+    <EntityType>audVehicleAudioEntity</EntityType>
+    <EntityType>audWeaponAudioEntity</EntityType>
+    <EntityType>audWeatherAudioEntity</EntityType>
+  </EntityTypes>
+</AudioConfig>

@@ -1,0 +1,14 @@
+// File header
+#include "Weapons/Gadgets/Gadget.h"
+
+// Macro to disable optimisations if set
+WEAPON_OPTIMISATIONS()
+
+//////////////////////////////////////////////////////////////////////////
+// CGadget
+//////////////////////////////////////////////////////////////////////////
+
+bool CGadget::Fire(const sFireParams& UNUSED_PARAM(params))
+{
+	return true;
+}

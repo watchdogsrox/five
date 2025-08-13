@@ -1,0 +1,1 @@
+call ..\spu_default_compile_flags.bat

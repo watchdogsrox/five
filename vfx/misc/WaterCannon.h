@@ -1,0 +1,195 @@
+///////////////////////////////////////////////////////////////////////////////
+//  
+//	FILE: 	WaterCannon.h
+//	BY	: 	Mark Nicholson (Based on Obbe's original code)
+//	FOR	:	Rockstar North
+//	ON	:	03 Jan 2007
+//	WHAT:	Water Cannon Control and Rendering 
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#ifndef WATERCANNON_H
+#define WATERCANNON_H
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  INCLUDES
+///////////////////////////////////////////////////////////////////////////////													
+
+// Rage headers
+#include "atl/string.h"
+#include "vectormath/classes.h"
+
+// Framework headers
+#include "fwutil/idgen.h"
+
+// Game headers
+#include "Renderer/HierarchyIds.h"
+#include "Scene/RegdRefTypes.h"
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  FORWARD DECLARATIONS
+///////////////////////////////////////////////////////////////////////////////	
+
+class CVehicle;
+class CPed;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  DEFINES
+///////////////////////////////////////////////////////////////////////////////													
+
+#define MAX_WATER_CANNONS		(16)
+#define NUM_CANNON_POINTS		(32)
+#define MAX_HIT_PEDS_CONTINUOUS	(5)
+#define MAX_HIT_VEHS_CONTINUOUS	(1)
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  ENUMS
+///////////////////////////////////////////////////////////////////////////////	
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  STRUCTURES
+///////////////////////////////////////////////////////////////////////////////	
+
+struct WaterPointInfo_s
+{
+	bool		isValid;
+	Vec3V		vPos;
+	Vec3V		vVel;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  CLASSES
+///////////////////////////////////////////////////////////////////////////////
+
+//  CWaterCannon  /////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////////////////
+
+class CWaterCannon
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		void				Init					(CVehicle* pVehicle, eHierarchyId iWeaponBone);
+		void				Update					(float deltaTime);
+		void				UpdateWaterJetCollision	();
+
+		void 				RegisterPointData		(Vec3V_In vPosition, Vec3V_In vVelocity);
+		void				ClearWaterCannonPoints	();
+
+
+	private: //////////////////////////
+
+ 		void 				ProcessHitPeds			();
+ 		void				ProcessHitVehicles		();
+		void				ProcessImpactEvents		();
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	public: //////////////////////////
+
+		fwUniqueObjId		m_id;	
+		bool				m_registeredThisFrame;
+		u32					m_lastTimeStamp;
+	
+		s32					m_currPoint;
+		WaterPointInfo_s	m_pointInfos			[NUM_CANNON_POINTS];
+
+		RegdVeh				m_regdVehicle;
+
+		eHierarchyId		m_iWeaponBone;
+
+	private:
+
+		s32					m_lastColnTime;
+		Vec3V				m_vColnPos;
+		Vec3V				m_vColnNormal;
+		Vec3V				m_vColnVel;
+		Vec3V				m_vColnDir;
+
+		static const atHashWithStringNotFinal ms_WaterCannonWeaponHash;
+
+
+}; // CWaterCannon
+
+
+//  CWaterCannons  ////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////////////////
+
+class CWaterCannons
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		void 				Init					(unsigned initMode);
+		void				Shutdown				(unsigned shutdownMode);
+
+		void 				Update					(float deltaTime);
+
+		void 				RegisterCannon			(CVehicle* pVehicle, fwUniqueObjId cannonId, Vec3V_In vPosition, Vec3V_In vVelocity, eHierarchyId iWeaponBone);
+
+		void				ClearAllWatercannonSprayInWorld();
+
+#if __BANK
+		void				InitWidgets			();
+#endif
+
+	private: //////////////////////////
+	
+		void 				PushPeds				();
+
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	public: //////////////////////////
+
+		CWaterCannon		m_waterCannons			[MAX_WATER_CANNONS];
+
+#if __BANK
+		bool				m_renderDebugPoints;
+		bool				m_renderDebugSegments;
+		bool				m_renderDebugCollisions;
+		bool				m_renderDebugHitVehicles;
+		bool				m_renderDebugHitPeds;
+		bool				m_renderDebugFires;
+		bool				m_disableJetFx;
+		bool				m_disableSprayFx;
+		bool				m_useConstDirection;
+#endif
+
+}; // CWaterCannons
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  EXTERNS
+///////////////////////////////////////////////////////////////////////////////
+
+extern	CWaterCannons		g_waterCannonMan;
+
+extern	dev_float			WATER_CANNON_SPRAY_DIST_EVO_THRESH_MIN;
+extern	dev_float			WATER_CANNON_SPRAY_DIST_EVO_THRESH_MAX;
+extern	dev_float			WATER_CANNON_SPRAY_ANGLE_EVO_THRESH_MIN;
+extern	dev_float			WATER_CANNON_SPRAY_ANGLE_EVO_THRESH_MAX;
+
+
+
+
+#endif // WATERCANNON_H

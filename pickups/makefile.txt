@@ -1,0 +1,31 @@
+Project pickups 
+
+Files {
+	Directory Data {
+		ActionData.h
+		ActionData.cpp
+		PickupData.h
+		PickupData.cpp
+		PickupDataManager.h
+		PickupDataManager.cpp
+		PickupIds.h
+		PickupIds.cpp
+		RewardData.h
+		RewardData.cpp
+		Parse {
+			PickupDataManager
+			ScriptedGlows
+		}
+	}
+	Pickup.cpp
+	Pickup.h
+	PickupActions.cpp
+	PickupActions.h
+	PickupManager.cpp
+	PickupManager.h
+	PickupPlacement.cpp
+	PickupPlacement.h
+	PickupRewards.cpp
+	PickupRewards.h
+}
+

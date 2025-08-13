@@ -1,0 +1,29 @@
+To localize the xlast file:
+
+1.  Make sure americanXLAST.txt is writable (i.e. check it out from AB).
+    Run strings.bat to extract the latest English strings from the xlast in to
+    americanXLAST.txt.
+    Check in americanXLAST.txt.
+
+2. Make sure the following files exist in gta\build\common\text\:
+
+americanXLAST_DE.txt
+americanXLAST_ES.txt
+americanXLAST_FR.txt
+americanXLAST_IT.txt
+
+3.  Make sure each of those files is in UTF-8 format.  It's likely that a
+    conversion will be necessary.
+
+4.  Check out gta\gta_bin\gta_xenon\xlast\Fuzzy.xlast (or otherwise make it writable).
+    This file should be in UTF-16LE format.
+
+5.  Make sure perl is installed and is in the executable path.
+
+6.  Run localize.bat.
+
+7.  Run "strings all" to normalize the formats of all the americanXLAST files.
+
+There should be no errors generated when running the scripts.  If errors occur
+it usually signifies a file format error (i.e. one of the source files is not in
+the expected format).

@@ -1,0 +1,1 @@
+-Wcomment -Wchar-subscripts -Wdeprecated-declarations -Wendif-labels -Wformat=2 -Wformat-extra-args -Wimplicit -Wimport -Wmissing-braces -Wparentheses -Wpointer-arith -Wredundant-decls -Wreturn-type -Wsign-compare -Wswitch -Wunknown-pragmas -Wunused -Wwrite-strings -O4 -g -fPIC -fno-zero-initialized-in-bss

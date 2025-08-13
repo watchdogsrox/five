@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="shaders_dependency_2008"
+	ProjectGUID="{BC287067-17A5-47C2-AF14-9A0416E6BFB7}"
+	RootNamespace="shaders_dependency_2008"
+	Keyword="MakeFileProj"
+	TargetFrameworkVersion="196613"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(ProjectDir)\build\dependency"
+			IntermediateDirectory="$(ProjectDir)\build\dependency"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig dev -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml"
+				ReBuildCommandLine=""
+				CleanCommandLine=""
+				Output=""
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(ProjectDir)\build\dependency"
+			IntermediateDirectory="$(ProjectDir)\build\dependency"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig final -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml"
+				ReBuildCommandLine=""
+				CleanCommandLine=""
+				Output=""
+				PreprocessorDefinitions="WIN32;NDEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="D3D SM 4.0 LQ|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="0"
+			>
+			<Tool
+				Name="VCNMakeTool"
+				BuildCommandLine="%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig dev -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml"
+				ReBuildCommandLine=""
+				CleanCommandLine=""
+				Output=""
+				PreprocessorDefinitions="WIN32;_DEBUG"
+				IncludeSearchPath=""
+				ForcedIncludes=""
+				AssemblySearchPath=""
+				ForcedUsingAssemblies=""
+				CompileAsManaged=""
+			/>
+		</Configuration>
+	</Configurations>
+	<References>
+	</References>
+	<Files>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

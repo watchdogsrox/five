@@ -1,0 +1,157 @@
+///////////////////////////////////////////////////////////////////////////////
+//  
+//	FILE: 	BrightLights.h
+//	BY	: 	Mark Nicholson (Adapted from original by Obbe)
+//	FOR	:	Rockstar North
+//	ON	:	01 Aug 2008
+//	WHAT:	
+//
+///////////////////////////////////////////////////////////////////////////////
+
+#ifndef BRIGHTLIGHTS_H
+#define	BRIGHTLIGHTS_H
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  INCLUDES
+///////////////////////////////////////////////////////////////////////////////													
+
+// rage
+#include "vector/color32.h"
+
+// game
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  FORWARD DECLARATIONS
+///////////////////////////////////////////////////////////////////////////////	
+
+namespace rage
+{
+	class grcTexture;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  DEFINES
+///////////////////////////////////////////////////////////////////////////////													
+
+#define	BRIGHTLIGHTS_MAX						(32)
+#define	BRIGHTLIGHTS_NUM_BUFFERS				(2)
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  ENUMS
+///////////////////////////////////////////////////////////////////////////////	
+
+enum BrightLightType_e
+{ 
+	BRIGHTLIGHTTYPE_INVALID						= -1,
+
+	BRIGHTLIGHTTYPE_VEH_TRAFFIC_GREEN			= 0,
+	BRIGHTLIGHTTYPE_VEH_TRAFFIC_AMBER, 
+	BRIGHTLIGHTTYPE_VEH_TRAFFIC_RED, 
+
+	BRIGHTLIGHTTYPE_PED_TRAFFIC_RED, 
+	BRIGHTLIGHTTYPE_PED_TRAFFIC_GREEN, 
+
+	BRIGHTLIGHTTYPE_RAILWAY_BARRIER_RED,
+	BRIGHTLIGHTTYPE_RAILWAY_TRAFFIC_RED,
+
+	BRIGHTLIGHTTYPE_MAX 
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  STRUCTURES
+///////////////////////////////////////////////////////////////////////////////
+
+typedef struct 
+{	
+	Vec3V				vPos;
+	Vec3V				vUp;
+	Vec3V				vRight;
+	Vec3V				vForward;
+	Color32				color;
+	BrightLightType_e	type;
+
+} BrightLight_t; 
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  CLASSES
+///////////////////////////////////////////////////////////////////////////////
+
+//  CBrightLights  ////////////////////////////////////////////////////////////
+//
+///////////////////////////////////////////////////////////////////////////////
+
+class CBrightLights
+{	
+	///////////////////////////////////
+	// FUNCTIONS 
+	///////////////////////////////////
+
+	public: ///////////////////////////
+
+		void				Init						(unsigned initMode);
+		void				Shutdown					(unsigned shutdownMode);
+
+		void				Render						();
+		void				UpdateAfterRender			();
+		void				Register					(BrightLightType_e type, Vec3V_In vPos, Vec3V_In vUp, Vec3V_In vRight, Vec3V_In vForward, const Vector3& lightColor, float coronaSize = 1.25f, float coronaIntensity = 1.0f, bool noDistCheck = false, float alphaValue = 0.0f);
+
+		// debug function
+#if __BANK
+		void				InitWidgets				();
+#endif
+	
+static	void				UpdateVisualDataSettings	();
+	private: //////////////////////////
+
+		// init and shutdown helper functions
+		void				LoadTextures				(s32 txdSlot);
+
+	///////////////////////////////////
+	// VARIABLES
+	///////////////////////////////////
+
+	private: //////////////////////////
+
+		BrightLight_t		m_brightLights				[BRIGHTLIGHTS_NUM_BUFFERS][BRIGHTLIGHTS_MAX];
+		s32					m_numBrightLights			[BRIGHTLIGHTS_NUM_BUFFERS];	
+
+		// texture variables
+		grcTexture*			m_pTexTrafficLightDiffuse;
+		grcTexture*			m_pTexRailwayLightDiffuse;
+
+		// Settings
+		float				m_distCulledFadeStartDistance;
+		float				m_distCulledFadeEndDistance;
+		float				m_notDistCulledFadeStartDistance;
+		float				m_notDistCulledFadeEndDistance;
+		float				m_globalIntensity;
+		float				m_railwayIntensity;
+		float				m_coronaZBias;
+
+#if __BANK
+		bool				m_disableRender;	
+#endif
+
+}; 
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//  EXTERNS
+///////////////////////////////////////////////////////////////////////////////
+
+extern	CBrightLights		g_brightLights;
+
+
+#endif // BRIGHTLIGHTS_H
+
+
+
+
+

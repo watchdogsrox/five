@@ -1,0 +1,840 @@
+<?xml version="1.0" ?>
+<Atlas>
+	<!--RULESET DEFINITION-->
+	<Ruleset gameName="gtavps3" version="1">
+	
+		<!--KEYS-->
+		<Key name="XLAST2C_VERSION_2_0" id="1" type="int" desc="NONE[Version of XLAST2C that generated Atlas XML]" />
+		<Key name="ARENA_FFA_PLACE" id="2" type="string" desc="NONE[ARENA_FFA_PLACE]" />
+		<Key name="KEY_rs_GamerHandle" id="3" type="string" desc="NONE[Gamer Handle]" />
+		<Key name="KEY_rs_GamerName" id="4" type="string" desc="NONE[Gamer Name]" />
+		<Key name="KEY_0000000a_EXISTS" id="5" type="byte" desc="Leaderboard_002[Exists]" />
+		<Key name="KEY_0000000a_20000005" id="6" type="int64" desc="Leaderboard_002[LB_COLUMN_01]" />
+		<Key name="KEY_0000000a_10000006" id="7" type="int" desc="Leaderboard_002[LB_COLUMN_02]" />
+		<Key name="KEY_0000000a_10000007" id="8" type="int" desc="Leaderboard_002[LB_COLUMN_03]" />
+		<Key name="KEY_0000000a_20000008" id="9" type="int64" desc="Leaderboard_002[LB_COLUMN_04]" />
+		<Key name="KEY_0000000a_20000009" id="10" type="int64" desc="Leaderboard_002[LB_COLUMN_05]" />
+		<Key name="KEY_0000000a_2000000a" id="11" type="int64" desc="Leaderboard_002[LB_COLUMN_06]" />
+		<Key name="KEY_0000000a_2000000b" id="12" type="int64" desc="Leaderboard_002[LB_COLUMN_07]" />
+		<Key name="KEY_0000000a_2000000c" id="13" type="int64" desc="Leaderboard_002[LB_COLUMN_08]" />
+		<Key name="KEY_0000000a_2000000d" id="14" type="int64" desc="Leaderboard_002[LB_COLUMN_09]" />
+		<Key name="KEY_0000000a_3000000e" id="15" type="float" desc="Leaderboard_002[LB_COLUMN_10]" />
+		<Key name="KEY_0000000a_3000000f" id="16" type="float" desc="Leaderboard_002[LB_COLUMN_11]" />
+		<Key name="KEY_0000000b_EXISTS" id="17" type="byte" desc="Leaderboard_003[Exists]" />
+		<Key name="KEY_0000000b_20000005" id="18" type="int64" desc="Leaderboard_003[LB_COLUMN_01]" />
+		<Key name="KEY_0000000b_10000006" id="19" type="int" desc="Leaderboard_003[LB_COLUMN_02]" />
+		<Key name="KEY_0000000b_10000007" id="20" type="int" desc="Leaderboard_003[LB_COLUMN_03]" />
+		<Key name="KEY_0000000b_20000008" id="21" type="int64" desc="Leaderboard_003[LB_COLUMN_04]" />
+		<Key name="KEY_0000000b_20000009" id="22" type="int64" desc="Leaderboard_003[LB_COLUMN_05]" />
+		<Key name="KEY_0000000b_2000000a" id="23" type="int64" desc="Leaderboard_003[LB_COLUMN_06]" />
+		<Key name="KEY_0000000b_2000000b" id="24" type="int64" desc="Leaderboard_003[LB_COLUMN_07]" />
+		<Key name="KEY_0000000b_2000000c" id="25" type="int64" desc="Leaderboard_003[LB_COLUMN_08]" />
+		<Key name="KEY_0000000b_2000000d" id="26" type="int64" desc="Leaderboard_003[LB_COLUMN_09]" />
+		<Key name="KEY_0000000b_3000000e" id="27" type="float" desc="Leaderboard_003[LB_COLUMN_10]" />
+		<Key name="KEY_0000000b_3000000f" id="28" type="float" desc="Leaderboard_003[LB_COLUMN_11]" />
+		<Key name="KEY_0000000c_EXISTS" id="29" type="byte" desc="Leaderboard_004[Exists]" />
+		<Key name="KEY_0000000c_20000005" id="30" type="int64" desc="Leaderboard_004[LB_COLUMN_01]" />
+		<Key name="KEY_0000000c_10000006" id="31" type="int" desc="Leaderboard_004[LB_COLUMN_02]" />
+		<Key name="KEY_0000000c_10000007" id="32" type="int" desc="Leaderboard_004[LB_COLUMN_03]" />
+		<Key name="KEY_0000000c_20000008" id="33" type="int64" desc="Leaderboard_004[LB_COLUMN_04]" />
+		<Key name="KEY_0000000c_20000009" id="34" type="int64" desc="Leaderboard_004[LB_COLUMN_05]" />
+		<Key name="KEY_0000000c_2000000a" id="35" type="int64" desc="Leaderboard_004[LB_COLUMN_06]" />
+		<Key name="KEY_0000000c_2000000b" id="36" type="int64" desc="Leaderboard_004[LB_COLUMN_07]" />
+		<Key name="KEY_0000000c_2000000c" id="37" type="int64" desc="Leaderboard_004[LB_COLUMN_08]" />
+		<Key name="KEY_0000000c_2000000d" id="38" type="int64" desc="Leaderboard_004[LB_COLUMN_09]" />
+		<Key name="KEY_0000000c_3000000e" id="39" type="float" desc="Leaderboard_004[LB_COLUMN_10]" />
+		<Key name="KEY_0000000c_3000000f" id="40" type="float" desc="Leaderboard_004[LB_COLUMN_11]" />
+		<Key name="KEY_0000000d_EXISTS" id="41" type="byte" desc="Leaderboard_005[Exists]" />
+		<Key name="KEY_0000000d_20000005" id="42" type="int64" desc="Leaderboard_005[LB_COLUMN_01]" />
+		<Key name="KEY_0000000d_10000006" id="43" type="int" desc="Leaderboard_005[LB_COLUMN_02]" />
+		<Key name="KEY_0000000d_10000007" id="44" type="int" desc="Leaderboard_005[LB_COLUMN_03]" />
+		<Key name="KEY_0000000d_20000008" id="45" type="int64" desc="Leaderboard_005[LB_COLUMN_04]" />
+		<Key name="KEY_0000000d_20000009" id="46" type="int64" desc="Leaderboard_005[LB_COLUMN_05]" />
+		<Key name="KEY_0000000d_2000000a" id="47" type="int64" desc="Leaderboard_005[LB_COLUMN_06]" />
+		<Key name="KEY_0000000d_2000000b" id="48" type="int64" desc="Leaderboard_005[LB_COLUMN_07]" />
+		<Key name="KEY_0000000d_2000000c" id="49" type="int64" desc="Leaderboard_005[LB_COLUMN_08]" />
+		<Key name="KEY_0000000d_2000000d" id="50" type="int64" desc="Leaderboard_005[LB_COLUMN_09]" />
+		<Key name="KEY_0000000d_3000000e" id="51" type="float" desc="Leaderboard_005[LB_COLUMN_10]" />
+		<Key name="KEY_0000000d_3000000f" id="52" type="float" desc="Leaderboard_005[LB_COLUMN_11]" />
+		<Key name="KEY_0000000e_EXISTS" id="53" type="byte" desc="Leaderboard_001[Exists]" />
+		<Key name="KEY_0000000e_20000005" id="54" type="int64" desc="Leaderboard_001[LB_COLUMN_01]" />
+		<Key name="KEY_0000000e_10000006" id="55" type="int" desc="Leaderboard_001[LB_COLUMN_02]" />
+		<Key name="KEY_0000000e_10000007" id="56" type="int" desc="Leaderboard_001[LB_COLUMN_03]" />
+		<Key name="KEY_0000000e_20000008" id="57" type="int64" desc="Leaderboard_001[LB_COLUMN_04]" />
+		<Key name="KEY_0000000e_20000009" id="58" type="int64" desc="Leaderboard_001[LB_COLUMN_05]" />
+		<Key name="KEY_0000000e_2000000a" id="59" type="int64" desc="Leaderboard_001[LB_COLUMN_06]" />
+		<Key name="KEY_0000000e_2000000b" id="60" type="int64" desc="Leaderboard_001[LB_COLUMN_07]" />
+		<Key name="KEY_0000000e_2000000c" id="61" type="int64" desc="Leaderboard_001[LB_COLUMN_08]" />
+		<Key name="KEY_0000000e_2000000d" id="62" type="int64" desc="Leaderboard_001[LB_COLUMN_09]" />
+		<Key name="KEY_0000000e_3000000e" id="63" type="float" desc="Leaderboard_001[LB_COLUMN_10]" />
+		<Key name="KEY_0000000e_3000000f" id="64" type="float" desc="Leaderboard_001[LB_COLUMN_11]" />
+		<Key name="KEY_ffff0003_EXISTS" id="65" type="byte" desc="SkillLeaderboard__GameMode_03Ranked[Exists]" />
+		<Key name="KEY_ffff0003_ELO_TEAM" id="66" type="byte" desc="SkillLeaderboard__GameMode_03Ranked[Elo Team]" />
+		<Key name="KEY_ffff0003_ELO_FFA" id="67" type="byte" desc="SkillLeaderboard__GameMode_03Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0003_EXISTS" id="68" type="byte" desc="SkillLeaderboard__GameMode_03Standard[Exists]" />
+		<Key name="KEY_fffe0003_ELO_TEAM" id="69" type="byte" desc="SkillLeaderboard__GameMode_03Standard[Elo Team]" />
+		<Key name="KEY_fffe0003_ELO_FFA" id="70" type="byte" desc="SkillLeaderboard__GameMode_03Standard[Elo FFA]" />
+		<Key name="KEY_ffff0000_EXISTS" id="71" type="byte" desc="SkillLeaderboard__GameMode_00Ranked[Exists]" />
+		<Key name="KEY_ffff0000_ELO_TEAM" id="72" type="byte" desc="SkillLeaderboard__GameMode_00Ranked[Elo Team]" />
+		<Key name="KEY_ffff0000_ELO_FFA" id="73" type="byte" desc="SkillLeaderboard__GameMode_00Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0000_EXISTS" id="74" type="byte" desc="SkillLeaderboard__GameMode_00Standard[Exists]" />
+		<Key name="KEY_fffe0000_ELO_TEAM" id="75" type="byte" desc="SkillLeaderboard__GameMode_00Standard[Elo Team]" />
+		<Key name="KEY_fffe0000_ELO_FFA" id="76" type="byte" desc="SkillLeaderboard__GameMode_00Standard[Elo FFA]" />
+		<Key name="KEY_ffff0004_EXISTS" id="77" type="byte" desc="SkillLeaderboard__GameMode_04Ranked[Exists]" />
+		<Key name="KEY_ffff0004_ELO_TEAM" id="78" type="byte" desc="SkillLeaderboard__GameMode_04Ranked[Elo Team]" />
+		<Key name="KEY_ffff0004_ELO_FFA" id="79" type="byte" desc="SkillLeaderboard__GameMode_04Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0004_EXISTS" id="80" type="byte" desc="SkillLeaderboard__GameMode_04Standard[Exists]" />
+		<Key name="KEY_fffe0004_ELO_TEAM" id="81" type="byte" desc="SkillLeaderboard__GameMode_04Standard[Elo Team]" />
+		<Key name="KEY_fffe0004_ELO_FFA" id="82" type="byte" desc="SkillLeaderboard__GameMode_04Standard[Elo FFA]" />
+		<Key name="KEY_ffff0001_EXISTS" id="83" type="byte" desc="SkillLeaderboard__GameMode_01Ranked[Exists]" />
+		<Key name="KEY_ffff0001_ELO_TEAM" id="84" type="byte" desc="SkillLeaderboard__GameMode_01Ranked[Elo Team]" />
+		<Key name="KEY_ffff0001_ELO_FFA" id="85" type="byte" desc="SkillLeaderboard__GameMode_01Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0001_EXISTS" id="86" type="byte" desc="SkillLeaderboard__GameMode_01Standard[Exists]" />
+		<Key name="KEY_fffe0001_ELO_TEAM" id="87" type="byte" desc="SkillLeaderboard__GameMode_01Standard[Elo Team]" />
+		<Key name="KEY_fffe0001_ELO_FFA" id="88" type="byte" desc="SkillLeaderboard__GameMode_01Standard[Elo FFA]" />
+		<Key name="KEY_ffff0005_EXISTS" id="89" type="byte" desc="SkillLeaderboard__GameMode_05Ranked[Exists]" />
+		<Key name="KEY_ffff0005_ELO_TEAM" id="90" type="byte" desc="SkillLeaderboard__GameMode_05Ranked[Elo Team]" />
+		<Key name="KEY_ffff0005_ELO_FFA" id="91" type="byte" desc="SkillLeaderboard__GameMode_05Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0005_EXISTS" id="92" type="byte" desc="SkillLeaderboard__GameMode_05Standard[Exists]" />
+		<Key name="KEY_fffe0005_ELO_TEAM" id="93" type="byte" desc="SkillLeaderboard__GameMode_05Standard[Elo Team]" />
+		<Key name="KEY_fffe0005_ELO_FFA" id="94" type="byte" desc="SkillLeaderboard__GameMode_05Standard[Elo FFA]" />
+		<Key name="KEY_ffff0002_EXISTS" id="95" type="byte" desc="SkillLeaderboard__GameMode_02Ranked[Exists]" />
+		<Key name="KEY_ffff0002_ELO_TEAM" id="96" type="byte" desc="SkillLeaderboard__GameMode_02Ranked[Elo Team]" />
+		<Key name="KEY_ffff0002_ELO_FFA" id="97" type="byte" desc="SkillLeaderboard__GameMode_02Ranked[Elo FFA]" />
+		<Key name="KEY_fffe0002_EXISTS" id="98" type="byte" desc="SkillLeaderboard__GameMode_02Standard[Exists]" />
+		<Key name="KEY_fffe0002_ELO_TEAM" id="99" type="byte" desc="SkillLeaderboard__GameMode_02Standard[Elo Team]" />
+		<Key name="KEY_fffe0002_ELO_FFA" id="100" type="byte" desc="SkillLeaderboard__GameMode_02Standard[Elo FFA]" />
+		
+		<!--STATS-->
+		<Stat name="NUM_GAMES_PLAYED_fffe0000" id="74" category="Player" type="int" desc="SkillLeaderboard__GameMode_00Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_fffe0001" id="86" category="Player" type="int" desc="SkillLeaderboard__GameMode_01Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_fffe0002" id="98" category="Player" type="int" desc="SkillLeaderboard__GameMode_02Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_fffe0003" id="68" category="Player" type="int" desc="SkillLeaderboard__GameMode_03Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_fffe0004" id="80" category="Player" type="int" desc="SkillLeaderboard__GameMode_04Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_fffe0005" id="92" category="Player" type="int" desc="SkillLeaderboard__GameMode_05Standard[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0000" id="71" category="Player" type="int" desc="SkillLeaderboard__GameMode_00Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0001" id="83" category="Player" type="int" desc="SkillLeaderboard__GameMode_01Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0002" id="95" category="Player" type="int" desc="SkillLeaderboard__GameMode_02Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0003" id="65" category="Player" type="int" desc="SkillLeaderboard__GameMode_03Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0004" id="77" category="Player" type="int" desc="SkillLeaderboard__GameMode_04Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="NUM_GAMES_PLAYED_ffff0005" id="89" category="Player" type="int" desc="SkillLeaderboard__GameMode_05Ranked[NUM_GAMES_PLAYED]" />
+		<Stat name="STAT_0000000a_00000002" id="5" category="Player" type="int" desc="Leaderboard_002[COLUMN_02]" />
+		<Stat name="STAT_0000000a_00000003" id="6" category="Player" type="int" desc="Leaderboard_002[COLUMN_03]" />
+		<Stat name="STAT_0000000a_00000004" id="7" category="Player" type="int64" desc="Leaderboard_002[COLUMN_04]" />
+		<Stat name="STAT_0000000a_00000005" id="8" category="Player" type="int64" desc="Leaderboard_002[COLUMN_05]" />
+		<Stat name="STAT_0000000a_00000006" id="9" category="Player" type="int64" desc="Leaderboard_002[COLUMN_06]" />
+		<Stat name="STAT_0000000a_00000007" id="10" category="Player" type="int64" desc="Leaderboard_002[COLUMN_07]" />
+		<Stat name="STAT_0000000a_00000008" id="11" category="Player" type="int64" desc="Leaderboard_002[COLUMN_08]" />
+		<Stat name="STAT_0000000a_00000009" id="12" category="Player" type="int64" desc="Leaderboard_002[COLUMN_09]" />
+		<Stat name="STAT_0000000a_0000000a" id="13" category="Player" type="float" desc="Leaderboard_002[COLUMN_010]" />
+		<Stat name="STAT_0000000a_0000000b" id="14" category="Player" type="float" desc="Leaderboard_002[COLUMN_011]" />
+		<Stat name="STAT_0000000a_0000fffe" id="4" category="Player" type="int64" desc="Leaderboard_002[COLUMN_01](RATING)" />
+		<Stat name="STAT_0000000a_EXISTS" id="3" category="Player" type="byte" desc="Leaderboard_002[Exists]" />
+		<Stat name="STAT_0000000b_00000002" id="17" category="Player" type="int" desc="Leaderboard_003[COLUMN_02]" />
+		<Stat name="STAT_0000000b_00000003" id="18" category="Player" type="int" desc="Leaderboard_003[COLUMN_03]" />
+		<Stat name="STAT_0000000b_00000004" id="19" category="Player" type="int64" desc="Leaderboard_003[COLUMN_04]" />
+		<Stat name="STAT_0000000b_00000005" id="20" category="Player" type="int64" desc="Leaderboard_003[COLUMN_05]" />
+		<Stat name="STAT_0000000b_00000006" id="21" category="Player" type="int64" desc="Leaderboard_003[COLUMN_06]" />
+		<Stat name="STAT_0000000b_00000007" id="22" category="Player" type="int64" desc="Leaderboard_003[COLUMN_07]" />
+		<Stat name="STAT_0000000b_00000008" id="23" category="Player" type="int64" desc="Leaderboard_003[COLUMN_08]" />
+		<Stat name="STAT_0000000b_00000009" id="24" category="Player" type="int64" desc="Leaderboard_003[COLUMN_09]" />
+		<Stat name="STAT_0000000b_0000000a" id="25" category="Player" type="float" desc="Leaderboard_003[COLUMN_010]" />
+		<Stat name="STAT_0000000b_0000000b" id="26" category="Player" type="float" desc="Leaderboard_003[COLUMN_011]" />
+		<Stat name="STAT_0000000b_0000fffe" id="16" category="Player" type="int64" desc="Leaderboard_003[COLUMN_01](RATING)" />
+		<Stat name="STAT_0000000b_EXISTS" id="15" category="Player" type="byte" desc="Leaderboard_003[Exists]" />
+		<Stat name="STAT_0000000c_00000002" id="29" category="Player" type="int" desc="Leaderboard_004[COLUMN_02]" />
+		<Stat name="STAT_0000000c_00000003" id="30" category="Player" type="int" desc="Leaderboard_004[COLUMN_03]" />
+		<Stat name="STAT_0000000c_00000004" id="31" category="Player" type="int64" desc="Leaderboard_004[COLUMN_04]" />
+		<Stat name="STAT_0000000c_00000005" id="32" category="Player" type="int64" desc="Leaderboard_004[COLUMN_05]" />
+		<Stat name="STAT_0000000c_00000006" id="33" category="Player" type="int64" desc="Leaderboard_004[COLUMN_06]" />
+		<Stat name="STAT_0000000c_00000007" id="34" category="Player" type="int64" desc="Leaderboard_004[COLUMN_07]" />
+		<Stat name="STAT_0000000c_00000008" id="35" category="Player" type="int64" desc="Leaderboard_004[COLUMN_08]" />
+		<Stat name="STAT_0000000c_00000009" id="36" category="Player" type="int64" desc="Leaderboard_004[COLUMN_09]" />
+		<Stat name="STAT_0000000c_0000000a" id="37" category="Player" type="float" desc="Leaderboard_004[COLUMN_010]" />
+		<Stat name="STAT_0000000c_0000000b" id="38" category="Player" type="float" desc="Leaderboard_004[COLUMN_011]" />
+		<Stat name="STAT_0000000c_0000fffe" id="28" category="Player" type="int64" desc="Leaderboard_004[COLUMN_01](RATING)" />
+		<Stat name="STAT_0000000c_EXISTS" id="27" category="Player" type="byte" desc="Leaderboard_004[Exists]" />
+		<Stat name="STAT_0000000d_00000002" id="41" category="Player" type="int" desc="Leaderboard_005[COLUMN_02]" />
+		<Stat name="STAT_0000000d_00000003" id="42" category="Player" type="int" desc="Leaderboard_005[COLUMN_03]" />
+		<Stat name="STAT_0000000d_00000004" id="43" category="Player" type="int64" desc="Leaderboard_005[COLUMN_04]" />
+		<Stat name="STAT_0000000d_00000005" id="44" category="Player" type="int64" desc="Leaderboard_005[COLUMN_05]" />
+		<Stat name="STAT_0000000d_00000006" id="45" category="Player" type="int64" desc="Leaderboard_005[COLUMN_06]" />
+		<Stat name="STAT_0000000d_00000007" id="46" category="Player" type="int64" desc="Leaderboard_005[COLUMN_07]" />
+		<Stat name="STAT_0000000d_00000008" id="47" category="Player" type="int64" desc="Leaderboard_005[COLUMN_08]" />
+		<Stat name="STAT_0000000d_00000009" id="48" category="Player" type="int64" desc="Leaderboard_005[COLUMN_09]" />
+		<Stat name="STAT_0000000d_0000000a" id="49" category="Player" type="float" desc="Leaderboard_005[COLUMN_010]" />
+		<Stat name="STAT_0000000d_0000000b" id="50" category="Player" type="float" desc="Leaderboard_005[COLUMN_011]" />
+		<Stat name="STAT_0000000d_0000fffe" id="40" category="Player" type="int64" desc="Leaderboard_005[COLUMN_01](RATING)" />
+		<Stat name="STAT_0000000d_EXISTS" id="39" category="Player" type="byte" desc="Leaderboard_005[Exists]" />
+		<Stat name="STAT_0000000e_00000002" id="53" category="Player" type="int" desc="Leaderboard_001[COLUMN_02]" />
+		<Stat name="STAT_0000000e_00000003" id="54" category="Player" type="int" desc="Leaderboard_001[COLUMN_03]" />
+		<Stat name="STAT_0000000e_00000004" id="55" category="Player" type="int64" desc="Leaderboard_001[COLUMN_04]" />
+		<Stat name="STAT_0000000e_00000005" id="56" category="Player" type="int64" desc="Leaderboard_001[COLUMN_05]" />
+		<Stat name="STAT_0000000e_00000006" id="57" category="Player" type="int64" desc="Leaderboard_001[COLUMN_06]" />
+		<Stat name="STAT_0000000e_00000007" id="58" category="Player" type="int64" desc="Leaderboard_001[COLUMN_07]" />
+		<Stat name="STAT_0000000e_00000008" id="59" category="Player" type="int64" desc="Leaderboard_001[COLUMN_08]" />
+		<Stat name="STAT_0000000e_00000009" id="60" category="Player" type="int64" desc="Leaderboard_001[COLUMN_09]" />
+		<Stat name="STAT_0000000e_0000000a" id="61" category="Player" type="float" desc="Leaderboard_001[COLUMN_010]" />
+		<Stat name="STAT_0000000e_0000000b" id="62" category="Player" type="float" desc="Leaderboard_001[COLUMN_011]" />
+		<Stat name="STAT_0000000e_0000fffe" id="52" category="Player" type="int64" desc="Leaderboard_001[COLUMN_01](RATING)" />
+		<Stat name="STAT_0000000e_EXISTS" id="51" category="Player" type="byte" desc="Leaderboard_001[Exists]" />
+		<Stat name="STAT_fffe0000_0000003d" id="73" category="Player" type="int" desc="SkillLeaderboard__GameMode_00Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0000_EXISTS" id="72" category="Player" type="byte" desc="SkillLeaderboard__GameMode_00Standard[Exists]" />
+		<Stat name="STAT_fffe0001_0000003d" id="85" category="Player" type="int" desc="SkillLeaderboard__GameMode_01Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0001_EXISTS" id="84" category="Player" type="byte" desc="SkillLeaderboard__GameMode_01Standard[Exists]" />
+		<Stat name="STAT_fffe0002_0000003d" id="97" category="Player" type="int" desc="SkillLeaderboard__GameMode_02Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0002_EXISTS" id="96" category="Player" type="byte" desc="SkillLeaderboard__GameMode_02Standard[Exists]" />
+		<Stat name="STAT_fffe0003_0000003d" id="67" category="Player" type="int" desc="SkillLeaderboard__GameMode_03Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0003_EXISTS" id="66" category="Player" type="byte" desc="SkillLeaderboard__GameMode_03Standard[Exists]" />
+		<Stat name="STAT_fffe0004_0000003d" id="79" category="Player" type="int" desc="SkillLeaderboard__GameMode_04Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0004_EXISTS" id="78" category="Player" type="byte" desc="SkillLeaderboard__GameMode_04Standard[Exists]" />
+		<Stat name="STAT_fffe0005_0000003d" id="91" category="Player" type="int" desc="SkillLeaderboard__GameMode_05Standard[Rating](RATING)" />
+		<Stat name="STAT_fffe0005_EXISTS" id="90" category="Player" type="byte" desc="SkillLeaderboard__GameMode_05Standard[Exists]" />
+		<Stat name="STAT_ffff0000_0000003d" id="70" category="Player" type="int" desc="SkillLeaderboard__GameMode_00Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0000_EXISTS" id="69" category="Player" type="byte" desc="SkillLeaderboard__GameMode_00Ranked[Exists]" />
+		<Stat name="STAT_ffff0001_0000003d" id="82" category="Player" type="int" desc="SkillLeaderboard__GameMode_01Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0001_EXISTS" id="81" category="Player" type="byte" desc="SkillLeaderboard__GameMode_01Ranked[Exists]" />
+		<Stat name="STAT_ffff0002_0000003d" id="94" category="Player" type="int" desc="SkillLeaderboard__GameMode_02Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0002_EXISTS" id="93" category="Player" type="byte" desc="SkillLeaderboard__GameMode_02Ranked[Exists]" />
+		<Stat name="STAT_ffff0003_0000003d" id="64" category="Player" type="int" desc="SkillLeaderboard__GameMode_03Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0003_EXISTS" id="63" category="Player" type="byte" desc="SkillLeaderboard__GameMode_03Ranked[Exists]" />
+		<Stat name="STAT_ffff0004_0000003d" id="76" category="Player" type="int" desc="SkillLeaderboard__GameMode_04Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0004_EXISTS" id="75" category="Player" type="byte" desc="SkillLeaderboard__GameMode_04Ranked[Exists]" />
+		<Stat name="STAT_ffff0005_0000003d" id="88" category="Player" type="int" desc="SkillLeaderboard__GameMode_05Ranked[Rating](RATING)" />
+		<Stat name="STAT_ffff0005_EXISTS" id="87" category="Player" type="byte" desc="SkillLeaderboard__GameMode_05Ranked[Exists]" />
+		<Stat name="STAT_rs_GamerHandle_p1" id="1" category="Player" type="string" desc="NONE[Gamer Handle]" />
+		<Stat name="STAT_rs_GamerName_p1" id="2" category="Player" type="string" desc="NONE[Gamer Name]" />
+		
+		<!--RULES-->
+		<Rule name="RULE_rs_GamerHandle_p1" id="1" operation="Replace" desc="">
+			<InputKey name="KEY_rs_GamerHandle" />
+			<OutputStat name="STAT_rs_GamerHandle_p1" />
+		</Rule>
+		<Rule name="RULE_rs_GamerName_p1" id="2" operation="Replace" desc="">
+			<InputKey name="KEY_rs_GamerName" />
+			<OutputStat name="STAT_rs_GamerName_p1" />
+		</Rule>
+		<Rule name="RULE_0000000a_EXISTS" id="3" operation="Replace" desc="">
+			<InputKey name="KEY_0000000a_EXISTS" />
+			<OutputStat name="STAT_0000000a_EXISTS" />
+		</Rule>
+		<Rule name="RULE_0000000a_0000fffe" id="4" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_20000005" />
+			<InputStat name="STAT_0000000a_0000fffe" />
+			<OutputStat name="STAT_0000000a_0000fffe" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000002" id="5" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_10000006" />
+			<InputStat name="STAT_0000000a_00000002" />
+			<OutputStat name="STAT_0000000a_00000002" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000003" id="6" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_10000007" />
+			<InputStat name="STAT_0000000a_00000003" />
+			<OutputStat name="STAT_0000000a_00000003" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000004" id="7" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_20000008" />
+			<InputStat name="STAT_0000000a_00000004" />
+			<OutputStat name="STAT_0000000a_00000004" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000005" id="8" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_20000009" />
+			<InputStat name="STAT_0000000a_00000005" />
+			<OutputStat name="STAT_0000000a_00000005" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000006" id="9" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_2000000a" />
+			<InputStat name="STAT_0000000a_00000006" />
+			<OutputStat name="STAT_0000000a_00000006" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000007" id="10" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_2000000b" />
+			<InputStat name="STAT_0000000a_00000007" />
+			<OutputStat name="STAT_0000000a_00000007" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000008" id="11" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_2000000c" />
+			<InputStat name="STAT_0000000a_00000008" />
+			<OutputStat name="STAT_0000000a_00000008" />
+		</Rule>
+		<Rule name="RULE_0000000a_00000009" id="12" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_2000000d" />
+			<InputStat name="STAT_0000000a_00000009" />
+			<OutputStat name="STAT_0000000a_00000009" />
+		</Rule>
+		<Rule name="RULE_0000000a_0000000a" id="13" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_3000000e" />
+			<InputStat name="STAT_0000000a_0000000a" />
+			<OutputStat name="STAT_0000000a_0000000a" />
+		</Rule>
+		<Rule name="RULE_0000000a_0000000b" id="14" operation="Add" desc="">
+			<InputKey name="KEY_0000000a_3000000f" />
+			<InputStat name="STAT_0000000a_0000000b" />
+			<OutputStat name="STAT_0000000a_0000000b" />
+		</Rule>
+		<Rule name="RULE_0000000b_EXISTS" id="15" operation="Replace" desc="">
+			<InputKey name="KEY_0000000b_EXISTS" />
+			<OutputStat name="STAT_0000000b_EXISTS" />
+		</Rule>
+		<Rule name="RULE_0000000b_0000fffe" id="16" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_20000005" />
+			<InputStat name="STAT_0000000b_0000fffe" />
+			<OutputStat name="STAT_0000000b_0000fffe" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000002" id="17" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_10000006" />
+			<InputStat name="STAT_0000000b_00000002" />
+			<OutputStat name="STAT_0000000b_00000002" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000003" id="18" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_10000007" />
+			<InputStat name="STAT_0000000b_00000003" />
+			<OutputStat name="STAT_0000000b_00000003" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000004" id="19" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_20000008" />
+			<InputStat name="STAT_0000000b_00000004" />
+			<OutputStat name="STAT_0000000b_00000004" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000005" id="20" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_20000009" />
+			<InputStat name="STAT_0000000b_00000005" />
+			<OutputStat name="STAT_0000000b_00000005" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000006" id="21" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_2000000a" />
+			<InputStat name="STAT_0000000b_00000006" />
+			<OutputStat name="STAT_0000000b_00000006" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000007" id="22" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_2000000b" />
+			<InputStat name="STAT_0000000b_00000007" />
+			<OutputStat name="STAT_0000000b_00000007" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000008" id="23" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_2000000c" />
+			<InputStat name="STAT_0000000b_00000008" />
+			<OutputStat name="STAT_0000000b_00000008" />
+		</Rule>
+		<Rule name="RULE_0000000b_00000009" id="24" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_2000000d" />
+			<InputStat name="STAT_0000000b_00000009" />
+			<OutputStat name="STAT_0000000b_00000009" />
+		</Rule>
+		<Rule name="RULE_0000000b_0000000a" id="25" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_3000000e" />
+			<InputStat name="STAT_0000000b_0000000a" />
+			<OutputStat name="STAT_0000000b_0000000a" />
+		</Rule>
+		<Rule name="RULE_0000000b_0000000b" id="26" operation="Add" desc="">
+			<InputKey name="KEY_0000000b_3000000f" />
+			<InputStat name="STAT_0000000b_0000000b" />
+			<OutputStat name="STAT_0000000b_0000000b" />
+		</Rule>
+		<Rule name="RULE_0000000c_EXISTS" id="27" operation="Replace" desc="">
+			<InputKey name="KEY_0000000c_EXISTS" />
+			<OutputStat name="STAT_0000000c_EXISTS" />
+		</Rule>
+		<Rule name="RULE_0000000c_0000fffe" id="28" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_20000005" />
+			<InputStat name="STAT_0000000c_0000fffe" />
+			<OutputStat name="STAT_0000000c_0000fffe" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000002" id="29" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_10000006" />
+			<InputStat name="STAT_0000000c_00000002" />
+			<OutputStat name="STAT_0000000c_00000002" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000003" id="30" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_10000007" />
+			<InputStat name="STAT_0000000c_00000003" />
+			<OutputStat name="STAT_0000000c_00000003" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000004" id="31" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_20000008" />
+			<InputStat name="STAT_0000000c_00000004" />
+			<OutputStat name="STAT_0000000c_00000004" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000005" id="32" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_20000009" />
+			<InputStat name="STAT_0000000c_00000005" />
+			<OutputStat name="STAT_0000000c_00000005" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000006" id="33" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_2000000a" />
+			<InputStat name="STAT_0000000c_00000006" />
+			<OutputStat name="STAT_0000000c_00000006" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000007" id="34" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_2000000b" />
+			<InputStat name="STAT_0000000c_00000007" />
+			<OutputStat name="STAT_0000000c_00000007" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000008" id="35" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_2000000c" />
+			<InputStat name="STAT_0000000c_00000008" />
+			<OutputStat name="STAT_0000000c_00000008" />
+		</Rule>
+		<Rule name="RULE_0000000c_00000009" id="36" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_2000000d" />
+			<InputStat name="STAT_0000000c_00000009" />
+			<OutputStat name="STAT_0000000c_00000009" />
+		</Rule>
+		<Rule name="RULE_0000000c_0000000a" id="37" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_3000000e" />
+			<InputStat name="STAT_0000000c_0000000a" />
+			<OutputStat name="STAT_0000000c_0000000a" />
+		</Rule>
+		<Rule name="RULE_0000000c_0000000b" id="38" operation="Add" desc="">
+			<InputKey name="KEY_0000000c_3000000f" />
+			<InputStat name="STAT_0000000c_0000000b" />
+			<OutputStat name="STAT_0000000c_0000000b" />
+		</Rule>
+		<Rule name="RULE_0000000d_EXISTS" id="39" operation="Replace" desc="">
+			<InputKey name="KEY_0000000d_EXISTS" />
+			<OutputStat name="STAT_0000000d_EXISTS" />
+		</Rule>
+		<Rule name="RULE_0000000d_0000fffe" id="40" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_20000005" />
+			<InputStat name="STAT_0000000d_0000fffe" />
+			<OutputStat name="STAT_0000000d_0000fffe" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000002" id="41" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_10000006" />
+			<InputStat name="STAT_0000000d_00000002" />
+			<OutputStat name="STAT_0000000d_00000002" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000003" id="42" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_10000007" />
+			<InputStat name="STAT_0000000d_00000003" />
+			<OutputStat name="STAT_0000000d_00000003" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000004" id="43" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_20000008" />
+			<InputStat name="STAT_0000000d_00000004" />
+			<OutputStat name="STAT_0000000d_00000004" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000005" id="44" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_20000009" />
+			<InputStat name="STAT_0000000d_00000005" />
+			<OutputStat name="STAT_0000000d_00000005" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000006" id="45" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_2000000a" />
+			<InputStat name="STAT_0000000d_00000006" />
+			<OutputStat name="STAT_0000000d_00000006" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000007" id="46" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_2000000b" />
+			<InputStat name="STAT_0000000d_00000007" />
+			<OutputStat name="STAT_0000000d_00000007" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000008" id="47" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_2000000c" />
+			<InputStat name="STAT_0000000d_00000008" />
+			<OutputStat name="STAT_0000000d_00000008" />
+		</Rule>
+		<Rule name="RULE_0000000d_00000009" id="48" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_2000000d" />
+			<InputStat name="STAT_0000000d_00000009" />
+			<OutputStat name="STAT_0000000d_00000009" />
+		</Rule>
+		<Rule name="RULE_0000000d_0000000a" id="49" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_3000000e" />
+			<InputStat name="STAT_0000000d_0000000a" />
+			<OutputStat name="STAT_0000000d_0000000a" />
+		</Rule>
+		<Rule name="RULE_0000000d_0000000b" id="50" operation="Add" desc="">
+			<InputKey name="KEY_0000000d_3000000f" />
+			<InputStat name="STAT_0000000d_0000000b" />
+			<OutputStat name="STAT_0000000d_0000000b" />
+		</Rule>
+		<Rule name="RULE_0000000e_EXISTS" id="51" operation="Replace" desc="">
+			<InputKey name="KEY_0000000e_EXISTS" />
+			<OutputStat name="STAT_0000000e_EXISTS" />
+		</Rule>
+		<Rule name="RULE_0000000e_0000fffe" id="52" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_20000005" />
+			<InputStat name="STAT_0000000e_0000fffe" />
+			<OutputStat name="STAT_0000000e_0000fffe" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000002" id="53" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_10000006" />
+			<InputStat name="STAT_0000000e_00000002" />
+			<OutputStat name="STAT_0000000e_00000002" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000003" id="54" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_10000007" />
+			<InputStat name="STAT_0000000e_00000003" />
+			<OutputStat name="STAT_0000000e_00000003" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000004" id="55" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_20000008" />
+			<InputStat name="STAT_0000000e_00000004" />
+			<OutputStat name="STAT_0000000e_00000004" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000005" id="56" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_20000009" />
+			<InputStat name="STAT_0000000e_00000005" />
+			<OutputStat name="STAT_0000000e_00000005" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000006" id="57" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_2000000a" />
+			<InputStat name="STAT_0000000e_00000006" />
+			<OutputStat name="STAT_0000000e_00000006" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000007" id="58" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_2000000b" />
+			<InputStat name="STAT_0000000e_00000007" />
+			<OutputStat name="STAT_0000000e_00000007" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000008" id="59" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_2000000c" />
+			<InputStat name="STAT_0000000e_00000008" />
+			<OutputStat name="STAT_0000000e_00000008" />
+		</Rule>
+		<Rule name="RULE_0000000e_00000009" id="60" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_2000000d" />
+			<InputStat name="STAT_0000000e_00000009" />
+			<OutputStat name="STAT_0000000e_00000009" />
+		</Rule>
+		<Rule name="RULE_0000000e_0000000a" id="61" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_3000000e" />
+			<InputStat name="STAT_0000000e_0000000a" />
+			<OutputStat name="STAT_0000000e_0000000a" />
+		</Rule>
+		<Rule name="RULE_0000000e_0000000b" id="62" operation="Add" desc="">
+			<InputKey name="KEY_0000000e_3000000f" />
+			<InputStat name="STAT_0000000e_0000000b" />
+			<OutputStat name="STAT_0000000e_0000000b" />
+		</Rule>
+		<Rule name="RULE_ffff0003_EXISTS" id="63" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0003_EXISTS" />
+			<OutputStat name="STAT_ffff0003_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0003_ELO_TEAM" id="64" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0003_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0003" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0003" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0003_ELO_FFA" id="65" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0003_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0003" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0003" />
+		</Rule>
+		<Rule name="RULE_ffff0003_0000003d_ELO_TEAM" id="66" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0003_ELO_TEAM" />
+			<InputStat name="STAT_ffff0003_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0003" />
+			<OutputStat name="STAT_ffff0003_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0003_0000003d_ELO_FFA" id="67" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0003_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0003_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0003" />
+			<OutputStat name="STAT_ffff0003_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0003_EXISTS" id="68" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0003_EXISTS" />
+			<OutputStat name="STAT_fffe0003_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0003_ELO_TEAM" id="69" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0003_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0003" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0003" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0003_ELO_FFA" id="70" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0003_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0003" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0003" />
+		</Rule>
+		<Rule name="RULE_fffe0003_0000003d_ELO_TEAM" id="71" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0003_ELO_TEAM" />
+			<InputStat name="STAT_fffe0003_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0003" />
+			<OutputStat name="STAT_fffe0003_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0003_0000003d_ELO_FFA" id="72" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0003_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0003_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0003" />
+			<OutputStat name="STAT_fffe0003_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0000_EXISTS" id="73" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0000_EXISTS" />
+			<OutputStat name="STAT_ffff0000_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0000_ELO_TEAM" id="74" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0000_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0000" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0000" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0000_ELO_FFA" id="75" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0000_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0000" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0000" />
+		</Rule>
+		<Rule name="RULE_ffff0000_0000003d_ELO_TEAM" id="76" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0000_ELO_TEAM" />
+			<InputStat name="STAT_ffff0000_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0000" />
+			<OutputStat name="STAT_ffff0000_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0000_0000003d_ELO_FFA" id="77" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0000_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0000_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0000" />
+			<OutputStat name="STAT_ffff0000_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0000_EXISTS" id="78" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0000_EXISTS" />
+			<OutputStat name="STAT_fffe0000_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0000_ELO_TEAM" id="79" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0000_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0000" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0000" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0000_ELO_FFA" id="80" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0000_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0000" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0000" />
+		</Rule>
+		<Rule name="RULE_fffe0000_0000003d_ELO_TEAM" id="81" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0000_ELO_TEAM" />
+			<InputStat name="STAT_fffe0000_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0000" />
+			<OutputStat name="STAT_fffe0000_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0000_0000003d_ELO_FFA" id="82" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0000_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0000_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0000" />
+			<OutputStat name="STAT_fffe0000_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0004_EXISTS" id="83" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0004_EXISTS" />
+			<OutputStat name="STAT_ffff0004_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0004_ELO_TEAM" id="84" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0004_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0004" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0004" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0004_ELO_FFA" id="85" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0004_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0004" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0004" />
+		</Rule>
+		<Rule name="RULE_ffff0004_0000003d_ELO_TEAM" id="86" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0004_ELO_TEAM" />
+			<InputStat name="STAT_ffff0004_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0004" />
+			<OutputStat name="STAT_ffff0004_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0004_0000003d_ELO_FFA" id="87" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0004_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0004_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0004" />
+			<OutputStat name="STAT_ffff0004_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0004_EXISTS" id="88" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0004_EXISTS" />
+			<OutputStat name="STAT_fffe0004_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0004_ELO_TEAM" id="89" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0004_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0004" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0004" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0004_ELO_FFA" id="90" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0004_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0004" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0004" />
+		</Rule>
+		<Rule name="RULE_fffe0004_0000003d_ELO_TEAM" id="91" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0004_ELO_TEAM" />
+			<InputStat name="STAT_fffe0004_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0004" />
+			<OutputStat name="STAT_fffe0004_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0004_0000003d_ELO_FFA" id="92" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0004_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0004_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0004" />
+			<OutputStat name="STAT_fffe0004_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0001_EXISTS" id="93" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0001_EXISTS" />
+			<OutputStat name="STAT_ffff0001_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0001_ELO_TEAM" id="94" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0001_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0001" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0001" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0001_ELO_FFA" id="95" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0001_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0001" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0001" />
+		</Rule>
+		<Rule name="RULE_ffff0001_0000003d_ELO_TEAM" id="96" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0001_ELO_TEAM" />
+			<InputStat name="STAT_ffff0001_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0001" />
+			<OutputStat name="STAT_ffff0001_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0001_0000003d_ELO_FFA" id="97" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0001_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0001_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0001" />
+			<OutputStat name="STAT_ffff0001_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0001_EXISTS" id="98" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0001_EXISTS" />
+			<OutputStat name="STAT_fffe0001_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0001_ELO_TEAM" id="99" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0001_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0001" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0001" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0001_ELO_FFA" id="100" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0001_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0001" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0001" />
+		</Rule>
+		<Rule name="RULE_fffe0001_0000003d_ELO_TEAM" id="101" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0001_ELO_TEAM" />
+			<InputStat name="STAT_fffe0001_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0001" />
+			<OutputStat name="STAT_fffe0001_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0001_0000003d_ELO_FFA" id="102" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0001_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0001_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0001" />
+			<OutputStat name="STAT_fffe0001_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0005_EXISTS" id="103" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0005_EXISTS" />
+			<OutputStat name="STAT_ffff0005_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0005_ELO_TEAM" id="104" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0005_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0005" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0005" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0005_ELO_FFA" id="105" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0005_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0005" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0005" />
+		</Rule>
+		<Rule name="RULE_ffff0005_0000003d_ELO_TEAM" id="106" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0005_ELO_TEAM" />
+			<InputStat name="STAT_ffff0005_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0005" />
+			<OutputStat name="STAT_ffff0005_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0005_0000003d_ELO_FFA" id="107" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0005_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0005_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0005" />
+			<OutputStat name="STAT_ffff0005_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0005_EXISTS" id="108" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0005_EXISTS" />
+			<OutputStat name="STAT_fffe0005_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0005_ELO_TEAM" id="109" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0005_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0005" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0005" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0005_ELO_FFA" id="110" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0005_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0005" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0005" />
+		</Rule>
+		<Rule name="RULE_fffe0005_0000003d_ELO_TEAM" id="111" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0005_ELO_TEAM" />
+			<InputStat name="STAT_fffe0005_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0005" />
+			<OutputStat name="STAT_fffe0005_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0005_0000003d_ELO_FFA" id="112" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0005_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0005_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0005" />
+			<OutputStat name="STAT_fffe0005_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0002_EXISTS" id="113" operation="Replace" desc="">
+			<InputKey name="KEY_ffff0002_EXISTS" />
+			<OutputStat name="STAT_ffff0002_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0002_ELO_TEAM" id="114" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0002_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0002" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0002" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_ffff0002_ELO_FFA" id="115" operation="Increment" desc="">
+			<InputKey name="KEY_ffff0002_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0002" />
+			<OutputStat name="NUM_GAMES_PLAYED_ffff0002" />
+		</Rule>
+		<Rule name="RULE_ffff0002_0000003d_ELO_TEAM" id="116" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0002_ELO_TEAM" />
+			<InputStat name="STAT_ffff0002_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0002" />
+			<OutputStat name="STAT_ffff0002_0000003d" />
+		</Rule>
+		<Rule name="RULE_ffff0002_0000003d_ELO_FFA" id="117" operation="StandardELO" desc="">
+			<InputKey name="KEY_ffff0002_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_ffff0002_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_ffff0002" />
+			<OutputStat name="STAT_ffff0002_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0002_EXISTS" id="118" operation="Replace" desc="">
+			<InputKey name="KEY_fffe0002_EXISTS" />
+			<OutputStat name="STAT_fffe0002_EXISTS" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0002_ELO_TEAM" id="119" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0002_ELO_TEAM" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0002" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0002" />
+		</Rule>
+		<Rule name="NUM_GAMES_PLAYED_fffe0002_ELO_FFA" id="120" operation="Increment" desc="">
+			<InputKey name="KEY_fffe0002_ELO_FFA" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0002" />
+			<OutputStat name="NUM_GAMES_PLAYED_fffe0002" />
+		</Rule>
+		<Rule name="RULE_fffe0002_0000003d_ELO_TEAM" id="121" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0002_ELO_TEAM" />
+			<InputStat name="STAT_fffe0002_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0002" />
+			<OutputStat name="STAT_fffe0002_0000003d" />
+		</Rule>
+		<Rule name="RULE_fffe0002_0000003d_ELO_FFA" id="122" operation="StandardELO" desc="">
+			<InputKey name="KEY_fffe0002_ELO_FFA" />
+			<InputKey name="ARENA_FFA_PLACE" />
+			<InputStat name="STAT_fffe0002_0000003d" />
+			<InputStat name="NUM_GAMES_PLAYED_fffe0002" />
+			<OutputStat name="STAT_fffe0002_0000003d" />
+		</Rule>
+		
+	</Ruleset>
+</Atlas>
+<!-- GENERATED WITH XLAST2C V2.0 -->
+<!-- 100 keys, 98 stats (0 page padding, 0 static), 122 rules, 100 SAKE fields -->

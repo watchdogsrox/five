@@ -1,0 +1,8 @@
+Project apps
+
+Files {
+
+	appdata.cpp
+	appdata.h
+}
+

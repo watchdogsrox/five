@@ -1,0 +1,352 @@
+// 
+// animation/AnimDefines.h
+// 
+// Copyright (C) 1999-2010 Rockstar Games.  All Rights Reserved. 
+// 
+
+#ifndef ANIM_DEFINES_H
+#define ANIM_DEFINES_H
+
+// Rage headers
+#include "fwanimation/animdefines.h"
+
+// Game headers
+extern const atHashWithStringNotFinal ApprovalNone;
+extern const atHashWithStringNotFinal ApprovalPlaceholder;
+extern const atHashWithStringNotFinal ApprovalComplete;
+extern const atHashWithStringNotFinal ApprovalApproved;
+
+// ClipSetsIds
+extern const fwMvClipSetId CLIP_SET_COMBAT_BUDDY_SHOT_PISTOL;
+extern const fwMvClipSetId CLIP_SET_COMBAT_BUDDY_SHOT_RIFLE;
+extern const fwMvClipSetId CLIP_SET_COMBAT_REACTIONS_RIFLE_TURN;
+extern const fwMvClipSetId CLIP_SET_STD_PED;
+extern const fwMvClipSetId CLIP_SET_STD_GETUPS;
+extern const fwMvClipSetId CLIP_SET_STD_GETUPS_BACK;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_FEMALE;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_FPS;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_PARACHUTE_FPS;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_1HANDED; //UNUSED?
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_STEALTH;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_DS;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_PS;
+extern const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_DS_FPS;
+extern const fwMvClipSetId CLIP_SET_SIT_CHAIR_F;
+extern const fwMvClipSetId CLIP_SET_SIT_STOOL_F;
+extern const fwMvClipSetId CLIP_SET_SIT_COUCH_F;
+extern const fwMvClipSetId CLIP_SET_SIT_CHAIR_M;
+extern const fwMvClipSetId CLIP_SET_SIT_STOOL_M;
+extern const fwMvClipSetId CLIP_SET_SIT_COUCH_M;
+extern const fwMvClipSetId CLIP_SET_SIT_STEP_M;
+extern const fwMvClipSetId CLIP_SET_SIT_WALL_M;
+extern const fwMvClipSetId CLIP_SET_MOVE_MELEE;
+extern const fwMvClipSetId CLIP_SET_PICKUP_AND_CARRY_OBJECT;
+extern const fwMvClipSetId CLIP_SET_EVASIVE_DIVES;
+extern const fwMvClipSetId CLIP_SET_MOVE_AVOIDANCE;
+extern const fwMvClipSetId CLIP_SET_MOVE_INJURED;
+extern const fwMvClipSetId CLIP_SET_MOVE_INJURED_FEMALE;
+extern const fwMvClipSetId CLIP_SET_PARACHUTE;
+extern const fwMvClipSetId CLIP_SET_RGUARDR_LOW_2;
+extern const fwMvClipSetId CLIP_SET_MELEE_UNARMED_BASE;
+extern const fwMvClipSetId CLIP_SET_DUCK_AND_COVER;
+extern const fwMvClipSetId CLIP_SET_SLOPE_SCAMBLE;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_DS;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_ENTER_DS;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_PS;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_ENTER_PS;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_ANNIHILATOR2_DESCEND_RRDS;
+extern const fwMvClipSetId CLIP_SET_VEH_HELI_ANNIHILATOR2_DESCEND_RRPS;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_FRONT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_BACK;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_LEFT;
+extern const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_RIGHT;
+
+extern const fwMvClipSetId CLIP_SET_JUMP_COLLISION_BRACE;
+
+extern const fwMvClipSetId CLIP_SET_DEAD;
+
+extern const fwMvClipSetId CLIP_SET_GESTURE_M_CAR_DS;
+extern const fwMvClipSetId CLIP_SET_GESTURE_F_CAR_DS;
+
+extern const fwMvClipSetId CLIP_SET_GESTURE_M_CAR_PS;
+extern const fwMvClipSetId CLIP_SET_GESTURE_F_CAR_PS;
+
+extern const fwMvClipSetId CLIP_SET_GESTURE_M_SITTING;
+extern const fwMvClipSetId CLIP_SET_GESTURE_F_SITTING;
+
+extern const fwMvClipSetId CLIP_SET_FPS_DIVING;
+extern const fwMvClipSetId CLIP_SET_FPS_SWIMMING;
+extern const fwMvClipSetId CLIP_SET_FPS_DIVING_SCUBA;
+
+extern const fwMvClipSetId MOVE_PED_BASIC_LOCOMOTION;
+extern const fwMvClipSetId MOVE_GUARD_ALERT;
+extern const fwMvClipSetId MOVE_GUARD_NOT_ALERT;
+extern const fwMvClipSetId MOVE_PED_HANDCUFFED;
+extern const fwMvClipSetId CLIP_SET_NEW_PED_FALL;
+extern const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS;
+extern const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS_V1;
+extern const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS_V2;
+extern const fwMvClipSetId CLIP_SET_REACTION_SHOCKING_WALKS;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_BASE;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_FREEFALL;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_LOW_LOD;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE_CHUTE;
+extern const fwMvClipSetId CLIP_SET_VEH_SKYDIVE_PARACHUTE_CHUTE;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_BASE_FIRST_PERSON;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_FREEFALL_FIRST_PERSON;
+extern const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE_FIRST_PERSON;
+extern const fwMvClipSetId CLIP_SET_MOVE_M_SCARED;
+extern const fwMvClipSetId CLIP_SET_MOVE_F_SCARED;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_LEFT;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_RIGHT;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_FORWARD;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_BACKWARD;
+extern const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_LEFT;
+extern const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_RIGHT;
+extern const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_FORWARD;
+extern const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_BACKWARD;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_VARIATIONS_IDLE_E;
+extern const fwMvClipSetId CLIP_SET_REACT_SMALL_EXIT;
+extern const fwMvClipSetId CLIP_SET_REACT_BIG_EXIT;
+extern const fwMvClipSetId CLIP_SET_REACT_BACK_AWAY_MALE;
+extern const fwMvClipSetId CLIP_SET_REACT_BACK_AWAY_FEMALE;
+extern const fwMvClipSetId CLIP_SET_REACTION_SHOVE;
+extern const fwMvClipSetId CLIP_SET_TAKE_OFF_HELMET;
+extern const fwMvClipSetId CLIP_SET_SWITCH_VISOR_ON_FOOT;
+extern const fwMvClipSetId CLIP_SET_PUT_ON_TAKE_OFF_HELMET_FPS;
+extern const fwMvClipSetId CLIP_SET_PUT_ON_TAKE_OFF_HELMET_FPS_HELI;
+extern const fwMvClipSetId CLIP_SET_POLICE_WARNING;
+extern const fwMvClipSetId CLIP_SET_HAND_POSES;
+extern const fwMvClipSetId CLIP_SET_GROWL;
+extern const fwMvClipSetId CLIP_SET_VEH_STD_DS_BASE;
+extern const fwMvClipSetId CLIP_SET_VEH_STD_PS_BASE;
+extern const fwMvClipSetId CLIP_SET_MOVE_STRAFE_BALLISTIC;
+extern const fwMvClipId CLIP_STD_PHONE_TEXT_IN;
+extern const fwMvClipId CLIP_STD_PHONE_TEXT_LOOP;
+extern const fwMvClipId CLIP_STD_PHONE_TEXT_OUT;
+extern const fwMvClipId CLIP_AIM_MED_LOOP;
+extern const fwMvClipId CLIP_AIM_MED_LOOP_CROUCH;
+extern const fwMvClipId CLIP_AUTODROP_25CM_INTRO;
+extern const fwMvClipId CLIP_AUTODROP_25CM_LAND;
+extern const fwMvClipId CLIP_AUTODROP_25CM_LOOP;
+extern const fwMvClipId CLIP_AUTODROP_50CM_INTRO;
+extern const fwMvClipId CLIP_AUTODROP_50CM_LAND;
+extern const fwMvClipId CLIP_AUTODROP_50CM_LOOP;
+extern const fwMvClipId CLIP_AUTODROP_75CM_INTRO;
+extern const fwMvClipId CLIP_AUTODROP_75CM_LAND;
+extern const fwMvClipId CLIP_AUTODROP_75CM_LOOP;
+extern const fwMvClipId CLIP_AVOID_FROM_BACK_TO_FRONT;
+extern const fwMvClipId CLIP_AVOID_FROM_BACK_TO_LEFT;
+extern const fwMvClipId CLIP_AVOID_FROM_BACK_TO_RIGHT;
+extern const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_BACK;
+extern const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_LEFT;
+extern const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_RIGHT;
+extern const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_BACK;
+extern const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_FRONT;
+extern const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_RIGHT;
+extern const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_BACK;
+extern const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_FRONT;
+extern const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_LEFT;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_L_PISTOL;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_L_PISTOL_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_L_RIFLE;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_L_RIFLE_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_R_PISTOL;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_R_PISTOL_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_R_RIFLE;
+extern const fwMvClipId CLIP_COVER_DIVE_HIGH_R_RIFLE_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_L_PISTOL;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_L_PISTOL_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_L_RIFLE;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_L_RIFLE_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_R_PISTOL;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_R_PISTOL_SHORT;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_R_RIFLE;
+extern const fwMvClipId CLIP_COVER_DIVE_LOW_R_RIFLE_SHORT;
+extern const fwMvClipId CLIP_DAM_BACK;
+extern const fwMvClipId CLIP_DAM_FLOOR_BACK;
+extern const fwMvClipId CLIP_DAM_FRONT;
+extern const fwMvClipId CLIP_DAM_FLOOR_FRONT;
+extern const fwMvClipId CLIP_DAM_LEFT;
+extern const fwMvClipId CLIP_DAM_FLOOR_LEFT;
+extern const fwMvClipId CLIP_DAM_RIGHT;
+extern const fwMvClipId CLIP_DAM_FLOOR_RIGHT;
+extern const fwMvClipId CLIP_GROWL;
+extern const fwMvClipId CLIP_NON_HUMAN_DYING;
+extern const fwMvClipId CLIP_IDLE;
+extern const fwMvClipId CLIP_INJURED_DRAG_PED;
+extern const fwMvClipId CLIP_INJURED_DRAG_PLYR;
+extern const fwMvClipId CLIP_INJURED_PICKUP_BACK_PED;
+extern const fwMvClipId CLIP_INJURED_PICKUP_BACK_PLYR;
+extern const fwMvClipId CLIP_INJURED_PICKUP_FRONT_PED;
+extern const fwMvClipId CLIP_INJURED_PICKUP_FRONT_PLYR;
+extern const fwMvClipId CLIP_INJURED_PICKUP_SIDE_LEFT_PED;
+extern const fwMvClipId CLIP_INJURED_PICKUP_SIDE_LEFT_PLYR;
+extern const fwMvClipId CLIP_INJURED_PICKUP_SIDE_RIGHT_PED;
+extern const fwMvClipId CLIP_INJURED_PICKUP_SIDE_RIGHT_PLYR;
+extern const fwMvClipId CLIP_INJURED_PUTDOWN_PED;
+extern const fwMvClipId CLIP_INJURED_PUTDOWN_PLYR;
+extern const fwMvClipId CLIP_KO_BACK;
+extern const fwMvClipId CLIP_KO_COLLAPSE;
+extern const fwMvClipId CLIP_KO_DROWN;
+extern const fwMvClipId CLIP_KO_FRONT;
+extern const fwMvClipId CLIP_KO_LEFT;
+extern const fwMvClipId CLIP_KO_RIGHT;
+extern const fwMvClipId CLIP_MELEE_STEALTH_KILL_INDICATOR_CLOSE;
+extern const fwMvClipId CLIP_MELEE_BLOCK_INDICATOR;
+extern const fwMvClipId CLIP_MOVE_SPRINT;
+extern const fwMvClipId CLIP_OBJECT_PICKUP_LOW;
+extern const fwMvClipId CLIP_PARACHUTE_DEPLOY;
+extern const fwMvClipId CLIP_PARACHUTE_FREEFALL;
+extern const fwMvClipId CLIP_PARACHUTE_IDLE;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_BRAKING;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_CRUMPLE;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_DEPLOY;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_LEFTFCRUMPLE;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_RIGHTFCRUMPLE;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_STALLING;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_TURN_LEFT;
+extern const fwMvClipId CLIP_PARACHUTE_OBJECT_TURN_RIGHT;
+extern const fwMvClipId CLIP_PERP_HANDS_UP;
+extern const fwMvClipId CLIP_REACT_BACK_DIVE_LEFT;
+extern const fwMvClipId CLIP_REACT_BACK_DIVE_RIGHT;
+extern const fwMvClipId CLIP_REACT_FRONT_DIVE_LEFT;
+extern const fwMvClipId CLIP_REACT_FRONT_DIVE_RIGHT;
+extern const fwMvClipId CLIP_REACT_GUARD_FORWARD;
+extern const fwMvClipId CLIP_REACT_LEFT_SIDE_DIVE_BACK;
+extern const fwMvClipId CLIP_REACT_LEFT_SIDE_DIVE_FRONT;
+extern const fwMvClipId CLIP_REACT_RIGHT_SIDE_DIVE_BACK;
+extern const fwMvClipId CLIP_REACT_RIGHT_SIDE_DIVE_FRONT;
+extern const fwMvClipId CLIP_RUN;
+extern const fwMvClipId CLIP_SIT_COWER;
+extern const fwMvClipId CLIP_SIT_DOWN_FRONT;
+extern const fwMvClipId CLIP_SIT_DOWN_FRONT_CHAIR_TO_REAR;
+extern const fwMvClipId CLIP_SIT_DOWN_LEFT;
+extern const fwMvClipId CLIP_SIT_DOWN_RIGHT;
+extern const fwMvClipId CLIP_SIT_FLEE_FRONT;
+extern const fwMvClipId CLIP_SIT_FLEE_LEFT;
+extern const fwMvClipId CLIP_SIT_FLEE_RIGHT;
+extern const fwMvClipId CLIP_SIT_IDLE;
+extern const fwMvClipId CLIP_SIT_STANDUP_FRONT;
+extern const fwMvClipId CLIP_SIT_STANDUP_LEFT;
+extern const fwMvClipId CLIP_SIT_STANDUP_RIGHT;
+extern const fwMvClipId CLIP_SKYDIVE_FALL_GLIDE_TO_FREE_IDLE;
+extern const fwMvClipId CLIP_SPRINT;
+extern const fwMvClipId CLIP_STD_GETUP_FAST;
+extern const fwMvClipId CLIP_STD_GETUP_INJURED;
+extern const fwMvClipId CLIP_STD_GETUP_NORMAL;
+extern const fwMvClipId CLIP_STD_GETUP_SLOW;
+extern const fwMvClipId CLIP_STD_HANDSCOWER;
+extern const fwMvClipId CLIP_STD_HANDSUP;
+extern const fwMvClipId CLIP_STD_HELMET_OFF;
+extern const fwMvClipId CLIP_STD_HIT_WALL;
+extern const fwMvClipId CLIP_STD_NM_MELEE; 
+extern const fwMvClipId CLIP_STD_PHONE_IN;
+extern const fwMvClipId CLIP_STD_PHONE_IN_FROM_TEXT;
+extern const fwMvClipId CLIP_STD_PHONE_OUT;
+extern const fwMvClipId CLIP_STD_PHONE_TALK;
+extern const fwMvClipId CLIP_STD_PHONE_TEXT;
+extern const fwMvClipId CLIP_STEP_FWD;
+extern const fwMvClipId CLIP_STEP_RGT;
+extern const fwMvClipId CLIP_STEP_BWD;
+extern const fwMvClipId CLIP_STEP_LFT;
+extern const fwMvClipId CLIP_WALK;
+extern const fwMvClipId CLIP_FALL_HIGH_CUFFED;
+extern const fwMvClipId CLIP_TAKE_HELMET_OFF;
+extern const fwMvClipId CLIP_TAKE_HELMET_OFF_FPS;
+extern const fwMvClipId CLIP_SWITCH_VISOR_DOWN_ON_FOOT;
+extern const fwMvClipId CLIP_SWITCH_VISOR_UP_ON_FOOT;
+extern const fwMvClipId CLIP_SWITCH_VISOR_POV_DOWN_ON_FOOT;
+extern const fwMvClipId CLIP_SWITCH_VISOR_POV_UP_ON_FOOT;
+extern const fwMvClipId CLIP_SWITCH_NV_GOGGLES_DOWN_ON_FOOT;
+extern const fwMvClipId CLIP_SWITCH_NV_GOGGLES_UP_ON_FOOT;
+extern const fwMvClipId CLIP_HAND_POSE_NATURAL;
+extern const fwMvClipId CLIP_HAND_POSE_FIST;
+extern const fwMvClipId CLIP_HAND_POSE_FLAT_FLOOR;
+extern const fwMvClipId CLIP_HAND_POSE_GRAB;
+extern const fwMvClipId CLIP_HAND_POSE_HANDS_UP;
+extern const fwMvClipId CLIP_HAND_POSE_MIDDLE_FINGER;
+extern const fwMvClipId CLIP_HAND_POSE_FLAIL;
+extern const fwMvClipId CLIP_HAND_POSE_IMPACT;
+extern const fwMvClipId CLIP_VEH_STD_SIT;
+extern const fwMvClipId CLIP_FACIAL_MOOD_NORMAL;
+extern const fwMvClipId CLIP_FACIAL_VOICE_DRIVEN_MOUTH_MOVEMENT;
+
+extern const fwMvFilterId BONEMASK_ALL;
+extern const fwMvFilterId BONEMASK_ARMONLY_L;
+extern const fwMvFilterId BONEMASK_ARMONLY_R;
+extern const fwMvFilterId BONEMASK_ARMS;
+extern const fwMvFilterId BONEMASK_BODYONLY;
+extern const fwMvFilterId BONEMASK_HEADONLY;
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_ARMS;
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_L_ARM;
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_R_ARM;
+extern const fwMvFilterId BONEMASK_LOD_LO;
+extern const fwMvFilterId BONEMASK_SPINEONLY;
+extern const fwMvFilterId BONEMASK_SPINE_FEATHERED;
+extern const fwMvFilterId BONEMASK_UPPERONLY;					
+
+extern const fwMvFilterId FILTER_ARMSHEADNOMOVER;
+extern const fwMvFilterId FILTER_BOTHARMS;
+extern const fwMvFilterId FILTER_GRIP_R_ONLY;
+extern const fwMvFilterId FILTER_IGNOREMOVERBLEND;
+extern const fwMvFilterId FILTER_IGNOREMOVERBLENDROTATIONONLY;
+extern const fwMvFilterId FILTER_LEGSONLY;
+extern const fwMvFilterId FILTER_LOWERBODY;
+extern const fwMvFilterId FILTER_MOVERONLY;
+extern const fwMvFilterId FILTER_NOMOVER;
+extern const fwMvFilterId FILTER_ROOTUPPERBODY;
+extern const fwMvFilterId FILTER_UPPERBODYNOARM;
+extern const fwMvFilterId FILTER_UPPERBODYANDIK;
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED_NOLEFTTARM;
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED_NORIGHTARM;
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED;
+extern const fwMvFilterId FILTER_UPPERBODYNOMOVER;
+extern const fwMvFilterId FILTER_UPPERBODY;
+extern const fwMvFilterId FILTER_UPPERBODY_FROM_SPINE3;
+extern const fwMvFilterId FILTER_UPPERBODYBICYCLE_DRIVEBY;
+
+#endif // ANIM_DEFINES_H

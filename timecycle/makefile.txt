@@ -1,0 +1,15 @@
+Project timecycle 
+
+Files {
+	CalcAmbientScaleAsync.cpp
+	CalcAmbientScaleAsync.h
+	TimeCycle.cpp
+	TimeCycle.h
+	TimeCycleAsyncQueryMgr.cpp
+	TimeCycleAsyncQueryMgr.h
+	TimeCycleConfig.cpp
+	TimeCycleConfig.h
+	TimeCycleDebug.cpp
+	TimeCycleDebug.h
+}
+

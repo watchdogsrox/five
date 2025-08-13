@@ -1,0 +1,5 @@
+#ifndef PED_MOVE_BLEND_MANAGER_H
+#define	PED_MOVE_BLEND_MANAGER_H
+
+#endif
+

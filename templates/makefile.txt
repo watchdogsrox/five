@@ -1,0 +1,8 @@
+Project templates 
+
+Files {
+	CircularArray.h
+	DblBuf.h
+	LinkList.h
+	StaticStore.h
+}

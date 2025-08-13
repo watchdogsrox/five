@@ -1,0 +1,245 @@
+#define ENTRYPOINT wheelspu
+#define WHEEL_SPU (1)
+#define spu_undefined_atArray_operation()
+#include "system/task_spu2.h"
+#include "system/taskheaderspu.h"
+#define START_TIMER(x)
+//#define VEHICLE_OPTIMISATIONS_OFF 0
+#include <math.h>
+#include "vector/vector3_consts_spu.cpp"
+#include "vector/quaternion.h"
+
+#define PHARTICULATED_NON_CORE_AVAILABLE 1
+
+#include "basetypes.h"
+#include "fwmaths/angle.h"
+#include "fwmaths/RandomSPU.h"	
+#include "modelinfo/vehiclemodelinfo.h"
+#include "crskeleton/skeleton.h"
+#include "wheel.h"
+#include "fwutil/flags.h"
+#include "fwutil/flags.cpp"
+#include "vehicles/WheelRendering.cpp"
+#include "physics/gtaArchetype.h"
+#include "physics/collider.cpp"
+#include "physics/colliderdispatch.h"
+
+#include "pharticulated/articulatedbody.cpp"
+#include "pharticulated/bodypart.cpp"
+#include "pharticulated/joint.cpp"
+#include "pharticulated/joint1dof.cpp"
+#include "pharticulated/joint3dof.cpp"
+#include "pharticulated/prismaticjoint.cpp"
+#include "pharticulated/articulatedcollider.cpp"
+#include "pharticulated/bodyinertia.cpp"
+#include "pharticulated/spudma.cpp"
+#include "phbound/bound.cpp"
+#include "phbound/boundcomposite.cpp"
+
+bool g_UsePushes = false;
+
+////////////////////////////////////////////////////////////
+// instance type info
+
+enum																// RAGE-level phInst object enums
+{
+		PH_INST = 0,														// phInst, RAGE base phInst object
+		PH_INST_BREAKABLE,												// phInstBreakable, base-type for "static" objects
+		PH_INST_SWAPABLE,												// phInstSwapable, an instance with two bounds, one active
+		PH_INST_RAGE_LAST = PH_INST_SWAPABLE							// the last RAGE type, higher level code defines from here
+};
+
+enum
+{
+		PH_FRAG_INST = PH_INST_RAGE_LAST + 1,
+		PH_INST_GDF_LAST = PH_FRAG_INST
+};
+
+enum
+{
+	PH_INST_GTA = PH_INST_GDF_LAST+1,	// marker for start of GTA phInst's
+	PH_INST_MAPCOL,
+	PH_INST_BUILDING,
+	PH_INST_VEH,
+	PH_INST_PED,
+	PH_INST_OBJECT,
+	PH_INST_PROJECTILE,
+	PH_INST_EXPLOSION,
+	PH_INST_PED_LEGS,
+
+	PH_INST_FRAG_GTA,							// marker for start of GTA fragInst's
+	PH_INST_FRAG_VEH,
+	PH_INST_FRAG_PED,
+	PH_INST_FRAG_OBJECT,
+	PH_INST_FRAG_BUILDING, 
+	PH_INST_FRAG_CACHE_OBJECT,
+
+	PH_INST_FRAG_LAST
+};
+#ifdef DEBUG_DRAW
+#undef DEBUG_DRAW
+#endif 
+#define DEBUG_DRAW (0)
+
+CWheelTaskInfo* gParam;
+
+#define WHEEL_BOUND_DMA_TAG 1
+#define WHEEL_BOUND_DMA_MASK (1 << WHEEL_BOUND_DMA_TAG)
+
+#define WHEEL_SHAPETEST_LOCK_INFO_DMA_TAG 2
+#define WHEEL_SHAPETEST_LOCK_INFO_DMA_MASK (1 << WHEEL_SHAPETEST_LOCK_INFO_DMA_TAG)
+
+#define WHEEL_BODY_PART_DMA 3
+#define WHEEL_BODY_PART_TYPE_DMA 4
+#define WHEEL_OUTPUT_DMA 5
+
+const Matrix34 rage::M34_IDENTITY(1.0f,0.0f,0.0f, 0.f,1.0f,0.0f, 0.f,0.0f,1.0f, 0.f,0.f,0.0f);
+
+using namespace rage;
+
+void CWheel::InitOnSpu(CHandlingData* pHandling)
+{
+	m_pHandling = pHandling;
+}
+
+void wheelspu(sysTaskContext& c)
+{
+	fwRandom::Initialise();
+
+	CWheelTaskInfo& i = *c.GetUserDataAs<CWheelTaskInfo>();
+	
+	gParam = &i;
+	// read inputs
+	phCollider*    pCollider = c.GetInputAs<phArticulatedCollider>();
+
+	CWheel*	pWheelsSpu[INTEGRATION_MAX_NUM_WHEELS];	// This is where the wheels stored on SPU
+	
+	// This is an array of pointers telling us where
+	// we put the wheels back in main memory
+	CWheel** ppWheelsPpu;
+
+	for(u32 iWheelIndex = 0; iWheelIndex < i.nNumWheels; iWheelIndex++)
+	{
+		//Printf("[wheelspu] Fetching wheel %i...",iWheelIndex);
+		pWheelsSpu[iWheelIndex] = c.GetInputAs<CWheel>(1);
+		//Printf(" assinged to %p\n",pWheelsSpu[iWheelIndex]);
+	}
+
+	int iNumWheelsPlusPadding = (i.nNumWheels+ 3) & ~3;
+	ppWheelsPpu = c.GetInputAs<CWheel*>(iNumWheelsPlusPadding);
+	//Printf(" ppWheelsPpu addr is assinged to %p\n",ppWheelsPpu);
+	// Debug wheel addresses
+// 	for(u32 iWheelIndex = 0; iWheelIndex < i.nNumWheels; iWheelIndex++)
+// 	{
+// 		Printf(" ppWheelsPpu[%i] is %p\n",iWheelIndex,ppWheelsPpu[iWheelIndex]);
+// 	}
+
+
+	CHandlingData* pHandling = c.GetInputAs<CHandlingData>();	
+
+	phArticulatedBodyPart* pOrigBodyParts[phArticulatedBodyType::MAX_NUM_LINKS];
+	phPhaseSpaceVector *partVelocitiesMm = NULL;
+	phPhaseSpaceVector *velocitiesToPropUpMm = NULL;
+	Vec4V *angInertiaXYZmassWMm = NULL;
+	if(i.bIsArticulated)
+	{
+		phArticulatedCollider* pArticCollider = static_cast<phArticulatedCollider*>(pCollider);
+		
+		// Fixup the articulated body pointer
+		phArticulatedBody* pBodySpu = c.GetInputAs<phArticulatedBody>();
+		phArticulatedBodyType* pBodyTypeSpu = c.GetInputAs<phArticulatedBodyType>();
+		pBodySpu->m_Type = pBodyTypeSpu;
+		pArticCollider->SetBody(pBodySpu);
+		
+		const int iNumBodyParts = pBodySpu->GetNumBodyParts();
+		const int iNumComponents = pArticCollider->m_ComponentToLinkIndex.GetCount();
+
+		int* pComponentToLinkIndex = c.GetScratchAs<int>(iNumComponents);
+		sysDmaLargeGet(pComponentToLinkIndex, (uint64_t)pArticCollider->m_ComponentToLinkIndex.GetElements(), sizeof(int) * iNumComponents, DMA_TAG(WHEEL_BODY_PART_DMA));
+		pArticCollider->m_ComponentToLinkIndex.SetElements(pComponentToLinkIndex);
+		
+		phPhaseSpaceVector* pPartVelocities = c.GetScratchAs<phPhaseSpaceVector>(iNumBodyParts);
+		sysDmaLargeGet(pPartVelocities, (uint64_t)pBodySpu->m_PartVelocities.GetElements(), sizeof(phPhaseSpaceVector) * iNumBodyParts, DMA_TAG(WHEEL_BODY_PART_DMA));
+		partVelocitiesMm = pBodySpu->m_PartVelocities.GetElements();
+		pBodySpu->m_PartVelocities.SetElements(pPartVelocities);
+		
+		phPhaseSpaceVector* pVelocitiesToPropUp = c.GetScratchAs<phPhaseSpaceVector>(iNumBodyParts);
+		sysDmaLargeGet(pVelocitiesToPropUp, (uint64_t)pBodySpu->m_VelocitiesToPropUp.GetElements(), sizeof(phPhaseSpaceVector) * iNumBodyParts, DMA_TAG(WHEEL_BODY_PART_DMA));
+		velocitiesToPropUpMm = pBodySpu->m_VelocitiesToPropUp.GetElements();
+		pBodySpu->m_VelocitiesToPropUp.SetElements(pVelocitiesToPropUp);
+		
+		Vec4V* pAngInertiaXYZmassW = c.GetScratchAs<Vec4V>(iNumBodyParts);
+		sysDmaLargeGet(pAngInertiaXYZmassW, (uint64_t)pBodySpu->m_AngInertiaXYZmassW.GetElements(), sizeof(Vec4V) * iNumBodyParts, DMA_TAG(WHEEL_BODY_PART_DMA));
+		angInertiaXYZmassWMm = pBodySpu->m_AngInertiaXYZmassW.GetElements();
+		pBodySpu->m_AngInertiaXYZmassW.SetElements(pAngInertiaXYZmassW);
+			
+		phArticulatedBodyPart* pBodyParts = c.GetInputAs<phArticulatedBodyPart>(iNumBodyParts);
+		
+		for(int iBodyPartIndex = 0; iBodyPartIndex < pBodySpu->GetNumBodyParts(); iBodyPartIndex++)
+		{
+			sysDmaLargeGet(&pBodyParts[iBodyPartIndex], (u64) pBodySpu->GetLinkAddr(iBodyPartIndex), sizeof(phArticulatedBodyPart), DMA_TAG(WHEEL_BODY_PART_DMA));
+
+			// Store the PPU address so it can be restored later
+			pOrigBodyParts[iBodyPartIndex] = pBodySpu->GetLinkAddr(iBodyPartIndex);
+
+			// Set the artic body to point to the spu location
+			pBodySpu->FixUpLinkPtr(iBodyPartIndex, &pBodyParts[iBodyPartIndex]);
+		}
+		
+		sysDmaWait(DMA_MASK(WHEEL_BODY_PART_DMA));
+	}
+
+
+	// state is really an output but we're using a shared input/output buffer:
+	WheelIntegrationLocals* locals = c.GetInputAs<WheelIntegrationLocals>();
+
+	// set handling pointers to point at SPU data
+	CHandlingData* pOldHandling = pWheelsSpu[0]->GetHandlingData();
+	for(u32 j=0; j<i.nNumWheels; ++j)
+	{		
+		Assertf(pWheelsSpu[j]->GetHandlingData() == pOldHandling, 
+			"all wheels must have same handling");
+		pWheelsSpu[j]->InitOnSpu(pHandling);
+	}
+	
+	// do the integration
+	CWheelIntegrator::ProcessIntegrationTask(pCollider, i.vecInternalForce, i.vecInternalTorque, 
+		*locals, pWheelsSpu, i.nNumWheels, i.fMaxVelInGear, i.nGear, i.fTimeStep, i.gFrameCount, i.fGravity);
+
+	// reset handling pointers to PPU values
+	for(u32 j=0; j<i.nNumWheels; ++j)
+		pWheelsSpu[j]->InitOnSpu(pOldHandling);
+
+	// send results back to memory
+	for(u32 iWheelIndex = 0; iWheelIndex < i.nNumWheels; iWheelIndex++)
+	{
+//		Printf("[wheelspu] Putting wheel %i to %p\n",iWheelIndex,ppWheelsPpu[iWheelIndex]);
+		sysDmaPut(pWheelsSpu[iWheelIndex], (u64)ppWheelsPpu[iWheelIndex],			  sizeof(CWheel),	 DMA_TAG(WHEEL_OUTPUT_DMA));
+	}
+	sysDmaPut(&locals->output,	(u64)&i.pIntegrationState->output, sizeof(WheelIntegrationOutput), DMA_TAG(WHEEL_OUTPUT_DMA));
+	if (i.pCollider)
+		sysDmaPut(pCollider, (u64)i.pCollider,	sizeof(phCollider), DMA_TAG(WHEEL_OUTPUT_DMA));
+
+	if(i.bIsArticulated)
+	{
+		phArticulatedCollider* pArticCollider = static_cast<phArticulatedCollider*>(pCollider);
+
+		// Fixup the articulated body pointer
+		phArticulatedBody* pBody = pArticCollider->GetBody();
+		
+		const int iNumBodyParts = pBody->GetNumBodyParts();
+		
+		sysDmaLargePut(pBody->m_PartVelocities.GetElements(), (uint64_t)partVelocitiesMm, sizeof(phPhaseSpaceVector) * iNumBodyParts, DMA_TAG(WHEEL_OUTPUT_DMA));
+		sysDmaLargePut(pBody->m_VelocitiesToPropUp.GetElements(), (uint64_t)velocitiesToPropUpMm, sizeof(phPhaseSpaceVector) * iNumBodyParts, DMA_TAG(WHEEL_OUTPUT_DMA));
+		sysDmaLargePut(pBody->m_AngInertiaXYZmassW.GetElements(), (uint64_t)angInertiaXYZmassWMm, sizeof(Vec4V) * iNumBodyParts, DMA_TAG(WHEEL_OUTPUT_DMA));
+		
+		for(int iBodyPartIndex = 0; iBodyPartIndex < iNumBodyParts; iBodyPartIndex++)
+		{
+			sysDmaPut(pBody->GetLinkAddr(iBodyPartIndex), (u64) pOrigBodyParts[iBodyPartIndex], sizeof(phArticulatedBodyPart), DMA_TAG(WHEEL_OUTPUT_DMA));
+		}
+	}
+
+	sysDmaWait(DMA_MASK(WHEEL_OUTPUT_DMA));
+}
+
+#include "wheel.cpp"

@@ -1,0 +1,33 @@
+//
+// NetworkMetricsChannels.h
+//
+// Copyright (C) 2015 Rockstar Games.  All Rights Reserved.
+//
+
+#ifndef NETWORK_METRICS_CHANNELS_H_
+#define NETWORK_METRICS_CHANNELS_H_
+
+//PURPOSE
+//   Telemetry channels
+enum TelemetryChannels
+{
+	TELEMETRY_CHANNEL_AMBIENT = rlTelemetryPolicies::DEFAULT_LOG_CHANNEL
+	,TELEMETRY_CHANNEL_FLOW
+	,TELEMETRY_CHANNEL_JOB
+	,TELEMETRY_CHANNEL_MEDIA
+	,TELEMETRY_CHANNEL_MISC
+	,TELEMETRY_CHANNEL_MISSION
+	,TELEMETRY_CHANNEL_MONEY
+	,TELEMETRY_CHANNEL_POSSESSIONS
+
+	//Debug channels
+	,TELEMETRY_CHANNEL_DEV_DEBUG
+	,TELEMETRY_CHANNEL_DEV_CAPTURE
+
+	//Dont you dare to use it unless ure adding a metric to rage code.
+	,TELEMETRY_CHANNEL_RAGE
+
+	,MAX_TELEMETRY_CHANNEL
+};
+
+#endif

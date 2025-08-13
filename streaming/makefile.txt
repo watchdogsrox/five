@@ -1,0 +1,48 @@
+Project streaming 
+
+Files {
+	boxstreamer.cpp
+	boxstreamer.h
+  	islandhopper.cpp
+  	islandhopper.h
+    islandhopperdata.h
+	populationstreaming.cpp
+	populationstreaming.h
+	PrioritizedClipSetStreamer.cpp
+	PrioritizedClipSetStreamer.h
+	ResourceVisualizer.cpp
+	ResourceVisualizer.h
+	ScriptPreload.cpp
+	ScriptPreload.h
+	SituationalClipSetStreamer.cpp
+	SituationalClipSetStreamer.h
+	streaming.cpp
+	streaming.h
+	streamingcleanup.cpp
+	streamingcleanup.h
+	streamingdebug.cpp
+	streamingdebug.h
+	streamingdebuggraph.cpp
+	streamingdebuggraph.h
+	streamingdebuggraphextensions.cpp
+	streamingdebuggraphextensions.h
+	streamingrequestlist.cpp
+	streamingrequestlist.h
+	streamingrequestlisteditor.cpp
+	streamingrequestlist_shared.h
+	streamingrequestlist_rec_dbg.cpp
+	streamingrequestlisteditor.h
+	zonedassetmanager.cpp
+	zonedassetmanager.h
+	zonedassets.cpp
+	zonedassets.h
+	
+	Parse {
+    	islandhopperdata
+		SituationalClipSetStreamer
+		streamingrequestlist
+		streamingdebug
+		zonedassets
+	}
+}
+

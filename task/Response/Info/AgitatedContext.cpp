@@ -1,0 +1,20 @@
+// File header
+#include "Task/Response/Info/AgitatedContext.h"
+
+AI_OPTIMISATIONS()
+
+////////////////////////////////////////////////////////////////////////////////
+// CAgitatedContext
+////////////////////////////////////////////////////////////////////////////////
+
+CAgitatedContext::CAgitatedContext()
+: m_Response()
+, m_Situations()
+{
+
+}
+
+CAgitatedContext::~CAgitatedContext()
+{
+
+}

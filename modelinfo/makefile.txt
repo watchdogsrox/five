@@ -1,0 +1,56 @@
+Project modelinfo 
+
+Files {
+	BaseModelInfo.cpp
+	BaseModelInfo.h
+	CompEntityModelInfo.cpp
+	CompEntityModelInfo.h
+	MloModelInfo.cpp
+	MloModelInfo.h
+	ModelInfo.cpp
+	ModelInfo.h
+	modelinfo_channel.h
+	ModelInfo_Factories.h
+	ModelSeatInfo.cpp
+	ModelSeatInfo.h
+	PedModelInfo.cpp
+	PedModelInfo.h
+	TimeModelInfo.cpp
+	TimeModelInfo.h
+	VehicleModelInfo.cpp
+	VehicleModelInfo.h
+	VehicleModelInfoColors.cpp
+	VehicleModelInfoColors.h
+	VehicleModelInfoEnums.h
+	VehicleModelInfoExtensions.cpp
+	VehicleModelInfoExtensions.h
+	VehicleModelInfoFlags.cpp
+	VehicleModelInfoFlags.h
+	VehicleModelInfoMods.cpp
+	VehicleModelInfoMods.h
+	VehicleModelInfoPlates.cpp
+	VehicleModelInfoPlates.h
+	VehicleModelInfoLights.cpp
+	VehicleModelInfoLights.h
+	VehicleModelInfoSirens.cpp
+	VehicleModelInfoSirens.h
+	VehicleModelInfoVariation.cpp
+	VehicleModelInfoVariation.h
+	WeaponModelInfo.cpp
+	WeaponModelInfo.h
+	BaseModelInfoExtensions.cpp
+	BaseModelInfoExtensions.h
+	Parse {
+		VehicleModelInfoColors
+		VehicleModelInfoData
+		VehicleModelInfoFlags
+		VehicleModelInfoMetaData
+		VehicleModelInfoPlates
+		VehicleModelInfoLights
+		VehicleModelInfoSirens
+		VehicleModelInfoVariation
+		PedModelInfoData
+		WeaponModelInfoData
+	}
+}
+

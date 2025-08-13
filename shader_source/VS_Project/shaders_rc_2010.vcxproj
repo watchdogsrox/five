@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Win32 4.0|PS3">
+      <Configuration>Debug Win32 4.0</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32 4.0|Win32">
+      <Configuration>Debug Win32 4.0</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32 4.0|Xbox 360">
+      <Configuration>Debug Win32 4.0</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32 5.0|PS3">
+      <Configuration>Debug Win32 5.0</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32 5.0|Win32">
+      <Configuration>Debug Win32 5.0</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug Win32 5.0|Xbox 360">
+      <Configuration>Debug Win32 5.0</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ORBIS">
+      <Configuration>Debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Xbox 360">
+      <Configuration>Debug</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 4.0|PS3">
+      <Configuration>Release Win32 4.0</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 4.0|Win32">
+      <Configuration>Release Win32 4.0</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 4.0|Xbox 360">
+      <Configuration>Release Win32 4.0</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 5.0|PS3">
+      <Configuration>Release Win32 5.0</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 5.0|Win32">
+      <Configuration>Release Win32 5.0</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Win32 5.0|Xbox 360">
+      <Configuration>Release Win32 5.0</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Xbox 360">
+      <Configuration>Release</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E9177AC1-9799-45C7-BD88-A3CFADAA7255}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>shaders_rc</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|PS3'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|PS3'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|PS3'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|PS3'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Xbox 360'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Win32'">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|PS3'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32_40.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32_40.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32_40.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_orbis.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_orbis.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_orbis.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 4.0|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat dev</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat dev</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat dev</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32_40.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32_40.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32_40.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32_50.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32_50.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32_50.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat final</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat final</NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat final</NMakeCleanCommandLine>
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|PS3'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_psn.bat dev</NMakeBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|PS3'">
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_psn.bat dev</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|PS3'">
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_psn.bat dev</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|PS3'">
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Xbox 360'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_360.bat dev</NMakeBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Xbox 360'">
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_360.bat dev</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Xbox 360'">
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_360.bat dev</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Xbox 360'">
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Win32'">
+    <NMakeBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_build_win32_50.bat dev</NMakeBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Win32'">
+    <NMakeReBuildCommandLine>$(MSBuildProjectDirectory)\batch\rsm_rebuild_win32_50.bat dev</NMakeReBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Win32'">
+    <NMakeCleanCommandLine>$(MSBuildProjectDirectory)\batch\rsm_clean_win32_50.bat dev</NMakeCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Win32 5.0|Win32'">
+    <NMakeOutput>$(MSBuildProjectDirectory)\build</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Win32'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Win32'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|PS3'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|PS3'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Xbox 360'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 4.0|Xbox 360'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release Win32 5.0|Xbox 360'">
+    <BuildLog>
+      <Path>
+      </Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

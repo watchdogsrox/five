@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="('$(ImportDirectoryBuildProps)' == 'true' or '$(ImportDirectoryBuildProps)' == '') and '$(DirectoryBuildPropsPath)' == ''">
+    <ImportDirectoryBuildProps>true</ImportDirectoryBuildProps>
+    <_DirectoryBuildPropsFile Condition="'$(_DirectoryBuildPropsFile)' == ''">Directory.Build.props</_DirectoryBuildPropsFile>
+    <_DirectoryBuildPropsBasePath Condition="'$(_DirectoryBuildPropsBasePath)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildProjectDirectory), '$(_DirectoryBuildPropsFile)'))</_DirectoryBuildPropsBasePath>
+    <DirectoryBuildPropsPath Condition="'$(_DirectoryBuildPropsBasePath)' != '' and '$(_DirectoryBuildPropsFile)' != ''">$([System.IO.Path]::Combine('$(_DirectoryBuildPropsBasePath)', '$(_DirectoryBuildPropsFile)'))</DirectoryBuildPropsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(ImportDirectoryBuildProps)' == 'true' and exists('$(DirectoryBuildPropsPath)')">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(DirectoryBuildPropsPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <Import Project="$(DirectoryBuildPropsPath)" Condition="'$(ImportDirectoryBuildProps)' == 'true' and exists('$(DirectoryBuildPropsPath)')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC287067-17A5-47C2-AF14-9A0416E6BFB7}</ProjectGuid>
+    <ProjectName>shaders_dependency</ProjectName>
+    <Keyword>MakeFileProj</Keyword>
+    <PlatformToolset>v110</PlatformToolset>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup>
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(ProjectDir)\build\dependency\</OutDir>
+    <IntDir>$(ProjectDir)\build\dependency\</IntDir>
+    <NMakeReBuildCommandLine />
+    <NMakeCleanCommandLine />
+    <NMakeOutput />
+    <NMakeIncludeSearchPath>$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath>$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies>$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <NMakeBuildCommandLine>%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig dev -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml</NMakeBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <NMakeBuildCommandLine>%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig final -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>%RS_TOOLSROOT%\bin\RageShaderManager\RageShaderManager.exe -platform psn -platformConfig final -action builddependency -buildFromDirectory -regConfig=%RS_TOOLSROOT%\etc\RageShaderManager\shaderbuild_tu_dev_ng.xml</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,8 @@
+#define ISOLATE_8
+#define USE_DETAIL_MAP
+#define USE_DISPLACEMENT_MAP
+#define USE_OVERLAY_DIFFUSE2
+#define USE_SECONDARY_TEXCOORDS 
+#define USE_SECONDARY_TEXCOORDS_AS_OVERLAY_DIFFUSE2_COORDS
+
+#include "normal_spec_detail_dpm_tnt.fx"

@@ -1,0 +1,326 @@
+Project renderer 
+
+Files {
+	Directory Debug {
+		EntitySelect.cpp
+		EntitySelect.h
+		Raster.cpp
+		Raster.h
+	}
+	Directory DrawLists {
+		CopyOffMatrixSet.cpp
+		drawList.cpp
+		drawList.h
+		drawList_CopyOffEntityVirtual.h
+		drawListCommands_Entities.cpp
+		drawListMgr.cpp
+		drawListMgr.h
+		DrawListNY.cpp
+		DrawListNY.h
+		DrawListProfileStats.cpp
+		DrawListProfileStats.h
+		DrawableDataStructs.h
+		DrawableDataStructs.cpp
+		Custom {
+			CopyOffMatrixSetSPU.frag
+		}
+	}
+	Directory Deferred {
+		DeferredConfig.h
+		DeferredLighting.cpp
+		DeferredLighting.h
+		GBuffer.h
+		GBuffer.cpp
+	}
+	Directory Entities {
+		EntityBatchDrawHandler.cpp
+		EntityBatchDrawHandler.h
+		EntityDrawHandler.cpp
+		EntityDrawHandler.h
+		ObjectDrawHandler.cpp
+		ObjectDrawHandler.h
+		CutSceneDrawHandler.cpp
+		CutSceneDrawHandler.h
+		VehicleDrawHandler.cpp
+		VehicleDrawHandler.h
+		DynamicEntityDrawHandler.cpp
+		DynamicEntityDrawHandler.h
+		InstancedEntityRenderer.cpp
+		InstancedEntityRenderer.h
+		InstancedEntityRenderer_inline.h
+		PedDrawHandler.cpp
+		PedDrawHandler.h
+		PtFxDrawHandler.cpp
+		PtFxDrawHandler.h
+		VehicleGlassDrawHandler.cpp
+		VehicleGlassDrawHandler.h
+	}		
+	Directory Lights {
+		AsyncLightOcclusionMgr.cpp
+		AsyncLightOcclusionMgr.h
+		LightCommon.h
+		Lights.h
+		Lights.cpp
+		LightClassification.inl
+		LightCulling.h
+		LightSource.h
+		LightGroup.h
+		LightGroup.cpp
+		LightEntity.h
+		LightEntity.cpp
+		LightsVisibilitySort.h
+		LightsVisibilitySort.cpp
+		LODLights.h
+		LODLights.cpp
+		AmbientLights.h
+		AmbientLights.cpp
+		TiledLighting.h
+		TiledLighting.cpp
+		TiledLightingSettings.h
+		Custom {
+			LightsVisibilitySort.frag
+		}
+	}
+	Directory Shadows {
+		Shadows.h
+		ShadowsPrivate.cpp
+		ShadowsPrivate.h
+		ShadowTypes.h
+		ParaboloidShadows.cpp
+		ParaboloidShadows.h
+		ParaboloidShadows_shared.h
+		CascadeShadowsDebug.cpp
+		CascadeShadowsDebug.h
+		CascadeShadowsDepthHistogram.inl
+	}
+	Directory Tesselation {
+		barycentric.h
+		linearDualEdges.h
+		linear.h
+		progressiveLinear.h
+		progressiveLinear2.h
+		progressiveLinearDualEdges.h
+	}
+	Directory RenderPhases {
+		RenderPhase.cpp
+		RenderPhase.h
+		RenderPhaseCascadeShadows.cpp
+		RenderPhaseCascadeShadows.h
+		RenderPhaseDebugNY.cpp
+		RenderPhaseDebugNY.h
+		RenderPhaseDebugOverlay.cpp
+		RenderPhaseDebugOverlay.h
+		RenderPhaseDefLight.cpp
+		RenderPhaseDefLight.h
+		RenderPhaseEntitySelect.cpp
+		RenderPhaseEntitySelect.h
+		RenderPhaseFX.cpp
+		RenderPhaseFX.h
+		RenderPhaseHeightMap.cpp
+		RenderPhaseHeightMap.h
+		RenderPhaseLensDistortion.cpp
+		RenderPhaseLensDistortion.h
+		RenderPhaseMirrorReflection.cpp
+		RenderPhaseMirrorReflection.h
+		RenderPhaseParaboloidShadows.cpp
+		RenderPhaseParaboloidShadows.h
+		RenderPhasePedDamage.cpp
+		RenderPhasePedDamage.h
+		RenderPhaseRadar.cpp
+		RenderPhaseRadar.h
+		RenderPhaseReflection.cpp
+		RenderPhaseReflection.h
+		RenderPhaseStd.cpp
+		RenderPhaseStd.h
+		RenderPhaseStdNY.cpp
+		RenderPhaseStdNY.h
+		RenderPhaseTreeImposters.cpp
+		RenderPhaseTreeImposters.h
+		RenderPhaseWater.cpp
+		RenderPhaseWater.h
+		RenderPhaseWaterReflection.cpp
+		RenderPhaseWaterReflection.h
+	}
+	Directory fw {
+		RenderPhaseList.cpp
+		RenderPhaseList.h
+	}
+	Directory Util {
+		ShaderUtil.h
+		ShaderUtil.cpp
+		Util.cpp
+		Util.h
+		ShmooFile.cpp
+		ShmooFile.h		
+		RenderDocManager.cpp
+		RenderDocManager.h
+		renderdoc_app.h
+		Parse {
+			ShmooFile
+		}
+	}
+	Directory SPU {
+		LightClassificationSPU.cpp
+		ProcessSPU.cpp
+		SSAOSPU.cpp
+		SSAOSPU.h
+		RainUpdateSPU.cpp
+		Custom {
+			LightClassificationSPU.pmjob {
+				Platform PS3 {
+					Description			Building SPU Light Classification Job Handler: $(InputName)
+					Command				call "..\renderer\SPUPM\GtaBuildSPUJobHandler.bat" debugopt $(InputDir) $(InputName) $(IntDir)
+					Dependencies		..\renderer\SPU\LightClassificationSPU.cpp; ..\renderer\SpuPM\SpuPmMgr_pm_spursentry.cpp; ..\renderer\SpuPM\SpuPmMgr.cpp; ..\renderer\SpuPM\SpuPmMgr.h
+					Outputs				spu-obj/$(InputName).ppu.o
+				}
+			}
+			ProcessSPU.pmjob {
+				Platform PS3 {
+					Description			Building SPU Texture Post Process Job Handler: $(InputName)
+					Command				call "..\renderer\SPUPM\GtaBuildSPUJobHandler.bat" debugopt $(InputDir) $(InputName) $(IntDir)
+					Dependencies		..\renderer\SPU\ProcessSPU.cpp; ..\renderer\SpuPM\SpuPmMgr_pm_spursentry.cpp; ..\renderer\SpuPM\SpuPmMgr.cpp; ..\renderer\SpuPM\SpuPmMgr.h
+					Outputs				spu-obj/$(InputName).ppu.o
+				}
+			}
+			SSAOSPU.pmjob {
+				Platform PS3 {
+					Description			Building SPU SSAO Job Handler: $(InputName)
+					Command				call "..\renderer\SPUPM\GtaBuildSPUJobHandler.bat" debugopt $(InputDir) $(InputName) $(IntDir)
+					Dependencies		..\renderer\SPU\SSAOSPU.cpp; ..\renderer\SPU\SSAOSPU.h; ..\renderer\SpuPM\SpuPmMgr_pm_spursentry.cpp; ..\renderer\SpuPM\SpuPmMgr.cpp; ..\renderer\SpuPM\SpuPmMgr.h
+					Outputs				spu-obj/$(InputName).ppu.o
+				}
+			}
+			RainUpdateSPU.pmjob {
+				Platform PS3 {
+					Description			Building SPU Rain Update Job Handler: $(InputName)
+					Command				call "..\renderer\SPUPM\GtaBuildSPUJobHandler.bat" debugopt $(InputDir) $(InputName) $(IntDir)
+					Dependencies		..\renderer\SPU\RainUpdateSPU.cpp; ..\renderer\SpuPM\SpuPmMgr_pm_spursentry.cpp; ..\renderer\SpuPM\SpuPmMgr.cpp; ..\renderer\SpuPM\SpuPmMgr.h; ..\..\rage\suite\src\gpuptfx\ptxrainupdatespu.cpp
+					Outputs				spu-obj/$(InputName).ppu.o
+				}
+			}			
+		}
+	}
+	Directory SpuPM {
+		SpuPmMgr.cpp
+		SpuPmMgr.h
+		SpuPmMgr_pm.h
+		SpuPmMgr_pm_spursentry.cpp
+		SpuPmMgrSPU.cpp
+		SpuPmMgrSPU.h
+		Custom { 
+			spupmmgr_pm.cpp {
+				Platform PS3 { 
+					Description			Building SPU Policy Module: $(InputName)
+					Command				call "..\renderer\SpuPM\GtaBuildSPUPM.bat" debug $(InputDir) $(InputName) $(IntDir)
+					Dependencies		..\renderer\SpuPM\SpuPmMgr_pm_spursentry.cpp; ..\renderer\SpuPM\SpuPmMgr.cpp; ..\renderer\SpuPM\SpuPmMgr.h
+					Outputs				spu-obj/$(InputName).ppu.o
+				}
+			}
+		}
+	}
+	clip_stat.h
+	color.h
+	computeshader.cpp
+	computeshader.h
+	GtaDrawable.cpp
+	GtaDrawable.h
+	HierarchyIds.h
+	HorizonObjects.cpp
+	HorizonObjects.h
+	LensArtefacts.h
+	LensArtefacts.cpp
+	MeshBlendManager.cpp
+	MeshBlendManager.h
+	Mirrors.cpp
+	Mirrors.h
+	MLAA.cpp
+	MLAA.h
+	occlusion.cpp
+	occlusion.h
+	occlusionAsync.cpp
+	occlusionAsync.h
+	OcclusionQueries.h
+	OcclusionQueries.cpp
+	PlantsGrassRenderer.cpp
+	PlantsGrassRenderer.h
+	PlantsGrassRendererSwitches.h
+	PlantsGrassRendererSPU.cpp
+	PlantsGrassRendererSPU.h
+	PlantsMgr.cpp
+	PlantsMgr.h
+	PlantsMgrUpdateCommon.h
+	PlantsMgrUpdateSPU.cpp
+	ProcessLightOcclusionAsync.cpp
+	ProcessLightOcclusionAsync.h
+	ProcessLodLightVisibility.cpp
+	ProcessLodLightVisibility.h
+	PostProcessFX.cpp
+	PostProcessFX.h
+	PostProcessFXHelper.cpp
+	PostProcessFXHelper.h	
+	PostScan.cpp
+	PostScan.h
+	PostFX_shared.h
+	psnvramrendertargettotal.h
+	render_channel.h
+	Renderer.cpp
+	Renderer.h
+	renderListGroup.cpp
+	renderListGroup.h
+	RenderListBuilder.h
+	RenderListBuilder.cpp
+	RenderSettings.cpp
+	RenderSettings.h
+	RenderTargetMgr.cpp
+	RenderTargetMgr.h
+	rendertargets.cpp
+	rendertargets.h
+	renderThread.cpp
+	RenderThread.h
+	River.cpp
+	River.h
+	SortPVSAsync.cpp
+	sprite2d.cpp
+	sprite2d.h
+	SSAO.h
+	SSAO.cpp
+	TerrainEdgeInfo.cpp
+	TerrainEdgeInfo.h
+	TreeImposters.cpp
+	TreeImposters.h
+	UseTreeImposters.h
+	Water.cpp
+	Water.h
+	waterdefines.h
+	WaterSPU.cpp
+	WaterSPU.h
+	WaterUpdateDynamicCommon.h
+	zonecull.cpp
+	zonecull.h
+	ScreenshotManager.h
+	ScreenshotManager.cpp
+	UI3DDrawManager.h
+	UI3DDrawManager.cpp
+	AdaptiveDOF.cpp
+	AdaptiveDOF.h
+	ApplyDamage.cpp
+	ApplyDamage.h
+	Custom {
+		PlantsGrassRendererSPU.job
+		PlantsMgrUpdateSPU.job
+		ProcessLightOcclusionAsync.frag
+		ProcessLodLightVisibility.frag
+		SortPVSAsync.frag
+		WaterSPU.job
+	}
+	Parse {
+		Water
+		SSAO
+		PlantsGrassRenderer
+		TerrainTessellation
+		UI3DDrawManager
+		PostProcessFXHelper
+		LensArtefacts
+	}
+}
+

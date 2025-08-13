@@ -1,0 +1,4 @@
+#define ENTRYPOINT spuWaterProcess
+#include "system/task_spu.h"
+
+#include "WaterSPU.cpp" 

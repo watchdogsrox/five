@@ -1,0 +1,354 @@
+// 
+// animation/AnimDefines.cpp
+// 
+// Copyright (C) 1999-2010 Rockstar Games.  All Rights Reserved. 
+// 
+
+// Game headers
+#include "anim_channel.h"
+#include "AnimDefines.h"
+
+
+const atHashWithStringNotFinal ApprovalNone("None",0x1D632BA1);
+const atHashWithStringNotFinal ApprovalPlaceholder("Placeholder",0xC1287E2E);
+const atHashWithStringNotFinal ApprovalComplete("Complete",0x4367D27F);
+const atHashWithStringNotFinal ApprovalApproved("Approved",0xEF2EB77A);
+
+const fwMvClipSetId CLIP_SET_COMBAT_BUDDY_SHOT_PISTOL("combat@buddy_shot@pistol",0xDC43392A);
+const fwMvClipSetId CLIP_SET_COMBAT_BUDDY_SHOT_RIFLE("combat@buddy_shot@rifle",0x4AAB7982);
+const fwMvClipSetId CLIP_SET_COMBAT_REACTIONS_RIFLE_TURN("combat_reactions_rifle_turn",0x293523D1);
+const fwMvClipSetId CLIP_SET_STD_PED("ANIM_GROUP_STD_PED",0x7E8DB8C6);
+const fwMvClipSetId CLIP_SET_STD_GETUPS("ANIM_GROUP_STD_GETUPS",0x5198415E);
+const fwMvClipSetId CLIP_SET_STD_GETUPS_BACK("ANIM_GROUP_STD_GETUPS_BACK",0x7D8718EB);
+const fwMvClipSetId CLIP_SET_CELLPHONE("ANIM_GROUP_CELLPHONE",0x16DE0488);
+const fwMvClipSetId CLIP_SET_CELLPHONE_FEMALE("ANIM_GROUP_CELLPHONE_FEMALE",0x4a7a30cf);
+const fwMvClipSetId CLIP_SET_CELLPHONE_FPS("ANIM_GROUP_CELLPHONE_FPS",0xf3525e89);
+const fwMvClipSetId CLIP_SET_CELLPHONE_PARACHUTE_FPS("ANIM_GROUP_CELLPHONE_PARACHUTE_FPS",0xa34dfc85);
+const fwMvClipSetId CLIP_SET_CELLPHONE_1HANDED("ANIM_GROUP_CELLPHONE_1HANDED",0x7B7F155B);
+const fwMvClipSetId CLIP_SET_CELLPHONE_STEALTH("ANIM_GROUP_CELLPHONE_STEALTH",0x74a0dc6e);
+const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_DS("ANIM_GROUP_CELLPHONE_IN_CAR_DS",0x05676621);
+const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_PS("ANIM_GROUP_CELLPHONE_IN_CAR_PS",0x24ea7746);
+const fwMvClipSetId CLIP_SET_CELLPHONE_IN_CAR_DS_FPS("ANIM_GROUP_CELLPHONE_IN_CAR_DS_FPS",0xc0f640c3);
+const fwMvClipSetId CLIP_SET_SIT_CHAIR_F("AMB@PROP_HUMAN_SEAT_CHAIR_FEMALE_GENERIC@BASE",0x4E3D2FB1);
+const fwMvClipSetId CLIP_SET_SIT_STOOL_F("ANIM_GROUP_SIT_STOOL_F",0x4B39F468);
+const fwMvClipSetId CLIP_SET_SIT_COUCH_F("ANIM_GROUP_SIT_COUCH_F",0xEDC6D209);
+const fwMvClipSetId CLIP_SET_SIT_CHAIR_M("AMB@PROP_HUMAN_SEAT_CHAIR_MALE_GENERIC@BASE",0x4ED622D5);
+const fwMvClipSetId CLIP_SET_SIT_STOOL_M("ANIM_GROUP_SIT_STOOL_M",0xC79FED0A);
+const fwMvClipSetId CLIP_SET_SIT_COUCH_M("ANIM_GROUP_SIT_COUCH_M",0x6DC6520A);
+const fwMvClipSetId CLIP_SET_SIT_STEP_M("ANIM_GROUP_SIT_STEP_M",0xA64C721C);
+const fwMvClipSetId CLIP_SET_SIT_WALL_M("ANIM_GROUP_SIT_WALL_M",0xC0ED7CED);
+const fwMvClipSetId CLIP_SET_MOVE_MELEE("move_strafe_melee_unarmed",0xF28A0D1F);
+const fwMvClipSetId CLIP_SET_PICKUP_AND_CARRY_OBJECT("ANIM_GROUP_PICKUP_AND_CARRY_OBJECT",0x2400296A);
+const fwMvClipSetId CLIP_SET_EVASIVE_DIVES("ANIM_GROUP_EVASIVE_DIVES",0x5838D5E9);
+const fwMvClipSetId CLIP_SET_MOVE_AVOIDANCE("ANIM_GROUP_MOVE_AVOIDANCE",0x7B587380);
+const fwMvClipSetId CLIP_SET_MOVE_INJURED("move_injured_generic",0xBE27F702);
+const fwMvClipSetId CLIP_SET_MOVE_INJURED_FEMALE("move_injured_generic_female",0x31D46CB1);
+const fwMvClipSetId CLIP_SET_PARACHUTE("ANIM_GROUP_PARACHUTE",0x409A90C6);
+const fwMvClipSetId CLIP_SET_RGUARDR_LOW_2("ANIM_GROUP_RGUARDR_LOW_2",0xBAAC4DFC);
+const fwMvClipSetId CLIP_SET_MELEE_UNARMED_BASE("melee@unarmed@base",0x2AAB8DD2);
+const fwMvClipSetId CLIP_SET_DUCK_AND_COVER("duck_and_cover",0xD2A66496);
+const fwMvClipSetId CLIP_SET_SLOPE_SCAMBLE("ANIM_GROUP_SLOPE_SCRAMBLE",0x7DFBCECB);
+const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_DS("clipset@anim@veh@helicopter@annihilator2@rear_front_ds@enter_exit", 0x1ED09EB9);
+const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_ENTER_DS("clipset@veh@helicopter@rds@enter_exit",0xE8A3C5CE);
+const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_PS("clipset@anim@veh@helicopter@annihilator2@rear_front_ps@enter_exit", 0x266B2B09);
+const fwMvClipSetId CLIP_SET_VEH_HELI_REAR_DESCEND_ENTER_PS("clipset@veh@helicopter@rps@enter_exit",0x131F71B7);
+const fwMvClipSetId CLIP_SET_VEH_HELI_ANNIHILATOR2_DESCEND_RRDS("clipset@anim@veh@helicopter@annihilator2@rrds@enter_exit", 0x2B180B3A);
+const fwMvClipSetId CLIP_SET_VEH_HELI_ANNIHILATOR2_DESCEND_RRPS("clipset@anim@veh@helicopter@annihilator2@rrps@enter_exit", 0x8E29CE51);
+const fwMvClipSetId CLIP_SET_KO_SHOT("dam_ko@shot",0x4A7A9BBD);
+const fwMvClipSetId MOVE_PED_BASIC_LOCOMOTION("move_ped_basiclocomotion",0x70AFDBA);
+const fwMvClipSetId MOVE_GUARD_ALERT("move_guard_alert",0x891128E5);
+const fwMvClipSetId MOVE_GUARD_NOT_ALERT("move_guard_not_alert",0x9928ED53);
+const fwMvClipSetId MOVE_PED_HANDCUFFED("move_ped_handcuffed",0x45841BA9);
+const fwMvClipSetId CLIP_SET_NEW_PED_FALL("ANIM_GROUP_NEW_PED_FALL",0xAB98A01F);
+const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS("ANIM_GROUP_REACTION_GUNFIRE_RUNS",0x4402D4BB);
+const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS_V1("ANIM_GROUP_REACTION_GUNFIRE_RUNS_V1",0xc3d5f650);
+const fwMvClipSetId CLIP_SET_REACTION_GUNFIRE_RUNS_V2("ANIM_GROUP_REACTION_GUNFIRE_RUNS_V2",0x9ea6abf2);
+const fwMvClipSetId CLIP_SET_REACTION_SHOCKING_WALKS("ANIM_GROUP_REACT_SHOCKING_WALKS",0xE57E95CD);
+const fwMvClipSetId CLIP_SET_SKYDIVE_BASE("skydive@base",0xB659CEF1);
+const fwMvClipSetId CLIP_SET_SKYDIVE_FREEFALL("skydive@freefall",0x79A9276B);
+const fwMvClipSetId CLIP_SET_SKYDIVE_LOW_LOD("skydive@low_lod",0x5EFEC65C);
+const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE("skydive@parachute@",0x6A92721);
+const fwMvClipSetId CLIP_SET_SKYDIVE_BASE_FIRST_PERSON("skydive@base@first_person",0x03d433a8);
+const fwMvClipSetId CLIP_SET_SKYDIVE_FREEFALL_FIRST_PERSON("skydive@freefall@first_person",0xfb70681c);
+const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE_FIRST_PERSON("skydive@parachute@first_person",0x4730343f);
+const fwMvClipSetId CLIP_SET_SKYDIVE_PARACHUTE_CHUTE("skydive@parachute@chute",0x24A403C);
+const fwMvClipSetId CLIP_SET_VEH_SKYDIVE_PARACHUTE_CHUTE("anim@veh@skydive@parachute@chute",0xC634D3C9);
+const fwMvClipSetId CLIP_SET_MOVE_M_SCARED("move_m@scared",0x706B7540);
+const fwMvClipSetId CLIP_SET_MOVE_F_SCARED("move_f@scared",0xA8365B3B);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_LEFT("react_small_intro_left",0xECB2C7B8);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_RIGHT("react_small_intro_right",0xA19F3CE3);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_FORWARD("react_small_intro_forward",0x803E7B1E);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_INTRO_BACKWARD("react_small_intro_backward",0x5D75346);
+const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_LEFT("react_big_intro_left",0xAACC2792);
+const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_RIGHT("react_big_intro_right",0x30DC72B1);
+const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_FORWARD("react_big_intro_forward",0x3CC3A7D2);
+const fwMvClipSetId CLIP_SET_REACT_BIG_INTRO_BACKWARD("react_big_intro_backward",0x60A87A7A);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_VARIATIONS_IDLE_E("react_small_idle_e",0xD7085EA4);
+const fwMvClipSetId CLIP_SET_REACT_SMALL_EXIT("react_small_exit",0x67F0094B);
+const fwMvClipSetId CLIP_SET_REACT_BIG_EXIT("react_big_exit",0xC9165E22);
+const fwMvClipSetId CLIP_SET_REACT_BACK_AWAY_MALE("react_back_away_m",0xD0B99B4E);
+const fwMvClipSetId CLIP_SET_REACT_BACK_AWAY_FEMALE("react_back_away_f",0x67BE4955);
+const fwMvClipSetId CLIP_SET_REACTION_SHOVE("reaction@shove",0x3034A2E6);
+const fwMvClipSetId CLIP_SET_TAKE_OFF_HELMET("TakeOffHelmet",0x18E28865);
+const fwMvClipSetId CLIP_SET_SWITCH_VISOR_ON_FOOT("SwitchVisorOnFoot",0x1C69D8D8);
+const fwMvClipSetId CLIP_SET_PUT_ON_TAKE_OFF_HELMET_FPS("PutOnTakeOffHelmetFPS", 0x3adf5f8e);
+const fwMvClipSetId CLIP_SET_PUT_ON_TAKE_OFF_HELMET_FPS_HELI("PutOnTakeOffHelmetFPSHeli", 0x3B80C270);
+const fwMvClipSetId CLIP_SET_POLICE_WARNING("ISSUE_TICKET",0xED3A7DD7);
+const fwMvClipSetId CLIP_SET_HAND_POSES("nm@hands",0x12C80464);
+const fwMvClipSetId CLIP_SET_GROWL("creatures@cougar@melee",0x594EF9F4);
+const fwMvClipSetId CLIP_SET_VEH_STD_DS_BASE("clipset@veh@std@ds@base",0xC6A9839D);
+const fwMvClipSetId CLIP_SET_VEH_STD_PS_BASE("clipset@veh@std@ps@base",0x7F606C80);
+const fwMvClipSetId CLIP_SET_MOVE_STRAFE_BALLISTIC("move_strafe_ballistic",0xCAFCA15A);
+
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_FRONT("knockdown_vehiclehit_front",0xE10FB94A);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_BACK("knockdown_vehiclehit_back",0xD3BCA596);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_LEFT("knockdown_vehiclehit_left",0x80BD4E60);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_VEHICLE_RIGHT("knockdown_vehiclehit_right",0x2CE240E0);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_FRONT("knockdown_explosion_front",0x96580DE6);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_BACK("knockdown_explosion_back",0xD5250473);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_LEFT("knockdown_explosion_left",0x5BA6E8EA);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_EXPLOSION_RIGHT("knockdown_explosion_right",0xE360BF3);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_FRONT("knockdown_shotgun_front",0xF4B21D9D);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_BACK("knockdown_shotgun_back",0x1E4B3B3B);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_LEFT("knockdown_shotgun_left",0xF673EB16);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SHOTGUN_RIGHT("knockdown_shotgun_right",0xA7F27BF0);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_FRONT("knockdown_sniper_front",0x36C28149);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_BACK("knockdown_sniper_back",0xECD03E3);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_LEFT("knockdown_sniper_left",0x28083657);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SNIPER_RIGHT("knockdown_sniper_right",0x906192F4);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_FRONT("knockdown_headshot_front",0x92899125);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_BACK("knockdown_headshot_back",0x65940487);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_LEFT("knockdown_headshot_left",0x1A835D52);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_HEADSHOT_RIGHT("knockdown_headshot_right",0x52D91061);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_FRONT("knockdown_pistol_front",0x541DD552);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_BACK("knockdown_pistol_back",0xAD01EE9E);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_LEFT("knockdown_pistol_left",0x5F3EF931);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_PISTOL_RIGHT("knockdown_pistol_right",0x4CEECA67);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_FRONT("knockdown_smg_front",0x58CA3F02);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_BACK("knockdown_smg_back",0x6E816EE7);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_LEFT("knockdown_smg_left",0x67D834BF);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_SMG_RIGHT("knockdown_smg_right",0xEDA855AB);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_FRONT("knockdown_automatic_front",0xA39901FB);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_BACK("knockdown_automatic_back",0xC2DB999C);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_LEFT("knockdown_automatic_left",0x78881435);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_AUTOMATIC_RIGHT("knockdown_automatic_right",0xE46B0CBC);
+
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_FRONT("knockdown_legshot_front",0x8DCE037A);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_BACK("knockdown_legshot_back",0x3BD4E496);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_LEFT("knockdown_legshot_left",0x1CA4DC06);
+const fwMvClipSetId CLIP_SET_KNOCKDOWN_LEGSHOT_RIGHT("knockdown_legshot_right",0xDC498694);
+
+const fwMvClipSetId CLIP_SET_JUMP_COLLISION_BRACE("jump_collision_brace",0xf4553f2b);
+
+const fwMvClipSetId CLIP_SET_DEAD						   ("dead",0xc9b954ea);
+
+const fwMvClipSetId CLIP_SET_GESTURE_M_CAR_DS("ANIM_GROUP_GESTURE_M_CAR_STD_DS", 0xbeeadd8a);
+const fwMvClipSetId CLIP_SET_GESTURE_F_CAR_DS("ANIM_GROUP_GESTURE_F_CAR_STD_DS", 0x35843def);
+
+const fwMvClipSetId CLIP_SET_GESTURE_M_CAR_PS("ANIM_GROUP_GESTURE_M_CAR_STD_PS", 0x731652ce);
+const fwMvClipSetId CLIP_SET_GESTURE_F_CAR_PS("ANIM_GROUP_GESTURE_F_CAR_STD_PS", 0xd7e186e3);
+
+const fwMvClipSetId CLIP_SET_GESTURE_M_SITTING("ANIM_GROUP_GESTURE_M_SITTING_GENERIC_CASUAL", 0xbbb82817);
+const fwMvClipSetId CLIP_SET_GESTURE_F_SITTING("ANIM_GROUP_GESTURE_F_SITTING_GENERIC_CASUAL", 0xdd53cce2);
+
+const fwMvClipSetId CLIP_SET_FPS_DIVING("move_ped_diving_first_person", 0xfafb20dc);
+const fwMvClipSetId CLIP_SET_FPS_SWIMMING("move_ped_swimming_first_person", 0xb40136b1);
+const fwMvClipSetId CLIP_SET_FPS_DIVING_SCUBA("move_ped_diving_scuba_first_person", 0xcfe192fb);
+
+const fwMvClipId CLIP_STD_PHONE_TEXT_IN                    ("cellphone_text_out",0xB59B9B77);
+const fwMvClipId CLIP_STD_PHONE_TEXT_LOOP                  ("cellphone_text_loop",0x36A971AA);
+const fwMvClipId CLIP_STD_PHONE_TEXT_OUT                   ("cellphone_text_away",0xF58DB6FD);
+const fwMvClipId CLIP_AIM_MED_LOOP                         ("AIM_MED_LOOP",0x5BCEFE69);
+const fwMvClipId CLIP_AIM_MED_LOOP_CROUCH                  ("AIM_MED_LOOP_CROUCH",0xEE50E60E);
+const fwMvClipId CLIP_AUTODROP_25CM_INTRO                  ("25cm_intro",0xD65CFF16);
+const fwMvClipId CLIP_AUTODROP_25CM_LAND                   ("25cm_land",0x2B761440);
+const fwMvClipId CLIP_AUTODROP_25CM_LOOP                   ("25cm_loop",0x84D21E83);
+const fwMvClipId CLIP_AUTODROP_50CM_INTRO                  ("50cm_intro",0xD536D2DC);
+const fwMvClipId CLIP_AUTODROP_50CM_LAND                   ("50cm_land",0x267C26D6);
+const fwMvClipId CLIP_AUTODROP_50CM_LOOP                   ("50cm_loop",0xB6F93DC6);
+const fwMvClipId CLIP_AUTODROP_75CM_INTRO                  ("75cm_intro",0x754E9471);
+const fwMvClipId CLIP_AUTODROP_75CM_LAND                   ("75cm_land",0x90AF13DB);
+const fwMvClipId CLIP_AUTODROP_75CM_LOOP                   ("75cm_loop",0xFB66535E);
+const fwMvClipId CLIP_AVOID_FROM_BACK_TO_FRONT             ("frback_tofront",0x3783CAD5);
+const fwMvClipId CLIP_AVOID_FROM_BACK_TO_LEFT              ("frback_toleft",0x3F8D5EED);
+const fwMvClipId CLIP_AVOID_FROM_BACK_TO_RIGHT             ("frback_toright",0x231608D0);
+const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_BACK             ("frfront_toback",0x9B46B9B);
+const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_LEFT             ("frfront_toleft",0x92325024);
+const fwMvClipId CLIP_AVOID_FROM_FRONT_TO_RIGHT            ("frfront_toright",0x85DAFC84);
+const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_BACK              ("frleft_toback",0xF9C4BBB4);
+const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_FRONT             ("frleft_tofront",0x24EDD356);
+const fwMvClipId CLIP_AVOID_FROM_LEFT_TO_RIGHT             ("frleft_toright",0x1EA9D829);
+const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_BACK             ("frright_toback",0x4084A7D0);
+const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_FRONT            ("frright_tofront",0x7DB78424);
+const fwMvClipId CLIP_AVOID_FROM_RIGHT_TO_LEFT             ("frright_toleft",0x7BADA767);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_L_PISTOL             ("HIGH_L_PISTOL",0x6978F12C);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_L_PISTOL_SHORT       ("HIGH_L_PISTOL_SHORT",0xE8B6F13);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_L_RIFLE              ("HIGH_L_RIFLE",0x5A3B2D4F);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_L_RIFLE_SHORT        ("HIGH_L_RIFLE_SHORT",0xE6E0EAB9);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_R_PISTOL             ("HIGH_R_PISTOL",0xD01CD11);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_R_PISTOL_SHORT       ("HIGH_R_PISTOL_SHORT",0x69E8DE58);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_R_RIFLE              ("HIGH_R_RIFLE",0x7AB80FBC);
+const fwMvClipId CLIP_COVER_DIVE_HIGH_R_RIFLE_SHORT        ("HIGH_R_RIFLE_SHORT",0x85F1A7F0);
+const fwMvClipId CLIP_COVER_DIVE_LOW_L_PISTOL              ("LOW_L_PISTOL",0x789A6974);
+const fwMvClipId CLIP_COVER_DIVE_LOW_L_PISTOL_SHORT        ("LOW_L_PISTOL_SHORT",0x3E8D17D7);
+const fwMvClipId CLIP_COVER_DIVE_LOW_L_RIFLE               ("LOW_L_RIFLE",0xA2EDD701);
+const fwMvClipId CLIP_COVER_DIVE_LOW_L_RIFLE_SHORT         ("LOW_L_RIFLE_SHORT",0x93BD0D44);
+const fwMvClipId CLIP_COVER_DIVE_LOW_R_PISTOL              ("LOW_R_PISTOL",0x2FA472AA);
+const fwMvClipId CLIP_COVER_DIVE_LOW_R_PISTOL_SHORT        ("LOW_R_PISTOL_SHORT",0x715CEBD0);
+const fwMvClipId CLIP_COVER_DIVE_LOW_R_RIFLE               ("LOW_R_RIFLE",0x9C3A87AD);
+const fwMvClipId CLIP_COVER_DIVE_LOW_R_RIFLE_SHORT         ("LOW_R_RIFLE_SHORT",0x68F27444);
+const fwMvClipId CLIP_DAM_BACK                             ("Back",0x37418674);
+const fwMvClipId CLIP_DAM_FLOOR_BACK                       ("Floor_Back",0xCEA2C6CE);
+const fwMvClipId CLIP_DAM_FRONT                            ("Front",0x89F230A2);
+const fwMvClipId CLIP_DAM_FLOOR_FRONT                      ("Floor_Front",0x6C3CB5B2);
+const fwMvClipId CLIP_DAM_LEFT                             ("Left",0x6FA34840);
+const fwMvClipId CLIP_DAM_FLOOR_LEFT                       ("Floor_Left",0x6B6F3389);
+const fwMvClipId CLIP_DAM_RIGHT                            ("Right",0xB8CCC339);
+const fwMvClipId CLIP_DAM_FLOOR_RIGHT                      ("Floor_Right",0x21EBAB4);
+const fwMvClipId CLIP_GROWL								   ("growling",0xE61C0628);
+const fwMvClipId CLIP_NON_HUMAN_DYING					   ("dying",0x2EB6E84);
+const fwMvClipId CLIP_IDLE                                 ("Idle",0x71C21326);
+const fwMvClipId CLIP_INJURED_DRAG_PED                     ("injured_drag_ped",0xF4C70034);
+const fwMvClipId CLIP_INJURED_DRAG_PLYR                    ("injured_drag_plyr",0x8FB1982B);
+const fwMvClipId CLIP_INJURED_PICKUP_BACK_PED              ("injured_pickup_back_ped",0x26F0B19A);
+const fwMvClipId CLIP_INJURED_PICKUP_BACK_PLYR             ("injured_pickup_back_plyr",0xA0F73AB4);
+const fwMvClipId CLIP_INJURED_PICKUP_FRONT_PED             ("injured_pickup_front_ped",0x1AC4641B);
+const fwMvClipId CLIP_INJURED_PICKUP_FRONT_PLYR            ("injured_pickup_front_plyr",0x3B90BDC1);
+const fwMvClipId CLIP_INJURED_PICKUP_SIDE_LEFT_PED         ("injured_pickup_side_left_ped",0xCC67E295);
+const fwMvClipId CLIP_INJURED_PICKUP_SIDE_LEFT_PLYR        ("injured_pickup_side_left_plyr",0x510286C);
+const fwMvClipId CLIP_INJURED_PICKUP_SIDE_RIGHT_PED        ("injured_pickup_side_right_ped",0xFDB4FA7E);
+const fwMvClipId CLIP_INJURED_PICKUP_SIDE_RIGHT_PLYR       ("injured_pickup_side_right_plyr",0x912C2A5B);
+const fwMvClipId CLIP_INJURED_PUTDOWN_PED                  ("injured_putdown_ped",0xDB390650);
+const fwMvClipId CLIP_INJURED_PUTDOWN_PLYR                 ("injured_putdown_plyr",0xED671669);
+const fwMvClipId CLIP_KO_BACK                              ("KO_Back",0xC2CEE495);
+const fwMvClipId CLIP_KO_COLLAPSE                          ("KO_Collapse",0x2AD54281);
+const fwMvClipId CLIP_KO_DROWN                             ("drown",0x798A1E3B);
+const fwMvClipId CLIP_KO_FRONT                             ("KO_Front",0x6FA3FB0A);
+const fwMvClipId CLIP_KO_LEFT                              ("KO_Left",0xF4FD8300);
+const fwMvClipId CLIP_KO_RIGHT                             ("KO_Right",0xF7AE8287);
+const fwMvClipId CLIP_MELEE_STEALTH_KILL_INDICATOR_CLOSE   ("stealth_kill_indicate_close",0x6D9C1AB);
+const fwMvClipId CLIP_MELEE_BLOCK_INDICATOR				   ("dodge_generic_centre",0x59358B07);
+const fwMvClipId CLIP_MOVE_SPRINT                          ("Sprint",0xBC29E48);
+const fwMvClipId CLIP_OBJECT_PICKUP_LOW                    ("pickup_low",0x526DF3D0);
+const fwMvClipId CLIP_PARACHUTE_DEPLOY                     ("open_chute",0x46A7994E);
+const fwMvClipId CLIP_PARACHUTE_FREEFALL                   ("free_fall",0x59F44BE3);
+const fwMvClipId CLIP_PARACHUTE_IDLE                       ("hang_idle",0x1BB2516D);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_BRAKING             ("P_Parachute_S_braking",0x7D866175);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_CRUMPLE             ("P_Parachute_S_crumple",0x971835F1);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_DEPLOY              ("P_Parachute_S_deploy",0xCB757C1F);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_LEFTFCRUMPLE        ("P_Parachute_S_leftFcrumple",0x6671E549);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_RIGHTFCRUMPLE       ("P_Parachute_S_rightFcrumple",0x80D5095A);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_STALLING            ("P_Parachute_S_stalling",0x6805000D);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_TURN_LEFT           ("P_Parachute_S_turnLeft",0xA4DEDF66);
+const fwMvClipId CLIP_PARACHUTE_OBJECT_TURN_RIGHT          ("P_Parachute_S_turnRight",0x48A510DD);
+const fwMvClipId CLIP_PERP_HANDS_UP                        ("IDLE_2_HANDS_UP",0xE314061);
+const fwMvClipId CLIP_REACT_BACK_DIVE_LEFT                 ("react_back_dive_left",0x2C5C6F2E);
+const fwMvClipId CLIP_REACT_BACK_DIVE_RIGHT                ("react_back_dive_right",0x3DBF8228);
+const fwMvClipId CLIP_REACT_FRONT_DIVE_LEFT                ("react_front_dive_left",0x33E09DE2);
+const fwMvClipId CLIP_REACT_FRONT_DIVE_RIGHT               ("react_front_dive_right",0xAAA7E722);
+const fwMvClipId CLIP_REACT_GUARD_FORWARD                  ("Front",0x89F230A2);
+const fwMvClipId CLIP_REACT_LEFT_SIDE_DIVE_BACK            ("react_left_side_dive_back",0x4867EE00);
+const fwMvClipId CLIP_REACT_LEFT_SIDE_DIVE_FRONT           ("react_left_side_dive_front",0xD4403B16);
+const fwMvClipId CLIP_REACT_RIGHT_SIDE_DIVE_BACK           ("react_right_side_dive_back",0xBD78CEB0);
+const fwMvClipId CLIP_REACT_RIGHT_SIDE_DIVE_FRONT          ("react_right_side_dive_front",0x9D274020);
+const fwMvClipId CLIP_RUN                                  ("Run",0x1109B569);
+const fwMvClipId CLIP_SIT_COWER                            ("Cower",0x3376FD5D);
+const fwMvClipId CLIP_SIT_DOWN_FRONT                       ("Sit_Down_Front",0x8188D537);
+const fwMvClipId CLIP_SIT_DOWN_FRONT_CHAIR_TO_REAR         ("Sit_Down_Front_B",0x3F27A421);
+const fwMvClipId CLIP_SIT_DOWN_LEFT                        ("Sit_Down_R",0x65046237);
+const fwMvClipId CLIP_SIT_DOWN_RIGHT                       ("Sit_Down_L",0x79090A40);
+const fwMvClipId CLIP_SIT_FLEE_FRONT                       ("Flee_Front",0xD300D6E5);
+const fwMvClipId CLIP_SIT_FLEE_LEFT                        ("Flee_R",0x7E1676E3);
+const fwMvClipId CLIP_SIT_FLEE_RIGHT                       ("Flee_L",0xA7304942);
+const fwMvClipId CLIP_SIT_IDLE                             ("base",0x44E21C90);
+const fwMvClipId CLIP_SIT_STANDUP_FRONT                    ("Get_Up_Front",0x972658C0);
+const fwMvClipId CLIP_SIT_STANDUP_LEFT                     ("Get_Up_R",0x7193E3C7);
+const fwMvClipId CLIP_SIT_STANDUP_RIGHT                    ("Get_Up_L",0x2AB55607);
+const fwMvClipId CLIP_SKYDIVE_FALL_GLIDE_TO_FREE_IDLE      ("fall_glide_to_free_idle",0xAD93F382);
+const fwMvClipId CLIP_SPRINT                               ("Sprint",0xBC29E48);
+const fwMvClipId CLIP_STD_GETUP_FAST                       ("get_up_fast",0xBA261E14);
+const fwMvClipId CLIP_STD_GETUP_INJURED                    ("get_up_injured",0x7F634962);
+const fwMvClipId CLIP_STD_GETUP_NORMAL                     ("get_up_normal",0xE9B82F7);
+const fwMvClipId CLIP_STD_GETUP_SLOW                       ("get_up_slow",0x198CD4C8);
+const fwMvClipId CLIP_STD_HANDSCOWER                       ("DUCK_cower",0x7F32A691);
+const fwMvClipId CLIP_STD_HANDSUP                          ("handsup",0x7066E9F8);
+const fwMvClipId CLIP_STD_HELMET_OFF                       ("helmet_off",0xD915F948);
+const fwMvClipId CLIP_STD_HIT_WALL                         ("HIT_wall",0x2EB2184F);
+const fwMvClipId CLIP_STD_NM_MELEE                         ("nm_melee",0xF8DC0AED); 
+const fwMvClipId CLIP_STD_PHONE_IN                         ("CellPHONE_in",0x63AB241D);
+const fwMvClipId CLIP_STD_PHONE_IN_FROM_TEXT               ("Cell_Text_to_Ear",0xD697AFC6);
+const fwMvClipId CLIP_STD_PHONE_OUT                        ("CellPHONE_out",0xF6C22DE5);
+const fwMvClipId CLIP_STD_PHONE_TALK                       ("CellPHONE_talk",0x2D6D6580);
+const fwMvClipId CLIP_STD_PHONE_TEXT                       ("CellPHONE_text",0x5F4BE0F4);
+const fwMvClipId CLIP_STEP_FWD							   ("step_fwd",0x84A8C5D8);
+const fwMvClipId CLIP_STEP_RGT							   ("step_rgt",0x22723C80);
+const fwMvClipId CLIP_STEP_BWD							   ("step_bwd",0x92796B7C);
+const fwMvClipId CLIP_STEP_LFT							   ("step_lft",0xF30F102C);
+const fwMvClipId CLIP_WALK                                 ("Walk",0x83504C9C);
+const fwMvClipId CLIP_FALL_HIGH_CUFFED					   ("fall_high_cuffed",0xED7CEE8E);
+const fwMvClipId CLIP_TAKE_HELMET_OFF					   ("Take_off_helmet_stand",0x65CC7E1F);
+const fwMvClipId CLIP_TAKE_HELMET_OFF_FPS				   ("Take_off_helmet_stand_FPS",0x1f787b96);
+const fwMvClipId CLIP_SWITCH_VISOR_DOWN_ON_FOOT				("VISOR_DOWN",0xBFF477A5);
+const fwMvClipId CLIP_SWITCH_VISOR_UP_ON_FOOT				("VISOR_UP",0x8A27E124);
+const fwMvClipId CLIP_SWITCH_VISOR_POV_DOWN_ON_FOOT			("POV_VISOR_DOWN",0xF007BD42);
+const fwMvClipId CLIP_SWITCH_VISOR_POV_UP_ON_FOOT			("POV_VISOR_UP",0xAD2A8A9F);
+const fwMvClipId CLIP_SWITCH_NV_GOGGLES_DOWN_ON_FOOT		("GOGGLES_DOWN",0x4D22C0A);
+const fwMvClipId CLIP_SWITCH_NV_GOGGLES_UP_ON_FOOT			("GOGGLES_UP",0xCE9F1062);
+const fwMvClipId CLIP_HAND_POSE_NATURAL					   ("natural",0xFFE1A346);
+const fwMvClipId CLIP_HAND_POSE_FIST					   ("fist",0x9AFA945D);
+const fwMvClipId CLIP_HAND_POSE_FLAT_FLOOR					("flat_floor",0xDD40B805);
+const fwMvClipId CLIP_HAND_POSE_GRAB						("grab",0xAF0C75AE);
+const fwMvClipId CLIP_HAND_POSE_HANDS_UP					("hands_up",0x93EA25F5);
+const fwMvClipId CLIP_HAND_POSE_MIDDLE_FINGER				("middle_finger",0x7B620096);
+const fwMvClipId CLIP_HAND_POSE_FLAIL						("flail",0x33FD0080);
+const fwMvClipId CLIP_HAND_POSE_IMPACT						("impact",0x628CB55F);
+const fwMvClipId CLIP_VEH_STD_SIT							("sit",0x5577AB18);
+const fwMvClipId CLIP_FACIAL_MOOD_NORMAL					("mood_normal_1",0xBD789759);
+const fwMvClipId CLIP_FACIAL_VOICE_DRIVEN_MOUTH_MOVEMENT	("mic_chatter",0XED9FFE5C);
+
+extern const fwMvFilterId BONEMASK_ALL							("BONEMASK_ALL",0x540BB62);
+extern const fwMvFilterId BONEMASK_ARMONLY_L					("BONEMASK_ARMONLY_L",0x67B52A94);
+extern const fwMvFilterId BONEMASK_ARMONLY_R					("BONEMASK_ARMONLY_R",0xE0D61CDC);
+extern const fwMvFilterId BONEMASK_ARMS							("BONEMASK_ARMS",0xBD702808);
+extern const fwMvFilterId BONEMASK_BODYONLY						("BONEMASK_BODYONLY",0x55675614);
+extern const fwMvFilterId BONEMASK_HEADONLY						("BONEMASK_HEADONLY",0x2992A656);
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_ARMS			("BONEMASK_HEAD_NECK_AND_ARMS",0x5DD02EC7);
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_L_ARM			("BONEMASK_HEAD_NECK_AND_L_ARM",0xBD60B513);
+extern const fwMvFilterId BONEMASK_HEAD_NECK_AND_R_ARM			("BONEMASK_HEAD_NECK_AND_R_ARM",0xE9BB04A9);
+extern const fwMvFilterId BONEMASK_LOD_LO						("BONEMASK_LOD_LO",0x16A8D84);
+extern const fwMvFilterId BONEMASK_SPINEONLY					("BONEMASK_SPINEONLY",0xB1E56B80);
+extern const fwMvFilterId BONEMASK_SPINE_FEATHERED				("BONEMASK_SPINE_FEATHERED",0x551951CC);
+extern const fwMvFilterId BONEMASK_UPPERONLY					("BONEMASK_UPPERONLY",0xD89921AE);
+
+extern const fwMvFilterId FILTER_ARMSHEADNOMOVER				("ArmsHeadNoMover_filter",0x73A0CAE1);
+extern const fwMvFilterId FILTER_BOTHARMS						("BothArms_filter",0x16F1D420);
+extern const fwMvFilterId FILTER_BOTHARMS_NOSPINE				("BothArms__NoSpine_filter",0xC9DC0F15);
+extern const fwMvFilterId FILTER_GRIP_R_ONLY					("Grip_R_Only_filter",0xB455BA3A);
+extern const fwMvFilterId FILTER_IGNOREMOVERBLEND				("IgnoreMoverBlend_filter",0xA337AF2F);
+extern const fwMvFilterId FILTER_IGNOREMOVERBLENDROTATIONONLY	("IgnoreMoverBlendRotationOnly_filter",0xDD429612);
+extern const fwMvFilterId FILTER_LEGSONLY						("LegsOnly_filter",0xCF7C3B18);
+extern const fwMvFilterId FILTER_LOWERBODY						("Lowerbody_filter",0x22D49B65);
+extern const fwMvFilterId FILTER_MOVERONLY						("MoverOnly_Filter",0xAE170C1E);
+extern const fwMvFilterId FILTER_NOMOVER						("NoMover_filter",0x30DFE311);
+extern const fwMvFilterId FILTER_ROOTONLY						("RootOnly_filter",0x48EBA8C5);
+extern const fwMvFilterId FILTER_ROOTUPPERBODY					("RootUpperbody_filter",0x503C54E9);
+extern const fwMvFilterId FILTER_UPPERBODYNOARM					("UpperBodyNoArms_filter",0x146886A);
+extern const fwMvFilterId FILTER_UPPERBODYANDIK					("UpperbodyAndIk_filter",0xFD429037);
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED_NOLEFTTARM	("UpperbodyFeathered_NoLefttArm_filter",0xEFBF5E79);
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED_NORIGHTARM	("UpperbodyFeathered_NoRightArm_filter",0x7320B763);
+extern const fwMvFilterId FILTER_UPPERBODYFEATHERED				("UpperbodyFeathered_filter",0xFCDD409);
+extern const fwMvFilterId FILTER_UPPERBODYNOMOVER				("UpperbodyNoMover_filter",0xA2D3A818);
+extern const fwMvFilterId FILTER_UPPERBODY						("Upperbody_filter",0x35B1D869);
+extern const fwMvFilterId FILTER_UPPERBODY_FROM_SPINE3			("Upperbody_from_Spine3_filter",0x52768EF6);
+extern const fwMvFilterId FILTER_UPPERBODYBICYCLE_DRIVEBY		("UpperBodyBicycleDriveby_filter",0x34BA8AB9);
+
+
+//////////////////////////////////////////////////////////////////////////

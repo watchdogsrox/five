@@ -1,0 +1,21 @@
+/////////////////////////////////////////////////////////////////////////////////
+//
+// FILE :      chunk.h
+// PURPOSE :   declarations for file chunk handling
+// AUTHOR :    KRH 16/12/97
+// NICKED BY : Obbe. (Thanks Keith)
+//
+/////////////////////////////////////////////////////////////////////////////////
+
+#ifndef CHUNK_H
+#define CHUNK_H
+
+#include <string.h>
+
+struct ChunkHeader
+{
+	char	Type[4];
+	u32		Size;
+};
+
+#endif

@@ -1,0 +1,32 @@
+//
+//	Custom test of SPU processing job:
+//
+//
+//
+#if __SPU
+
+static u8 buffer128[128] ALIGNED(128) = {0};	// handy general purpose scratch buffer
+
+#include "RainUpdateSPU.cpp"
+//
+//
+// main entry routine for custom pm SPU jobs:
+//
+void spuGtaProcess(void *infoPacketSource, unsigned int infoPacketSize)
+{	
+extern char _end[];
+
+	CSPUPostProcessDriverInfo *infoPacket = RainUpdateSPU_cr0(_end, infoPacketSource, infoPacketSize);
+
+#if 0
+	// Hard sync vram transfers so they get there before we patch jump-to-self.
+	dmaTransferRecord.hardSync();
+#endif
+
+	// Write and decrement gates, etc..
+	finalizeSpuGtaProcess(infoPacket, buffer128, 0x01);
+
+}// end of spuGtaProcess()...
+
+#endif
+

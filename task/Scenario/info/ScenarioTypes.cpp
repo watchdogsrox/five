@@ -1,0 +1,7 @@
+// File header
+#include "Task/Scenario/Info/ScenarioTypes.h"
+
+// Parser headers
+#include "ScenarioTypes_parser.h"
+
+////////////////////////////////////////////////////////////////////////////////

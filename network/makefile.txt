@@ -1,0 +1,402 @@
+Project network
+
+Files {
+	Directory Arrays {
+		NetworkArrayHandlerTypes.cpp
+		NetworkArrayHandlerTypes.h
+		NetworkArrayMgr.cpp
+		NetworkArrayMgr.h
+	}
+	Directory Bandwidth {
+		NetworkBandwidthManager.cpp
+		NetworkBandwidthManager.h
+	}
+	Directory Chat {
+		NetworkTextChat.cpp
+		NetworkTextChat.h
+	}
+	Directory Crews {
+		NetworkCrewDataMgr.cpp
+		NetworkCrewDataMgr.h
+		NetworkCrewEmblemMgr.cpp
+		NetworkCrewEmblemMgr.h
+		NetworkCrewMetadata.cpp
+		NetworkCrewMetadata.h
+	}
+	Directory Cloud {
+		CloudCache.cpp
+		CloudCache.h
+		CloudManager.cpp
+		CloudManager.h
+		VideoUploadManager.cpp
+		VideoUploadManager_Custom.cpp
+		VideoUploadManager_Orbis.cpp
+		VideoUploadManager.h
+		Tunables.cpp
+		Tunables.h
+		UGCQueryHelper.cpp
+		UGCQueryHelper.h
+		UserContentManager.cpp
+		UserContentManager.h
+	}
+	Directory Commerce {
+		CommerceManager.cpp
+		CommerceManager.h
+	}
+	Directory Facebook {
+		Facebook.cpp
+		Facebook.h
+	}
+	
+	Directory SocialClubServices {
+		SocialClubInboxManager.h
+		SocialClubInboxManager.cpp
+		GamePresenceEventDispatcher.h
+		GamePresenceEventDispatcher.cpp
+		GamePresenceEvents.h
+		GamePresenceEvents.cpp
+		netGamePresenceEvent.h
+		netGamePresenceEvent.cpp
+		netLocalizedCloudStrings.h
+		netLocalizedCloudStrings.cpp
+		SocialClubCommunityEventMgr.h
+		SocialClubCommunityEventMgr.cpp
+		SocialClubEmailMgr.h
+		SocialClubEmailMgr.cpp
+		SocialClubFeed.h
+		SocialClubFeed.cpp
+		SocialClubFeedMgr.h
+		SocialClubFeedMgr.cpp
+		SocialClubFeedTilesMgr.h
+		SocialClubFeedTilesMgr.cpp
+		SocialClubNewsStoryMgr.h
+		SocialClubNewsStoryMgr.cpp
+		
+	}
+	Directory SocialClubUpdates {
+		SocialClubPolicyManager.cpp
+		SocialClubPolicyManager.h
+		SocialClubVersionedFile.cpp
+		SocialClubVersionedFile.h
+	}
+	Directory Debug {
+		NetworkBot.cpp
+		NetworkBot.h
+		NetworkDebug.cpp
+		NetworkDebug.h
+		NetworkDebugMsgs.cpp
+		NetworkDebugMsgs.h
+		NetworkDebugPlayback.cpp
+		NetworkDebugPlayback.h
+		NetworkSoakTests.cpp
+		NetworkSoakTests.h
+	}
+	Directory Events {
+		NetworkEventTypes.cpp
+		NetworkEventTypes.h
+	}
+	Directory General {
+		Directory ScriptWorldState {
+			Directory WorldStates {
+			NetworkCarGenWorldState.cpp
+			NetworkCarGenWorldState.h
+			NetworkEntityAreaWorldState.cpp
+			NetworkEntityAreaWorldState.h
+			NetworkPopGroupOverrideWorldState.cpp
+			NetworkPopGroupOverrideWorldState.h
+			NetworkPopMultiplierAreaWorldState.cpp
+			NetworkPopMultiplierAreaWorldState.h			
+			NetworkPtFXWorldState.cpp
+			NetworkPtFXWorldState.h
+			NetworkRoadNodeWorldState.cpp
+			NetworkRoadNodeWorldState.h
+			NetworkRopeWorldState.cpp
+			NetworkRopeWorldState.h
+			NetworkScenarioBlockingAreaWorldState.cpp
+			NetworkScenarioBlockingAreaWorldState.h
+			NetworkVehiclePlayerLockingWorldState.cpp
+			NetworkVehiclePlayerLockingWorldState.h
+			}
+		NetworkScriptWorldStateManager.cpp
+		NetworkScriptWorldStateManager.h
+		NetworkScriptWorldStateTypes.cpp
+		NetworkScriptWorldStateTypes.h
+		}
+		NetworkAssetVerifier.cpp
+		NetworkAssetVerifier.h	
+		NetworkColours.cpp
+		NetworkColours.h
+		NetworkDamageTracker.cpp
+		NetworkDamageTracker.h
+		NetworkFakePlayerNames.cpp
+		NetworkFakePlayerNames.h
+		NetworkHasherUtil.cpp
+		NetworkHasherUtil.h
+		NetworkFXId.cpp
+		NetworkFXId.h	
+		NetworkGhostCollisions.cpp
+		NetworkGhostCollisions.h	
+		NetworkPendingProjectiles.cpp
+		NetworkPendingProjectiles.h
+		NetworkSerialisers.cpp
+		NetworkSerialisers.h
+		NetworkScratchpad.cpp
+		NetworkScratchpad.h
+		NetworkStreamingRequestManager.cpp
+		NetworkStreamingRequestManager.h
+		NetworkSynchronisedScene.cpp
+		NetworkSynchronisedScene.h
+		NetworkTextFilter.cpp
+		NetworkTextFilter.h
+		NetworkUtil.cpp
+		NetworkUtil.h
+		NetworkWorldGridOwnership.cpp
+		NetworkWorldGridOwnership.h
+		NetworkVehicleModelDoorLockTable.cpp
+		NetworkVehicleModelDoorLockTable.h
+	}
+	Directory Live {
+		AchMgr.h
+		AchMgr.cpp
+		ClanNetStatusArray.h
+		Events_durango.h
+		Events_durango.winrt.cpp
+		FriendClanData.h
+		FriendClanData.cpp
+		InviteMgr.h
+		InviteMgr.cpp
+		livemanager.cpp
+		livemanager.h
+		livep2pkeys.h
+		livep2pkeys.cpp
+		NetworkMetrics.h
+		NetworkMetrics.cpp
+		NetworkMetricsChannels.h
+		NetworkTelemetry.h
+		NetworkTelemetry.cpp
+		NetworkTransactionTelemetry.h
+		NetworkDebugTelemetry.h
+		NetworkDebugTelemetry.cpp
+		NetworkProfileStats.cpp
+		NetworkProfileStats.h
+		NetworkClan.h
+		NetworkClan.cpp
+		NetworkRemoteCheaterDetector.h
+		NetworkRemoteCheaterDetector.cpp
+		NetworkRichPresence.h
+		NetworkRichPresence.cpp
+		NetworkSCPresenceUtil.h
+		NetworkSCPresenceUtil.cpp
+		PlayerCardDataManager.h
+		PlayerCardDataManager.cpp
+		PlayerCardDataParserHelper.h
+		PlayerCardDataParserHelper.cpp
+		SocialClubMgr.cpp
+		SocialClubMgr.h
+		NetworkGamerAttributes.h
+		NetworkGamerAttributes.cpp
+		NetworkLegalRestrictionsManager.h
+		NetworkLegalRestrictionsManager.cpp
+		Parse {
+			NetworkMetrics
+		}
+	}
+	Directory Objects {
+		Directory Entities {
+			NetObjAutomobile.cpp
+			NetObjAutomobile.h
+			NetObjBike.cpp
+			NetObjBike.h
+			NetObjBoat.cpp
+			NetObjBoat.h
+			NetObjDoor.cpp
+			NetObjDoor.h
+			NetObjDynamicEntity.cpp
+			NetObjDynamicEntity.h
+			NetObjEntity.cpp
+			NetObjEntity.h
+			NetObjGame.cpp
+			NetObjGame.h
+			NetObjGlassPane.cpp
+			NetObjGlassPane.h
+			NetObjHeli.cpp
+			NetObjHeli.h
+			NetObjObject.cpp
+			NetObjObject.h
+			NetObjPed.cpp
+			NetObjPed.h
+			NetObjPhysical.cpp
+			NetObjPhysical.h
+			NetObjPickup.cpp
+			NetObjPickup.h
+			NetObjPickupPlacement.cpp
+			NetObjPickupPlacement.h
+			NetObjPlane.cpp
+			NetObjPlane.h
+			NetObjSubmarine.cpp
+			NetObjSubmarine.h
+			NetObjPlayer.cpp
+			NetObjPlayer.h
+			NetObjProximityMigrateable.cpp
+			NetObjProximityMigrateable.h
+			NetObjTrailer.cpp
+			NetObjTrailer.h
+			NetObjTrain.cpp
+			NetObjTrain.h
+			NetObjVehicle.cpp
+			NetObjVehicle.h
+		}
+		Directory Prediction {
+			NetBlenderBoat.cpp
+			NetBlenderBoat.h
+			NetBlenderHeli.cpp
+			NetBlenderHeli.h
+			NetBlenderPed.cpp
+			NetBlenderPed.h
+			NetBlenderPhysical.cpp
+			NetBlenderPhysical.h
+			NetBlenderTrain.cpp
+			NetBlenderTrain.h
+			NetBlenderVehicle.cpp
+			NetBlenderVehicle.h
+		}
+		Directory Synchronisation {
+			Directory SyncNodes {
+				AutomobileSyncNodes.cpp
+				AutomobileSyncNodes.h
+				BaseSyncNodes.cpp
+				BaseSyncNodes.h
+				BikeSyncNodes.cpp
+				BikeSyncNodes.h
+				BoatSyncNodes.cpp
+				BoatSyncNodes.h
+				DoorSyncNodes.cpp
+				DoorSyncNodes.h
+				SubmarineSyncNodes.cpp
+				SubmarineSyncNodes.h
+				DynamicEntitySyncNodes.cpp
+				DynamicEntitySyncNodes.h
+				EntitySyncNodes.cpp
+				EntitySyncNodes.h
+				GlassPaneSyncNodes.cpp
+				GlassPaneSyncNodes.h
+				HeliSyncNodes.cpp
+				HeliSyncNodes.h
+				ObjectSyncNodes.cpp
+				ObjectSyncNodes.h
+				PedSyncNodes.cpp
+				PedSyncNodes.h
+				PhysicalSyncNodes.cpp
+				PhysicalSyncNodes.h
+				PickupSyncNodes.cpp
+				PickupSyncNodes.h
+				PickupPlacementSyncNodes.cpp
+				PickupPlacementSyncNodes.h
+				PlayerSyncNodes.cpp
+				PlayerSyncNodes.h
+				ProximityMigrateableSyncNodes.cpp
+				ProximityMigrateableSyncNodes.h
+				TrainSyncNodes.cpp
+				TrainSyncNodes.h
+				VehicleSyncNodes.cpp
+				VehicleSyncNodes.h
+				PlaneSyncNodes.cpp
+				PlaneSyncNodes.h
+			}
+			Directory SyncTrees {
+				ProjectSyncTree.cpp
+				ProjectSyncTree.h
+				ProjectSyncTrees.cpp
+				ProjectSyncTrees.h
+			}
+		}
+		NetworkObjectMgr.cpp
+		NetworkObjectMgr.h
+		NetworkObjectPopulationMgr.cpp
+		NetworkObjectPopulationMgr.h
+		NetworkObjectTypes.h
+	}
+	Directory Players {
+		NetGamePlayer.cpp
+		NetGamePlayer.h
+		NetGamePlayerMessages.cpp
+		NetGamePlayerMessages.h
+		NetworkPlayerMgr.cpp
+		NetworkPlayerMgr.h
+	}
+	Directory Roaming {
+		RoamingBubbleMgr.cpp
+		RoamingBubbleMgr.h
+		RoamingMessages.cpp
+		RoamingMessages.h
+		RoamingTypes.h
+	}
+	Directory Sessions {
+		NetworkGameConfig.cpp
+		NetworkGameConfig.h
+		NetworkSession.cpp
+		NetworkSession.h
+		NetworkSessionMessages.cpp
+		NetworkSessionMessages.h
+		NetworkSessionUtils.cpp
+		NetworkSessionUtils.h
+		NetworkVoiceSession.cpp
+		NetworkVoiceSession.h
+	}
+	Directory Stats {
+		NetworkLeaderboardSessionMgr.cpp
+		NetworkLeaderboardSessionMgr.h
+		NetworkLeaderboardCommon.h
+		NetworkStockMarketStats.h
+		NetworkStockMarketStats.cpp
+		Parse {
+			CommunityStatsData
+		}
+	}
+	Directory Voice {
+	    NetworkVoice.cpp
+	    NetworkVoice.h
+	}
+	Directory xlast {
+		Fuzzy.schema.h
+		presenceutil.h
+		Events.man.h
+		Events_JA.man.h
+	}
+	Directory Shop {
+		Catalog.cpp
+		Catalog.h
+		VehicleCatalog.h
+		VehicleCatalog.cpp
+		Inventory.cpp
+		Inventory.h
+		NetworkShopping.cpp
+		NetworkShopping.h
+		NetworkGameTransactions.cpp
+		NetworkGameTransactions.h
+		GameTransactionsSessionMgr.cpp
+		GameTransactionsSessionMgr.h
+		GameTransactionsTasks.cpp
+		GameTransactionsTasks.h
+		
+		Parse {
+			Catalog
+			Inventory
+			NetworkShopping
+		}
+	}
+	Directory Party {
+		NetworkParty.cpp
+		NetworkParty.h
+		NetworkParty_bank.cpp
+		NetworkPartyInvites.cpp
+		NetworkPartyInvites.h	
+	}
+	
+	
+	Network.cpp
+	Network.h
+	NetworkInterface.cpp
+	NetworkInterface.h
+	NetworkTypes.h
+}

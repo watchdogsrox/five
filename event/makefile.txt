@@ -1,0 +1,82 @@
+Project event 
+
+Files {
+	Directory decision {
+		EventDecisionMaker.cpp
+		EventDecisionMaker.h
+		EventDecisionMakerManager.cpp
+		EventDecisionMakerManager.h
+		EventDecisionMakerResponse.cpp
+		EventDecisionMakerResponse.h
+		EventResponseDecisionFlags.cpp
+		EventResponseDecisionFlags.h
+		Parse {
+			EventDecisionMakerResponse
+			EventResponseDecisionFlags
+		}
+	}
+	Folder events {
+		Event.cpp
+		Event.h
+		EventDamage.cpp
+		EventDamage.h
+		EventEditable.cpp
+		EventEditable.h
+		EventErrors.cpp
+		EventErrors.h
+		EventLeader.cpp
+		EventLeader.h
+		EventMovement.cpp
+		EventMovement.h
+		EventNetwork.h
+		EventNetwork.cpp
+		EventPriorities.h
+		EventReactions.cpp
+		EventReactions.h
+		Events.cpp
+		Events.h
+		EventScript.cpp
+		EventScript.h
+		EventShocking.cpp
+		EventShocking.h
+		EventSound.cpp
+		EventSound.h
+		EventWeapon.cpp
+		EventWeapon.h
+		Parse {
+			EventDamage
+			EventLeader
+			EventMovement
+			EventReactions
+			Events
+			EventShocking
+			EventSound
+			EventWeapon
+		}
+	}
+	Directory system {
+		EventDataManager.cpp
+		EventDataManager.h
+		EventData.cpp
+		EventData.h
+		Parse {
+			EventDataMeta
+		}
+	}
+	EventDefines.h
+	EventGroup.cpp
+	EventGroup.h
+	EventHandler.cpp
+	EventHandler.h
+	EventNames.cpp
+	EventNames.h
+	EventResponse.h
+	EventResponseFactory.cpp
+	EventResponseFactory.h
+	EventSource.cpp
+	EventSource.h
+	ShockingEventEnums.h
+	ShockingEvents.cpp
+	ShockingEvents.h		
+}
+

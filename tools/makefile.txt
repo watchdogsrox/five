@@ -1,0 +1,26 @@
+Project tools
+
+Files {
+    EditorWidget.cpp
+    EditorWidget.h
+    ObjectProfiler.cpp
+    ObjectProfiler.h
+	ObjectPositionChecker.cpp
+	ObjectPositionChecker.h
+	PerformanceStats.cpp
+	PerformanceStats.h
+	SectorTools.cpp
+	SectorTools.h
+	SectorToolsParam.h
+	SmokeTest.cpp
+	SmokeTest.h
+	StreamingMemJunctionStats.cpp
+	StreamingMemJunctionStats.h
+	StreamingMemUsage.cpp
+	StreamingMemUsage.h
+	TracingStats.cpp
+	TracingStats.h
+	Parse {
+		ObjectProfiler
+	}
+}

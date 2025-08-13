@@ -1,0 +1,41 @@
+Project security
+
+Files {
+    Directory plugins {  
+        apicheckplugin.cpp
+        apicheckplugin.h
+		cedetectionplugin.cpp
+		cedetectionplugin.h
+		clockguard.h
+		clockguard.cpp
+        debuggercheckplugin.h
+        debuggercheckplugin.cpp
+		dllnamecheckplugin.h
+		dllnamecheckplugin.cpp
+		ecplugin.h
+		ecplugin.cpp
+        linkdatareporterplugin.h
+        linkdatareporterplugin.cpp
+        networkmonitorplugin.h
+        networkmonitorplugin.cpp
+		playernamemonitorplugin.h
+		playernamemonitorplugin.cpp
+        revolvingcheckerplugin.h
+        revolvingcheckerplugin.cpp
+        rtmaplugin.h
+        rtmaplugin.cpp
+        scripthook.h
+        scripthook.cpp
+        scriptvariableverifyplugin.h
+        scriptvariableverifyplugin.cpp
+		tunablesverifier.h
+		tunablesverifier.cpp
+        vehdebuggerplugin.cpp
+        vehdebuggerplugin.h
+        videomodificationplugin.h
+        videomodificationplugin.cpp
+    }
+	ragesecgameinterface.h
+    ragesecgameinterface.cpp
+	ragesechashutility.h
+}

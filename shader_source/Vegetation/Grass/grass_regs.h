@@ -1,0 +1,97 @@
+//
+// All constant registers used by grass shader
+//
+//	24/11/2008	- Andrzej:	- initial;
+//
+//
+//
+#ifndef __GRASSREGS_FXH__
+#define __GRASSREGS_FXH__
+
+
+//
+// VS registers used by grass shader:
+//
+#define GRASS_REG_TRANSFORM					(64)
+#define GRASS_CREG_TRANSFORM				c64
+#define GRASS_REG_PLANTCOLOR				(68)
+#define GRASS_CREG_PLANTCOLOR				c68
+#define GRASS_REG_GROUNDCOLOR				(69)
+#define GRASS_CREG_GROUNDCOLOR				c69
+
+#define GRASS_REG_CAMERAPOS					(80)
+#define GRASS_CREG_CAMERAPOS				c80
+#define GRASS_REG_PLAYERPOS					(81)
+#define GRASS_CREG_PLAYERPOS				c81
+
+#define GRASS_REG_DIMENSIONLOD2				(82)
+#define GRASS_CREG_DIMENSIONLOD2			c82
+
+#define GRASS_REG_PLAYERCOLLPARAMS			(83)
+#define GRASS_CREG_PLAYERCOLLPARAMS			c83
+
+#define GRASS_REG_ALPHALOD0DISTUMTIMER		(84)
+#define GRASS_CREG_ALPHALOD0DISTUMTIMER		c84
+#define GRASS_REG_ALPHALOD1DIST				(85)
+#define GRASS_CREG_ALPHALOD1DIST			c85
+#define GRASS_REG_ALPHALOD2DIST				(86)
+#define GRASS_CREG_ALPHALOD2DIST			c86
+#define GRASS_REG_UMPARAMS					(87)
+#define GRASS_CREG_UMPARAMS					c87
+
+#define GRASS_REG_FAKEDNORMAL				(88)
+#define GRASS_CREG_FAKEDNORMAL				c88
+
+#define GRASS_REG_ALPHALOD2DIST_FAR			(89)
+#define GRASS_CREG_ALPHALOD2DIST_FAR		c89
+
+#define GRASS_REG_VEHCOLL0ENABLED			(11)
+#define GRASS_BREG_VEHCOLL0ENABLED			b11
+#define GRASS_REG_VEHCOLL1ENABLED			(10)
+#define GRASS_BREG_VEHCOLL1ENABLED			b10
+#define GRASS_REG_VEHCOLL2ENABLED			(13)
+#define GRASS_BREG_VEHCOLL2ENABLED			b13
+#define GRASS_REG_VEHCOLL3ENABLED			(14)
+#define GRASS_BREG_VEHCOLL3ENABLED			b14
+
+#define GRASS_REG_VEHCOLL0B					(90)
+#define GRASS_CREG_VEHCOLL0B				c90
+#define GRASS_REG_VEHCOLL0M					(91)
+#define GRASS_CREG_VEHCOLL0M				c91
+#define GRASS_REG_VEHCOLL0R					(92)
+#define GRASS_CREG_VEHCOLL0R				c92
+
+#define GRASS_REG_VEHCOLL1B					(93)
+#define GRASS_CREG_VEHCOLL1B				c93
+#define GRASS_REG_VEHCOLL1M					(94)
+#define GRASS_CREG_VEHCOLL1M				c94
+#define GRASS_REG_VEHCOLL1R					(95)
+#define GRASS_CREG_VEHCOLL1R				c95
+
+#define GRASS_REG_VEHCOLL2B					(96)
+#define GRASS_CREG_VEHCOLL2B				c96
+#define GRASS_REG_VEHCOLL2M					(97)
+#define GRASS_CREG_VEHCOLL2M				c97
+#define GRASS_REG_VEHCOLL2R					(98)
+#define GRASS_CREG_VEHCOLL2R				c98
+
+#define GRASS_REG_VEHCOLL3B					(99)
+#define GRASS_CREG_VEHCOLL3B				c99
+#define GRASS_REG_VEHCOLL3M					(100)
+#define GRASS_CREG_VEHCOLL3M				c100
+#define GRASS_REG_VEHCOLL3R					(101)
+#define GRASS_CREG_VEHCOLL3R				c101
+
+#define GRASS_REG_TERRAINNORMAL				(102)	// required for CPLANT_WRITE_GRASS_NORMAL=1
+#define GRASS_CREG_TERRAINNORMAL			c102
+
+
+// common constants:
+#define GRASS_GLOBAL_AO						(1.0f)
+#define GRASS_LOD2_BATCHING					(0 && __PS3)	// gather LOD2 quad rendercalls together
+
+
+// constant buffers:
+#define GRASS_BREG_GRASSGLOBALS             b4
+
+#endif //__GRASSREGS_FXH__...

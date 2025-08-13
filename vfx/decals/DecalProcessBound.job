@@ -1,0 +1,13 @@
+//
+// vfx/decals/DecalProcessBound.job
+//
+// Copyright (C) 2012-2013 Rockstar Games.  All Rights Reserved.
+//
+
+#define DECAL_MANAGER_ENABLE_PROCESSBOUND               1
+#define DECAL_MANAGER_ENABLE_PROCESSBREAKABLEGLASS      0
+#define DECAL_MANAGER_ENABLE_PROCESSDRAWABLESNONSKINNED 0
+#define DECAL_MANAGER_ENABLE_PROCESSDRAWABLESSKINNED    0
+#define DECAL_MANAGER_ENABLE_PROCESSSMASHGROUP          0
+
+#include "DecalProcessInstTask.h"

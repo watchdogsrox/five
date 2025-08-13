@@ -1,0 +1,21 @@
+#ifndef _SCRIPT_MEMORY_TRACKING_H_
+	#define _SCRIPT_MEMORY_TRACKING_H_
+
+
+#define __SCRIPT_MEM_CALC		(__BANK)
+#define __SCRIPT_MEM_DISPLAY	(__BANK)
+
+#if __SCRIPT_MEM_CALC
+#define SCRIPT_MEM_CALC_ONLY(x)	x
+#else
+#define SCRIPT_MEM_CALC_ONLY(x)
+#endif
+
+#if __SCRIPT_MEM_DISPLAY
+#define SCRIPT_MEM_DISPLAY_ONLY(x)	x
+#else
+#define SCRIPT_MEM_DISPLAY_ONLY(x)
+#endif
+
+#endif	//	_SCRIPT_MEMORY_TRACKING_H_
+
